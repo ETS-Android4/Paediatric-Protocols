@@ -1151,10 +1151,6 @@ public class DrugDescriptionActivity extends Activity {
         //end of the method
     }
 
-
-
-
-
     private String getExactAge(int age2) {
         String message=null;
 
