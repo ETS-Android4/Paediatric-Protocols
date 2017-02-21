@@ -12,7 +12,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 
 import com.github.florent37.materialviewpager.header.MaterialViewPagerHeaderDecorator;
 import com.mwongera.paediatric_protocols.ClickListener;
@@ -28,86 +31,43 @@ import java.util.List;
  * Created by mwongera on 2/10/17.
  */
 
-public class Drugsfragment extends Fragment implements ClickListener{
-    Context context;
+public class Drugsfragment extends Fragment{
 
-    static final boolean GRID_LAYOUT = false;
-    private List<item> itemList = new ArrayList<>();
-    private RecyclerView recyclerView;
-    private MyAdapter mAdapter;
-    private LinearLayout main;
-
+    String drugs[];
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        context = getActivity();
-        return inflater.inflate(R.layout.fragment_recyclerview, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+
+        View rootView = inflater.inflate(R.layout.activity_drugs, container, false);
+
+        ListView lst= (ListView)rootView.findViewById(R.id.listView1);
+        drugs=getResources().getStringArray(R.array.Drugs);
+        ArrayAdapter<String> mine=	new ArrayAdapter<String> (getActivity(),android.R.layout.simple_list_item_1,drugs);
+        lst.setAdapter(mine);
+
+        lst.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view,
+                                    int position, long id) {
+                //do something
+                openWorkplace(position);
+            }
+        });
+
+        return rootView;
     }
 
-    @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
-        RecyclerView.LayoutManager layoutManager;
 
-        prepareItem();
 
-        if (GRID_LAYOUT) {
-            layoutManager = new GridLayoutManager(getActivity(), 2);
-        } else {
-            layoutManager = new LinearLayoutManager(getActivity());
-        }
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setHasFixedSize(true);
+    private void openWorkplace(int ps) {
+        Intent i = new Intent(getActivity(), DrugDescriptionActivity.class);
+        String drugtype=drugs[ps];
+        i.putExtra("drugtype", drugtype);
+        i.putExtra("position", ps+"");
+        //Toast.makeText(getApplicationContext(), drugtype+" "+ps , Toast.LENGTH_LONG).show();
+        startActivity(i);
 
-        //Use this now
-        recyclerView.addItemDecoration(new MaterialViewPagerHeaderDecorator());
 
-        mAdapter = new MyAdapter(itemList);
-        mAdapter.setClickListener(this);
-
-        //mAdapter = new RecyclerViewMaterialAdapter();
-        recyclerView.setAdapter(mAdapter);
-    }
-
-    private void prepareItem() {
-        item item = new item("Cake1");
-        itemList.add(item);
-        item = new item("Cake2");
-        itemList.add(item);
-        item = new item("Cake3");
-        itemList.add(item);
-        item= new item("Cake4");
-        itemList.add(item);
-        item = new item("Cake2");
-        itemList.add(item);
-        item = new item("Cake3");
-        itemList.add(item);
-        item= new item("Cake4");
-        itemList.add(item);
-        //mAdapter.notifyDataSetChanged();
-    }
-    @Override
-    public void itemClicked(View view, int position) {
-        if (position == 1) {
-            Intent intent = new Intent(getActivity(), Main2Activity.class);
-            startActivity(intent);
-        }
-        else if(position == 2) {
-            Intent intent = new Intent(getActivity(), Main2Activity.class);
-            startActivity(intent);
-        } else if (position == 4) {
-            Intent intent = new Intent(getActivity(), Main2Activity.class);
-            startActivity(intent);
-        }
-        else if (position==5){
-            Intent intent = new Intent(getActivity(), Main2Activity.class);
-            startActivity(intent);
-        }
-        else
-            System.out.println("position...."+position);
-    }
-
-    public static Drugsfragment newInstance() {
-        return new Drugsfragment();
     }
 }
