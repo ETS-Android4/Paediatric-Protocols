@@ -1,20 +1,28 @@
 package com.mwongera.paediatric_protocols;
 
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.app.ListFragment;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Toast;
 
 import com.github.florent37.materialviewpager.MaterialViewPager;
 import com.github.florent37.materialviewpager.header.HeaderDesign;
+import com.heinrichreimersoftware.materialdrawer.DrawerActivity;
+import com.heinrichreimersoftware.materialdrawer.structure.DrawerFragmentItem;
+import com.heinrichreimersoftware.materialdrawer.structure.DrawerItem;
+import com.heinrichreimersoftware.materialdrawer.structure.DrawerProfile;
+import com.heinrichreimersoftware.materialdrawer.theme.DrawerTheme;
 import com.mwongera.paediatric_protocols.fragment.Drugsfragment;
 import com.mwongera.paediatric_protocols.fragment.NewsFragment;
 import com.mwongera.paediatric_protocols.fragment.RecyclerViewFragment;
 import com.mwongera.paediatric_protocols.fragment.TriageFragment;
 
-public class MainActivity extends DrawerActivity  {
+public class MainActivity extends DrawerActivity {
     private MaterialViewPager mViewPager;
     private Toolbar toolbar;
 
@@ -25,6 +33,45 @@ public class MainActivity extends DrawerActivity  {
         setContentView(R.layout.activity_main);
 
         setTitle("");
+
+        setDrawerTheme(
+                new DrawerTheme(this)
+                        .setBackgroundColorRes(R.color.window_background_3)
+                        .setTextColorPrimaryRes(R.color.text_color_primary_3)
+                        .setTextColorSecondaryRes(R.color.text_color_secondary_3)
+        );
+        addItems(new DrawerItem()
+                        .setTextPrimary(getString(R.string.lorem_ipsum_short))
+                        .setTextSecondary(getString(R.string.lorem_ipsum_long)),
+                new DrawerFragmentItem()
+                        .setFragment(new ListFragment())
+                        .setTextPrimary(getString(R.string.lorem_ipsum_medium)),
+                new DrawerFragmentItem()
+                        .setFragment(new Fragment())
+                        .setImage(ContextCompat.getDrawable(this, R.drawable.ic_flag_white))
+                        .setTextPrimary(getString(R.string.lorem_ipsum_short))
+                        .setTextSecondary(getString(R.string.lorem_ipsum_long))
+        );
+        setOnItemClickListener(new DrawerItem.OnItemClickListener() {
+            @Override
+            public void onClick(DrawerItem item, long id, int position) {
+                selectItem(position);
+                Toast.makeText(MainActivity.this, "Clicked item #" + position, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        addProfile(new DrawerProfile()
+                .setId(1)
+                .setRoundedAvatar((BitmapDrawable) ContextCompat.getDrawable(this, R.drawable.cat_2))
+                .setBackground(ContextCompat.getDrawable(this, R.drawable.cat_wide_1))
+                .setName(getString(R.string.lorem_ipsum_short))
+        );
+        addProfile(new DrawerProfile()
+                        .setId(2)
+                        .setRoundedAvatar((BitmapDrawable) ContextCompat.getDrawable(this, R.drawable.cat_1))
+                        .setBackground(ContextCompat.getDrawable(this, R.drawable.cat_wide_2))
+                        .setName(getString(R.string.lorem_ipsum_short))
+                        .setDescription(getString(R.string.lorem_ipsum_medium))
 
         mViewPager = (MaterialViewPager) findViewById(R.id.materialViewPager);
         toolbar = mViewPager.getToolbar();
