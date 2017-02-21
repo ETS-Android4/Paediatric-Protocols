@@ -71,7 +71,7 @@ public class MainActivity extends DrawerActivity {
                         .setRoundedAvatar((BitmapDrawable) ContextCompat.getDrawable(this, R.drawable.cat_1))
                         .setBackground(ContextCompat.getDrawable(this, R.drawable.cat_wide_2))
                         .setName(getString(R.string.lorem_ipsum_short))
-                        .setDescription(getString(R.string.lorem_ipsum_medium))
+                        .setDescription(getString(R.string.lorem_ipsum_medium)));
 
         mViewPager = (MaterialViewPager) findViewById(R.id.materialViewPager);
         toolbar = mViewPager.getToolbar();
