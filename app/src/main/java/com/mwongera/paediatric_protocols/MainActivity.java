@@ -60,19 +60,6 @@ public class MainActivity extends DrawerActivity {
             }
         });
 
-        addProfile(new DrawerProfile()
-                .setId(1)
-                .setRoundedAvatar((BitmapDrawable) ContextCompat.getDrawable(this, R.drawable.cat_2))
-                .setBackground(ContextCompat.getDrawable(this, R.drawable.cat_wide_1))
-                .setName(getString(R.string.lorem_ipsum_short))
-        );
-        addProfile(new DrawerProfile()
-                        .setId(2)
-                        .setRoundedAvatar((BitmapDrawable) ContextCompat.getDrawable(this, R.drawable.cat_1))
-                        .setBackground(ContextCompat.getDrawable(this, R.drawable.cat_wide_2))
-                        .setName(getString(R.string.lorem_ipsum_short))
-                        .setDescription(getString(R.string.lorem_ipsum_medium)));
-
         mViewPager = (MaterialViewPager) findViewById(R.id.materialViewPager);
         toolbar = mViewPager.getToolbar();
 
