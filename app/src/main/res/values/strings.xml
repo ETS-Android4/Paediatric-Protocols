@@ -12,4 +12,198 @@
 
     <string name="drawer_frame_layout">DrawerFrameLayout</string>
     <string name="drawer_activity">DrawerActivity</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="d24"><html><p>Age 2-5 yrs: initially 35 micrograms/kg in 3 divided doses
+for 24 hrs then 10 micrograms/kg daily in 1–2 doses<br />Age 5-10 yrs: initially 25 micrograms/kg	(max.
+750 micrograms) in 3 divided doses for 24 hours then
+6 micrograms/kg daily (max. 250 micrograms daily) in 1–2
+doses<br />Age 10–18 yrs: initially 0.75–1.5 mg in 3 divided doses
+for 24 hrs then 62.5–250 micrograms daily in 1–2 doses</p></html></string>
+    <string name="drawer_open">Basic Padeatrics App</string>
+    <string name="drawer_close">Basic Padeatrics App</string>
+
+    <string-array name="menus">
+        <item>Table of Contents</item>
+        <item>Help</item>
+        <item>About</item>
+    </string-array>
+    <string-array name="days">
+        <item>age</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7+</item>
+    </string-array>
+    <string-array name="weights">
+        <item>weight estimation</item>
+        <item>WFH 1</item>
+        <item>WFH 2</item>
+        <item>WFH 3</item>
+        <item>WFH 4</item>
+    </string-array>
+    <string-array name="resc">
+        <item>Basic Life Support</item>
+        <item>Infact Child with Signs of Life</item>
+    </string-array>
+    <string-array name="TOC">
+        <item>Home</item>
+        <item>Drugs</item>
+        <item>Maintainance Fluids or Feeds</item>
+        <item>Triage</item>
+        <item>Resuscitation and Emergency Care</item>
+        <item>Major illness</item>
+        <item>Newborn Care</item>
+        <item>Procedures</item>
+        <item>Anthropometry</item>
+    </string-array>
+    <string-array name="newborncare">
+        <item>Resusciation</item>
+        <item>Neonatal Sepsis</item>
+        <item>Neonatal Jaundice</item>
+        <item>Feeding | Fluids</item>
+    </string-array>
+    <string-array name="malnutrition">
+        <item>Anthropometry</item>
+        <item>10 Steps of management</item>
+        <item>Fluids Management</item>
+        <item>Feeding</item>
+    </string-array>
+    <string-array name="MajorIllness">
+        <item>Diarrhoea</item>
+        <item>Convulsions</item>
+        <item>Malnutrition</item>
+        <item>Meningitis</item>
+        <item>Pneumonia</item>
+        <item>Asthma</item>
+        <item>Tuberculosis</item>
+        <item>Malaria</item>
+        <item>HIV</item>
+    </string-array>
+    <string-array name="HIV">
+        <item>Provider initiated testing and counselling</item>
+        <item>PMTCT</item>
+    </string-array>
+    <string-array name="Oedema">
+        <item>No or moderate Oedema</item>
+        <item>Severe or even-face Oedema</item>
+    </string-array>
+    <string-array name="Drugs">
+        <item>Adrenaline</item>
+        <item>Albendazole</item>
+        <item>Amikacin</item>
+        <item>Aminophylline</item>
+        <item>Amoxicillin</item>
+        <item>Ampicillin</item>
+        <item>Artemether - Lumefantrine</item>
+        <item>Artemisinin -Piperaquine</item>
+        <item>Artesunate</item>
+        <item>Beclomethasone</item>
+        <item>Benzyl Penicillin </item>
+        <item>Calcium</item>
+        <item>Carbamazepine</item>
+        <item>Cefotaxime</item>
+        <item>Ceftriaxone</item>
+        <item>Chloramphenicol</item>
+        <item>Ciprofloxacin</item>
+        <item>Clotrimazole 1% </item>
+        <item>Co-trimoxazole </item>
+        <item>Dexamethasone</item>
+        <item> Dextrose/glucose</item>
+        <item>Dihydrocodeine</item>
+        <item>Diazepam (iv)</item>
+        <item>Diazepam (rectal)</item>
+        <item>Digoxin (oral)</item>
+        <item>Flucloxacillin</item>
+        <item>Frusemide </item>
+        <item>Gentamicin</item>
+        <item>Hydroxyurea </item>
+        <item>Ibuprofen</item>
+        <item>Iron tabs / syrup</item>
+        <item>Lactulose</item>
+        <item>Mebendazole </item>
+        <item>Metronidazole(oral)</item>
+        <item>Morphine</item>
+        <item>Multivitamins</item>
+        <item>Nystatin </item>
+        <item>Paracetamol</item>
+        <item>Pethidine, im</item>
+        <item>Phenobarbitone</item>
+        <item>Phenytoin</item>
+        <item>Potassium - oral</item>
+        <item>Prednisolone - tabs</item>
+        <item>Quinine </item>
+        <item>Salbutamol </item>
+        <item>TB Treatment</item>
+        <item>Valproate(sodium)</item>
+        <item>Vitamin A </item>
+        <item>Vitamin D</item>
+        <item>Vitamin D – Maintenance</item>
+        <item>Vitamin K</item>
+        <item>Zinc Sulphate</item>
+    </string-array>
+    <string name="about">Developed by \n Laban Ndwaru \n 0725 415 457 \n <a href='labanish.me.ke'>www.labanish.me.ke</a></string>
+    <string name="title_activity_splash">Basic Paediatric Protocols</string>
+    <string name="title_activity_table">Table of Contents</string>
+    <string name="title_activity_major_illness">Major Illness</string>
+    <string name="title_activity_major_illnes_description">Major Illness Description</string>
+    <string name="title_activity_plan_c">Plan C Treatment</string>
+    <string name="title_activity_shock">Shock Treatment</string>
+    <string name="title_activity_plan_b">Plan B Treatment</string>
+    <string name="title_activity_plan_a">Plan A Treatment</string>
+
+    <string-array name="age">
+        <item>Age&lt;12m</item>
+        <item>Age&gt;12m</item>
+    </string-array>
+    <string-array name="age_category">
+        <item>days</item>
+        <item>months</item>
+        <item>years</item>
+    </string-array>
+
+    <string name="lang">select age</string>
+    <string name="title_activity_drugs">Drugs</string>
+    <string name="title_activity_drug_description">Drug Description</string>
+    <string name="title_activity_convulsions">Convulsions</string>
+    <string name="title_activity_malnutrition">Malnutrition</string>
+    <string name="title_activity_anthropometry">Anthropometry</string>
+    <string name="title_activity_managementin_sam">10 Steps of Management</string>
+    <string name="title_activity_fluidin_diarrhoea">Fluids in Diarrhoea</string>
+    <string name="title_activity_feeding">Feeding</string>
+    <string name="title_activity_meningitis">Meningitis</string>
+    <string name="title_activity_pneumonia">Pneumonia</string>
+    <string name="title_activity_treatment_failure">Treatment Failure</string>
+    <string name="title_activity_asthma">Asthma</string>
+    <string name="title_activity_tuberculosis">Tuberculosis</string>
+    <string name="title_activity_hiv">HIV</string>
+    <string name="title_activity_pitc">PITC</string>
+    <string name="title_activity_pmtct">PMTCT</string>
+    <string name="title_activity_malaria">Malaria</string>
+    <string name="title_activity_malaria_doses">MalariaDoses</string>
+    <string name="title_activity_new_born_care">New Born Care</string>
+    <string name="title_activity_resusciation">Resusciation</string>
+    <string name="title_activity_neonatal_sepsis">Neonatal Sepsis</string>
+    <string name="title_activity_neonatal_jaundice">NeonatalJaundice</string>
+    <string name="title_activity_procedures">Procedures</string>
+    <string name="title_activity_triage_of_sick_children">Triage Of Sick Children</string>
+    <string name="title_activity_resusciation_emergency_care">Resusciation and Emergency Care</string>
+    <string name="title_activity_basic_support">Basic support</string>
+    <string name="title_activity_infant_support">InfantSupport</string>
+    <string name="title_activity_anthropometry_weight_e">Anthropometry Weight Estimation</string>
+    <string name="title_activity_anthrometry_weight_images">Anthrometry Weight Estimation</string>
+    <string name="title_activity_home">Basic Paediatric Protocols</string>
+    <string name="title_activity_home_fragment">Basic Paediatric Protocols</string>
+    <string name="title_activity_maintainance_fluids">Maintainance Fluids</string>
+    <string name="title_activity_maralia_treatment_preparation">MaraliaTreatmentPreparation</string>
+    <string name="title_activity_malnutrition_feeding">Malnutrition Feeding</string>
+    <string name="title_activity_fluidsin_diarrhoea_calculation">Fluids in Diarrhoea Calculation</string>
+    <string name="title_activity_drug_activity1">Drugs</string>
+    <string name="title_activity_maintainace_fluids">Maintainace Fluids</string>
+    <string name="title_activity_new_born_fluids">NewBorn Fluids and Feeds</string>
+    <string name="title_activity_aboutus">Aboutus</string>
 </resources>
