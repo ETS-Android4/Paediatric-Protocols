@@ -10,15 +10,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
-import android.widget.ListView;
 
 import com.github.florent37.materialviewpager.header.MaterialViewPagerHeaderDecorator;
 import com.mwongera.paediatric_protocols.ClickListener;
 import com.mwongera.paediatric_protocols.DrugDescriptionActivity;
-import com.mwongera.paediatric_protocols.Main2Activity;
 import com.mwongera.paediatric_protocols.MyAdapter;
 import com.mwongera.paediatric_protocols.R;
 import com.mwongera.paediatric_protocols.item;

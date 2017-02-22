@@ -1,31 +1,17 @@
 package com.mwongera.paediatric_protocols.fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.webkit.WebViewFragment;
-import android.widget.LinearLayout;
 
 import com.github.florent37.materialviewpager.MaterialViewPagerHelper;
-import com.github.florent37.materialviewpager.header.MaterialViewPagerHeaderDecorator;
 import com.github.ksoichiro.android.observablescrollview.ObservableWebView;
-import com.mwongera.paediatric_protocols.ClickListener;
-import com.mwongera.paediatric_protocols.Main2Activity;
-import com.mwongera.paediatric_protocols.MyAdapter;
 import com.mwongera.paediatric_protocols.R;
-import com.mwongera.paediatric_protocols.item;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by mwongera on 2/10/17.

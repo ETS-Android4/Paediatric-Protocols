@@ -14,9 +14,9 @@ import android.widget.LinearLayout;
 
 import com.github.florent37.materialviewpager.header.MaterialViewPagerHeaderDecorator;
 import com.mwongera.paediatric_protocols.ClickListener;
-import com.mwongera.paediatric_protocols.Main2Activity;
 import com.mwongera.paediatric_protocols.MyAdapter;
 import com.mwongera.paediatric_protocols.R;
+import com.mwongera.paediatric_protocols.Resuscitation;
 import com.mwongera.paediatric_protocols.item;
 
 import java.util.ArrayList;
@@ -79,17 +79,9 @@ public class NewsFragment extends Fragment implements ClickListener {
     @Override
     public void itemClicked(View view, int position) {
         if(position == 2) {
-            Intent intent = new Intent(getActivity(), Main2Activity.class);
+            Intent intent = new Intent(getActivity(), Resuscitation.class);
             getActivity().startActivity(intent);
-        } else if (position == 4) {
-            Intent intent = new Intent(getActivity(), Main2Activity.class);
-            startActivity(intent);
-        }
-        else if (position==1){
-            Intent intent = new Intent(getActivity(), Main2Activity.class);
-            startActivity(intent);
-        }
-        else {
+        } else {
             System.out.println("position...."+position);
         }
     }
