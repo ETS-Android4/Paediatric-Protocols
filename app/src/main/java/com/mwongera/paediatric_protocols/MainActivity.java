@@ -76,9 +76,9 @@ public class MainActivity extends DrawerActivity {
                     case 1:
                     return NewsFragment.newInstance();
                     case 2:
-                        return TriageFragment.newInstance();
+                        return RecyclerViewFragment.newInstance();
                     case 3:
-                    return RecyclerViewFragment.newInstance();
+                    return TriageFragment.newInstance();
                     default:
                         return RecyclerViewFragment.newInstance();
                 }

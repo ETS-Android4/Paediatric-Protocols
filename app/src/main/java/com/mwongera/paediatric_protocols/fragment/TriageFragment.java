@@ -34,10 +34,6 @@ import java.util.List;
 public class TriageFragment extends Fragment{
     private ObservableWebView mWebView;
 
-    public static WebViewFragment newInstance() {
-        return new WebViewFragment();
-    }
-
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_webview, container, false);
@@ -69,5 +65,8 @@ public class TriageFragment extends Fragment{
         MaterialViewPagerHelper.registerWebView(getActivity(), mWebView, null);
     }
 
+    public static TriageFragment newInstance() {
+        return new TriageFragment();
+    }
 
 }
