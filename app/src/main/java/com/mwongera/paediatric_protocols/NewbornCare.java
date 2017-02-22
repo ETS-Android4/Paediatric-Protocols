@@ -52,7 +52,7 @@ public class NewbornCare extends AppCompatActivity {
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(NewbornCare.this, CPAP.class);
+                Intent intent = new Intent(NewbornCare.this, FeedingActivity.class);
                 startActivity(intent);
             }
         });
