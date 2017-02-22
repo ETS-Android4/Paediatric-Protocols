@@ -10,9 +10,14 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.webkit.WebViewFragment;
 import android.widget.LinearLayout;
 
+import com.github.florent37.materialviewpager.MaterialViewPagerHelper;
 import com.github.florent37.materialviewpager.header.MaterialViewPagerHeaderDecorator;
+import com.github.ksoichiro.android.observablescrollview.ObservableWebView;
 import com.mwongera.paediatric_protocols.ClickListener;
 import com.mwongera.paediatric_protocols.Main2Activity;
 import com.mwongera.paediatric_protocols.MyAdapter;
@@ -26,82 +31,43 @@ import java.util.List;
  * Created by mwongera on 2/10/17.
  */
 
-public class TriageFragment extends Fragment implements ClickListener {
+public class TriageFragment extends Fragment{
+    private ObservableWebView mWebView;
 
-    static final boolean GRID_LAYOUT = false;
-    private List<item> itemList = new ArrayList<>();
-    private RecyclerView recyclerView;
-    private MyAdapter mAdapter;
-    private LinearLayout main;
+    public static WebViewFragment newInstance() {
+        return new WebViewFragment();
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_recyclerview, container, false);
+        return inflater.inflate(R.layout.fragment_webview, container, false);
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
-        RecyclerView.LayoutManager layoutManager;
+        mWebView = (ObservableWebView) view.findViewById(R.id.webView);
 
-        prepareItem();
+        //must be called before loadURL
+        MaterialViewPagerHelper.preLoadInjectHeader(mWebView);
 
-        if (GRID_LAYOUT) {
-            layoutManager = new GridLayoutManager(getActivity(), 2);
-        } else {
-            layoutManager = new LinearLayoutManager(getActivity());
-        }
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setHasFixedSize(true);
+        //have to inject header when WebView page loaded
+        mWebView.setWebViewClient(new WebViewClient() {
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                MaterialViewPagerHelper.injectHeader(mWebView, true);
+            }
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                view.loadUrl(url);
+                return true;
+            }
+        });
 
-        //Use this now
-        recyclerView.addItemDecoration(new MaterialViewPagerHeaderDecorator());
+        mWebView.loadUrl("http://mobile.francetvinfo.fr/");
 
-        mAdapter = new MyAdapter(itemList);
-        mAdapter.setClickListener(this);
-
-        //mAdapter = new RecyclerViewMaterialAdapter();
-        recyclerView.setAdapter(mAdapter);
+        MaterialViewPagerHelper.registerWebView(getActivity(), mWebView, null);
     }
 
-    private void prepareItem() {
-        item item = new item("Cake1");
-        itemList.add(item);
-        item = new item("Cake2");
-        itemList.add(item);
-        item = new item("Cake3");
-        itemList.add(item);
-        item= new item("Cake4");
-        itemList.add(item);
-        item = new item("Cake2");
-        itemList.add(item);
-        item = new item("Cake3");
-        itemList.add(item);
-        item= new item("Cake4");
-        itemList.add(item);
-        //mAdapter.notifyDataSetChanged();
-    }
-    @Override
-    public void itemClicked(View view, int position) {
-        if(position == 2) {
-            Intent intent = new Intent(getActivity(), Main2Activity.class);
-            getActivity().startActivity(intent);
-        } else if (position == 4) {
-            Intent intent = new Intent(getActivity(), Main2Activity.class);
-            getActivity().startActivity(intent);
-        }
-        else if (position==1){
-            Intent intent = new Intent(getActivity(), Main2Activity.class);
-            getActivity().startActivity(intent);
-        }
-        else {
-            System.out.println("position...."+position);
-        }
-    }
-
-    public static TriageFragment newInstance() {
-        return new TriageFragment();
-    }
 
 }

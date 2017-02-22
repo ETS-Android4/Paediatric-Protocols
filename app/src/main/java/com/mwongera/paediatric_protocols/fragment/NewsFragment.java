@@ -66,19 +66,13 @@ public class NewsFragment extends Fragment implements ClickListener {
     }
 
     private void prepareItem() {
-        item item = new item("Cake1");
+        item item = new item("Resuscitation", "");
         itemList.add(item);
-        item = new item("Cake2");
+        item = new item("Newborn care", "");
         itemList.add(item);
-        item = new item("Cake3");
+        item = new item("Fluid and feeding", "");
         itemList.add(item);
-        item= new item("Cake4");
-        itemList.add(item);
-        item = new item("Cake2");
-        itemList.add(item);
-        item = new item("Cake3");
-        itemList.add(item);
-        item= new item("Cake4");
+        item= new item("Major conditions", "");
         itemList.add(item);
         //mAdapter.notifyDataSetChanged();
     }

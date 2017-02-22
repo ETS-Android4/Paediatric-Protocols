@@ -70,20 +70,11 @@ public class RecyclerViewFragment extends Fragment implements ClickListener {
         }
 
     private void prepareItem() {
-        item item = new item("Cake1");
+        item item = new item("Procedures", "");
         itemList.add(item);
-        item = new item("Cake2");
+        item = new item("Calculators", "");
         itemList.add(item);
-        item = new item("Cake3");
-        itemList.add(item);
-        item= new item("Cake4");
-        itemList.add(item);
-        item = new item("Cake2");
-        itemList.add(item);
-        item = new item("Cake3");
-        itemList.add(item);
-        item= new item("Cake4");
-        itemList.add(item);
+
         //mAdapter.notifyDataSetChanged();
     }
     @Override
