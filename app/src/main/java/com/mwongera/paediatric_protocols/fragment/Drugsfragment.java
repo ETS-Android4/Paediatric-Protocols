@@ -66,6 +66,7 @@ public class Drugsfragment extends Fragment implements ClickListener {
         recyclerView.addItemDecoration(new MaterialViewPagerHeaderDecorator());
 
         mAdapter = new MyAdapter(itemList);
+        mAdapter.setClickListener(this);
 
         //mAdapter = new RecyclerViewMaterialAdapter();
         recyclerView.setAdapter(mAdapter);
@@ -181,20 +182,16 @@ public class Drugsfragment extends Fragment implements ClickListener {
     }
     @Override
     public void itemClicked(View view, int position) {
-        if (position == 2) {
-            Intent intent = new Intent(getActivity(), DrugDescriptionActivity.class);
-            getActivity().startActivity(intent);
-        } else
-            System.out.println("position...." + position);
+       openWorkplace(position);
     }
 
     private void openWorkplace(int position) {
-        Intent intent = new Intent(getActivity(), Main2Activity.class);
+        Intent i = new Intent(getActivity(), Main2Activity.class);
         String drugtype=drugs[position];
-        intent.putExtra("drugtype", drugtype);
-        intent.putExtra("position", position+"");
+        i.putExtra("drugtype", drugtype);
+        i.putExtra("position", position+"");
         //Toast.makeText(getApplicationContext(), drugtype+" "+ps , Toast.LENGTH_LONG).show();
-        startActivity(intent);
+        startActivity(i);
     }
 
     public static Drugsfragment newInstance() {

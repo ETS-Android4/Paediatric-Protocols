@@ -59,6 +59,7 @@ public class TriageFragment extends Fragment implements ClickListener {
         recyclerView.addItemDecoration(new MaterialViewPagerHeaderDecorator());
 
         mAdapter = new MyAdapter(itemList);
+        mAdapter.setClickListener(this);
 
         //mAdapter = new RecyclerViewMaterialAdapter();
         recyclerView.setAdapter(mAdapter);
