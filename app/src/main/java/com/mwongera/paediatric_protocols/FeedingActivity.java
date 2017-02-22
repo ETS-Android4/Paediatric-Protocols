@@ -25,4 +25,5 @@ public class FeedingActivity extends Activity {
         imgv = (ImageView) findViewById(R.id.imageView1);
         mAttacher = new PhotoViewAttacher(imgv);
 
+    }
 }
