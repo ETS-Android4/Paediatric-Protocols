@@ -14,7 +14,7 @@ import android.widget.Button;
 
 public class Resuscitation extends AppCompatActivity {
 
-    Button button;
+    Button button1, button2;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,15 +25,25 @@ public class Resuscitation extends AppCompatActivity {
     }
 
     public void addListenerOnButton() {
-        button = (Button) findViewById(R.id.button1);
+        button1 = (Button) findViewById(R.id.button1);
+        button2 = (Button) findViewById(R.id.button2);
 
-        button.setOnClickListener(new View.OnClickListener() {
+        button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(this, BasicSupport.class);
+                Intent intent = new Intent(Resuscitation.this, BasicSupport.class);
                 startActivity(intent);
             }
         });
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Resuscitation.this, InfantSupport.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 
 
