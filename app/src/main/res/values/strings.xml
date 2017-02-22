@@ -14,15 +14,12 @@
     <string name="drawer_activity">DrawerActivity</string>
 
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
     <string name="d24"><html><p>Age 2-5 yrs: initially 35 micrograms/kg in 3 divided doses
 for 24 hrs then 10 micrograms/kg daily in 1–2 doses<br />Age 5-10 yrs: initially 25 micrograms/kg	(max.
 750 micrograms) in 3 divided doses for 24 hours then
 6 micrograms/kg daily (max. 250 micrograms daily) in 1–2
 doses<br />Age 10–18 yrs: initially 0.75–1.5 mg in 3 divided doses
 for 24 hrs then 62.5–250 micrograms daily in 1–2 doses</p></html></string>
-    <string name="drawer_open">Basic Padeatrics App</string>
-    <string name="drawer_close">Basic Padeatrics App</string>
 
     <string-array name="menus">
         <item>Table of Contents</item>
