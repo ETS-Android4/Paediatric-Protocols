@@ -31,14 +31,28 @@ public class NewbornCare extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(NewbornCare.this, BasicSupport.class);
+                Intent intent = new Intent(NewbornCare.this, Resuscitation_newborn.class);
                 startActivity(intent);
             }
         });
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(NewbornCare.this, InfantSupport.class);
+                Intent intent = new Intent(NewbornCare.this, Sepsis.class);
+                startActivity(intent);
+            }
+        });
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(NewbornCare.this, Jaundice.class);
+                startActivity(intent);
+            }
+        });
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(NewbornCare.this, CPAP.class);
                 startActivity(intent);
             }
         });
