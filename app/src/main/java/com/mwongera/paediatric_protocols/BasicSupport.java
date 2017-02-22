@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import uk.co.senab.photoview.PhotoViewAttacher;
+
 /**
  * Created by mwongera on 2/22/17.
  */
