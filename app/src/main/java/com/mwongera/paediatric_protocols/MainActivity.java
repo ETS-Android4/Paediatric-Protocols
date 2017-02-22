@@ -72,13 +72,13 @@ public class MainActivity extends DrawerActivity {
             public Fragment getItem(int position) {
                 switch (position % 4) {
                     case 0:
-                    return Drugsfragment.newInstance();
+                        return Drugsfragment.newInstance();
                     case 1:
-                    return NewsFragment.newInstance();
+                        return NewsFragment.newInstance();
                     case 2:
                         return RecyclerViewFragment.newInstance();
                     case 3:
-                    return TriageFragment.newInstance();
+                        return TriageFragment.newInstance();
                     default:
                         return RecyclerViewFragment.newInstance();
                 }
