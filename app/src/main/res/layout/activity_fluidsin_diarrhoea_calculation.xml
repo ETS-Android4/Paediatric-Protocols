@@ -1,0 +1,134 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+
+    tools:context=".ShockActivity" >
+
+    <LinearLayout
+        android:id="@+id/layoer72"
+        android:layout_width="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        <TextView
+            android:id="@+id/textDrug"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:background="#fecd64"
+            android:text="Fluid Management in Diarrhoea"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="14dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoer2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:weightSum="100"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="weight"
+            android:inputType="numberDecimal" >
+
+            <requestFocus />
+        </EditText>
+        <!--    <EditText -->
+        <!--         android:id="@+id/editText2" -->
+        <!--         android:layout_width="100dp" -->
+        <!--         android:layout_height="wrap_content" -->
+        <!--         android:layout_weight="1" -->
+        <!--         android:hint="Age" -->
+        <!--         android:ems="10" -->
+        <!--         android:inputType="number" > -->
+
+        <!--     </EditText> -->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoer3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoer2"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/layoer1"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:weightSum="100" >
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:text="Calculate" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:text="clear" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textShock"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/layoer1"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:background="#ffe2e3"
+            android:lines="5"
+            android:text="Shock"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="16dp" />
+        <TextView
+            android:id="@+id/textMaintainance"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/layoer1"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="3dp"
+            android:gravity="center"
+            android:background="#ccffcc"
+            android:lines="5"
+            android:text="Maintaince"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="16dp" />
+        <TextView
+            android:id="@+id/textAlternative"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/layoer1"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="3dp"
+            android:gravity="center"
+            android:background="#ffffe0"
+            android:lines="5"
+            android:text="Oral or NGT"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+</RelativeLayout>
