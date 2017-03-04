@@ -18,6 +18,7 @@ import com.heinrichreimersoftware.materialdrawer.structure.DrawerItem;
 import com.heinrichreimersoftware.materialdrawer.structure.DrawerProfile;
 import com.heinrichreimersoftware.materialdrawer.theme.DrawerTheme;
 import com.mwongera.paediatric_protocols.fragment.Drugsfragment;
+import com.mwongera.paediatric_protocols.fragment.MajorConditionsFragment;
 import com.mwongera.paediatric_protocols.fragment.NewsFragment;
 import com.mwongera.paediatric_protocols.fragment.RecyclerViewFragment;
 import com.mwongera.paediatric_protocols.fragment.TriageFragment;
@@ -70,15 +71,17 @@ public class MainActivity extends DrawerActivity {
         mViewPager.getViewPager().setAdapter(new FragmentStatePagerAdapter(getSupportFragmentManager()) {
             @Override
             public Fragment getItem(int position) {
-                switch (position % 4) {
+                switch (position % 5) {
                     case 0:
                         return Drugsfragment.newInstance();
                     case 1:
-                        return NewsFragment.newInstance();
-                    case 2:
-                        return RecyclerViewFragment.newInstance();
-                    case 3:
                         return TriageFragment.newInstance();
+                    case 2:
+                        return MajorConditionsFragment.newInstance();
+                    case 3:
+                        return RecyclerViewFragment.newInstance();
+                    case 4:
+                        return NewsFragment.newInstance();
                     default:
                         return RecyclerViewFragment.newInstance();
                 }
