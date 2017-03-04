@@ -17,6 +17,7 @@ import com.mwongera.paediatric_protocols.ClickListener;
 import com.mwongera.paediatric_protocols.DrugDescriptionActivity;
 import com.mwongera.paediatric_protocols.MyAdapter;
 import com.mwongera.paediatric_protocols.R;
+import com.mwongera.paediatric_protocols.Resuscitation;
 import com.mwongera.paediatric_protocols.item;
 
 import java.util.ArrayList;
@@ -69,126 +70,38 @@ public class Drugsfragment extends Fragment implements ClickListener {
     }
 
     private void prepareItem() {
-        item item = new item("Albendazole", "");
+        item item = new item("Essential Drugs", "");
         itemList.add(item);
-        item = new item("Amikacin", "");
+        item = new item("Maintenance Fluids", "");
         itemList.add(item);
-        item = new item("Aminophylline", "");
+        item = new item("Dehydration-Shock management", "");
         itemList.add(item);
-        item= new item("Amoxicillin", "");
+        item= new item("Dehydration-Plan A", "");
         itemList.add(item);
-        item = new item("Ampicillin", "");
+        item = new item("Dehydration-Plan B", "");
         itemList.add(item);
-        item = new item("Artemether - Lumefantrine", "");
+        item = new item("Dehydration-Plan C", "");
         itemList.add(item);
-        item= new item("Artemisinin -Piperaquine", "");
+        item= new item("Malnutrition-Fluid management", "");
         itemList.add(item);
-        item= new item("Artemether - Lumefantrine", "");
+        item= new item("Malnutrition-Feeding", "");
         itemList.add(item);
-        item= new item("Artesunate","");
-        itemList.add(item);
-        item= new item("Beclomethasone", "");
-        itemList.add(item);
-        item= new item("Calcium", "");
-        itemList.add(item);
-        item= new item("Carbamazepine", "");
-        itemList.add(item);
-        item= new item("Cefotaxime", "");
-        itemList.add(item);
-        item= new item("Ceftriaxone", "");
-        itemList.add(item);
-        item= new item("Chloramphenicol", "");
-        itemList.add(item);
-        item= new item("Ciprofloxacin", "");
-        itemList.add(item);
-        item= new item("Clotrimazole 1%", "");
-        itemList.add(item);
-        item= new item("Co-trimoxazole", "");
-        itemList.add(item);
-        item= new item("Dexamethasone", "");
-        itemList.add(item);
-        item= new item("Dextrose/glucose", "");
-        itemList.add(item);
-        item= new item("Dihydrocodeine", "");
-        itemList.add(item);
-        item= new item("Diazepam (iv)", "");
-        itemList.add(item);
-        item= new item("Diazepam (rectal)", "");
-        itemList.add(item);
-        item= new item("Digoxin (oral)", "");
-        itemList.add(item);
-        item= new item("Flucloxacillin", "");
-        itemList.add(item);
-        item= new item("Frusemide", "");
-        itemList.add(item);
-        item= new item("Gentamicin", "");
-        itemList.add(item);
-        item= new item("Hydroxyurea", "");
-        itemList.add(item);
-        item= new item("Ibuprofen", "");
-        itemList.add(item);
-        item= new item("Iron tabs / syrup", "");
-        itemList.add(item);
-        item= new item("Lactulose", "");
-        itemList.add(item);
-        item= new item("Mebendazole ", "");
-        itemList.add(item);
-        item= new item("Metronidazole(oral)", "");
-        itemList.add(item);
-        item= new item("Morphine", "");
-        itemList.add(item);
-        item= new item("Multivitamins", "");
-        itemList.add(item);
-        item= new item("Nystatin", "");
-        itemList.add(item);
-        item= new item("Paracetamol", "");
-        itemList.add(item);
-        item= new item("Pethidine, im", "");
-        itemList.add(item);
-        item= new item("Phenobarbitone", "");
-        itemList.add(item);
-        item= new item("Phenytoin", "");
-        itemList.add(item);
-        item= new item("Potassium - oral", "");
-        itemList.add(item);
-        item= new item("Prednisolone - tabs", "");
-        itemList.add(item);
-        item= new item("Quinine", "");
-        itemList.add(item);
-        item= new item("Salbutamol", "");
-        itemList.add(item);
-        item= new item("Quinine", "");
-        itemList.add(item);
-        item= new item("TB Treatment", "");
-        itemList.add(item);
-        item= new item("Valproate(sodium)", "");
-        itemList.add(item);
-        item= new item("Vitamin A ", "");
-        itemList.add(item);
-        item= new item("Vitamin D", "");
-        itemList.add(item);
-        item= new item("Vitamin D – Maintenance", "");
-        itemList.add(item);
-        item= new item("Vitamin K", "");
-        itemList.add(item);
-        item= new item("Zinc Sulphate", "");
+        item= new item("Anthropometry","");
         itemList.add(item);
 
         //mAdapter.notifyDataSetChanged();
     }
+
     @Override
     public void itemClicked(View view, int position) {
-       openWorkplace(position);
+        if(position == 2) {
+            Intent intent = new Intent(getActivity(), Resuscitation.class);
+            getActivity().startActivity(intent);
+        } else {
+            System.out.println("position...."+position);
+        }
     }
 
-    private void openWorkplace(int position) {
-        Intent i = new Intent(getActivity(), DrugDescriptionActivity.class);
-        String drugtype=drugs[position];
-        i.putExtra("drugtype", drugtype);
-        i.putExtra("position", position+"");
-        //Toast.makeText(getApplicationContext(), drugtype+" "+ps , Toast.LENGTH_LONG).show();
-        startActivity(i);
-    }
 
     public static Drugsfragment newInstance() {
         return new Drugsfragment();

@@ -15,6 +15,7 @@ import android.widget.LinearLayout;
 import com.github.florent37.materialviewpager.header.MaterialViewPagerHeaderDecorator;
 import com.mwongera.paediatric_protocols.ClickListener;
 import com.mwongera.paediatric_protocols.MyAdapter;
+import com.mwongera.paediatric_protocols.NewbornCare;
 import com.mwongera.paediatric_protocols.R;
 import com.mwongera.paediatric_protocols.item;
 
@@ -25,7 +26,7 @@ import java.util.List;
  * Created by mwongera on 2/10/17.
  */
 
-public class RecyclerViewFragment extends Fragment implements ClickListener {
+public class NewbornCareFragment extends Fragment implements ClickListener {
 
     static final boolean GRID_LAYOUT = false;
     private List<item> itemList = new ArrayList<>();
@@ -65,9 +66,15 @@ public class RecyclerViewFragment extends Fragment implements ClickListener {
         }
 
     private void prepareItem() {
-        item item = new item("Procedures", "");
+        item item = new item("Resuscitation", "");
         itemList.add(item);
-        item = new item("Calculators", "");
+        item = new item("Fluids & Feeding", "");
+        itemList.add(item);
+        item = new item("Sepsis", "");
+        itemList.add(item);
+        item = new item("Jaundice", "");
+        itemList.add(item);
+        item = new item("CPAP", "");
         itemList.add(item);
 
         //mAdapter.notifyDataSetChanged();
@@ -77,21 +84,13 @@ public class RecyclerViewFragment extends Fragment implements ClickListener {
         if(position == 2) {
             Intent intent = new Intent(getActivity(), Main2Activity.class);
             getActivity().startActivity(intent);
-        } else if (position == 4) {
-            Intent intent = new Intent(getActivity(), Main2Activity.class);
-            getActivity().startActivity(intent);
-        }
-        else if (position==1){
-            Intent intent = new Intent(getActivity(), Main2Activity.class);
-            getActivity().startActivity(intent);
         }
         else {
             System.out.println("position...."+position);
         }
     }
 
-    public static RecyclerViewFragment newInstance() {
-        return new RecyclerViewFragment();
+    public static NewbornCareFragment newInstance() {return new NewbornCareFragment();
     }
 
 }

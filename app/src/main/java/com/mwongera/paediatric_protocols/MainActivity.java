@@ -19,8 +19,8 @@ import com.heinrichreimersoftware.materialdrawer.structure.DrawerProfile;
 import com.heinrichreimersoftware.materialdrawer.theme.DrawerTheme;
 import com.mwongera.paediatric_protocols.fragment.Drugsfragment;
 import com.mwongera.paediatric_protocols.fragment.MajorConditionsFragment;
+import com.mwongera.paediatric_protocols.fragment.NewbornCareFragment;
 import com.mwongera.paediatric_protocols.fragment.NewsFragment;
-import com.mwongera.paediatric_protocols.fragment.RecyclerViewFragment;
 import com.mwongera.paediatric_protocols.fragment.TriageFragment;
 
 public class MainActivity extends DrawerActivity {
@@ -79,30 +79,32 @@ public class MainActivity extends DrawerActivity {
                     case 2:
                         return MajorConditionsFragment.newInstance();
                     case 3:
-                        return RecyclerViewFragment.newInstance();
+                        return NewbornCareFragment.newInstance();
                     case 4:
                         return NewsFragment.newInstance();
                     default:
-                        return RecyclerViewFragment.newInstance();
+                        return Drugsfragment.newInstance();
                 }
 
             }
 
             @Override
             public int getCount() {
-                return 4;
+                return 5;
             }
 
             @Override
             public CharSequence getPageTitle(int position) {
-                switch (position % 4) {
+                switch (position % 5) {
                     case 0:
-                        return "DRUGS";
+                        return "DRUGS/FLUIDS";
                     case 1:
-                        return "TRIAGE";
+                        return "TRIAGE/EMERGENCY CARE";
                     case 2:
-                        return "PROCEDURES";
+                        return "MAJOR CONDITIONS";
                     case 3:
+                        return "NEWBORN CARE";
+                    case 4:
                         return "NEWS";
                 }
                 return "";
@@ -126,6 +128,10 @@ public class MainActivity extends DrawerActivity {
                                 R.color.cyan,
                                 "http://www.droid-life.com/wp-content/uploads/2014/10/lollipop-wallpapers10.jpg");
                     case 3:
+                        return HeaderDesign.fromColorResAndUrl(
+                                R.color.red,
+                                "http://www.tothemobile.com/wp-content/uploads/2014/07/original.jpg");
+                    case 4:
                         return HeaderDesign.fromColorResAndUrl(
                                 R.color.red,
                                 "http://www.tothemobile.com/wp-content/uploads/2014/07/original.jpg");

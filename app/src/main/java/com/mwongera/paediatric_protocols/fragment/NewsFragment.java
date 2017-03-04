@@ -66,13 +66,13 @@ public class NewsFragment extends Fragment implements ClickListener {
     }
 
     private void prepareItem() {
-        item item = new item("Life support", "");
+        item item = new item("Triage", "");
         itemList.add(item);
-        item = new item("Newborn care", "");
+        item = new item("Basic life support", "");
         itemList.add(item);
-        item = new item("Fluid and feeding", "");
+        item = new item("Infant/Child with signs of life", "");
         itemList.add(item);
-        item= new item("Major conditions", "");
+        item= new item("Procedures", "");
         itemList.add(item);
         //mAdapter.notifyDataSetChanged();
     }
