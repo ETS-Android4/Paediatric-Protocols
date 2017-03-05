@@ -1,0 +1,158 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+
+    tools:context=".ShockActivity" >
+
+    <LinearLayout
+        android:id="@+id/layoer72"
+        android:layout_width="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        <TextView
+            android:id="@+id/textDrug"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:background="#fecd64"
+            android:text="New Born fluids|feeding"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="14dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoer2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:weightSum="100"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="51.09"
+            android:ems="10"
+            android:hint="weight"
+            android:inputType="numberDecimal" >
+
+            <requestFocus />
+        </EditText>
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/days" />
+
+        <!--    <EditText -->
+        <!--         android:id="@+id/editText2" -->
+        <!--         android:layout_width="100dp" -->
+        <!--         android:layout_height="wrap_content" -->
+        <!--         android:layout_weight="1" -->
+        <!--         android:hint="Age" -days-->
+        <!--         android:ems="10" -->
+        <!--         android:inputType="nmber" > -->
+
+        <!--     </EditText> -->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoer3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoer2"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/layoer1"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:weightSum="100" >
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:text="Calculate" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:text="clear" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textvolume"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/layoer1"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:background="#ffe2e3"
+            android:lines="3"
+            android:text="Total Daily Fluids"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="14dp" />
+        <TextView
+            android:id="@+id/texthrly"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/layoer1"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="3dp"
+            android:gravity="center"
+            android:background="#ccffcc"
+            android:lines="3"
+            android:text="NG Feeds 3hrly"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="14dp" />
+        <TextView
+            android:id="@+id/textRate"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/layoer1"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="3dp"
+            android:gravity="center"
+            android:background="#ffffe0"
+            android:lines="3"
+            android:text="IV fluids rate (mls/hr)"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="14dp" />
+        <TextView
+            android:id="@+id/textNGT"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/layoer1"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="3dp"
+            android:gravity="center"
+            android:background="#fff"
+            android:lines="6"
+            android:text="NGT Feeds after 24 hrs IVF"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="14dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
