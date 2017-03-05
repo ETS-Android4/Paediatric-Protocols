@@ -2,6 +2,7 @@ package com.mwongera.paediatric_protocols;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -22,10 +23,31 @@ public class Jaundice extends Activity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_neonatal_jaundice);
-        imgv = (ImageView) findViewById(R.id.imageView1);
-        mAttacher = new PhotoViewAttacher(imgv);
+        setContentView(R.layout.jaundiceimages);
         getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#f9a614")));
+        Intent i= getIntent();
+        String imaged=i.getStringExtra("image");
+        int pos= Integer.parseInt(imaged);
+        imgv = (ImageView) findViewById(R.id.imageView1);
+        switch(pos){
+            case 0:
+                //img.setImageResource(R.drawable.my_image);
+                imgv.setImageResource(R.drawable.jaundice_treatment_1);
+                break;
+            case 1:
+                imgv.setImageResource(R.drawable.jaundice_treatment_2);
+                break;
+            case 2:
+                imgv.setImageResource(R.drawable.sepsis_treatment);
+                break;
+            case 3:
+                Intent ii= new Intent (Jaundice.this,DrugActivity1.class);
+                startActivity(ii);
+
+                finish();
+                break;
+        }
+        mAttacher = new PhotoViewAttacher(imgv);
 
     }
 
