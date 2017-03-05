@@ -12,6 +12,7 @@ import android.widget.ListView;
 import com.mwongera.paediatric_protocols.fragment.AnthropometryWeightE;
 import com.mwongera.paediatric_protocols.fragment.Procedures;
 import com.mwongera.paediatric_protocols.fragment.ResusciationEmergencyCare;
+import com.mwongera.paediatric_protocols.fragment.TriageOfSickChildren;
 
 /**
  * Created by mwongera on 3/5/17.
