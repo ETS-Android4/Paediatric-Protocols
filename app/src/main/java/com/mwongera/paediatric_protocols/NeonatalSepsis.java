@@ -17,22 +17,20 @@ import uk.co.senab.photoview.PhotoViewAttacher;
  * Created by mwongera on 3/5/17.
  */
 
-public class NeonatalJaundice extends Activity{
+public class NeonatalSepsis extends Activity {
 
     ImageView imgv;
     AlertDialog dialog;
-    final String[] option = new String[] { "If 37 weeks or more gestational age", "If < 37 weeks gestational age"};
-    PhotoViewAttacher mAttacher;
 
+    PhotoViewAttacher mAttacher;
+    final String[] option = new String[] { "Sepsis Treatment", "Drugs"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_neonatal_jaundice);
+        setContentView(R.layout.activity_neonatal_sepsis);
         imgv = (ImageView) findViewById(R.id.imageView1);
         mAttacher = new PhotoViewAttacher(imgv);
         createAlertbox();
-        getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#f9a614")));
-
 
         mAttacher.setOnLongClickListener(new View.OnLongClickListener() {
 
@@ -45,15 +43,16 @@ public class NeonatalJaundice extends Activity{
                 return false;
             }
         });
-    }
 
+        getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#f9a614")));
+    }
     public void createAlertbox(){
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.select_dialog_item, option);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
-        builder.setTitle("Select Jaundice Treatment Option");
+        builder.setTitle("Select Options");
         builder.setAdapter(adapter, new DialogInterface.OnClickListener() {
 
             public void onClick(DialogInterface dialog, int which) {
@@ -66,10 +65,10 @@ public class NeonatalJaundice extends Activity{
 
     }
     private void openWorkplace(int ps) {
-        Intent i = new Intent(NeonatalJaundice.this, Jaundice.class);
+        Intent i = new Intent(NeonatalSepsis.this, Jaundice.class);
 
-        i.putExtra("image", ps+"");
-        //Toast.makeText(getApplicationContext(), " "+ps , Toast.LENGTH_LONG).show();
+        i.putExtra("image", (ps+2)+"");
+        //Toast.makeText(getApplicationContext(), " "+(ps+2) , Toast.LENGTH_LONG).show();
         startActivity(i);
     }
 
