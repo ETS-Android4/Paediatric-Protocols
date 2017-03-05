@@ -1,50 +1,34 @@
 package com.mwongera.paediatric_protocols;
 
-import android.app.Activity;
-import android.content.Intent;
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.Button;
 
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.os.Bundle;
+import android.widget.ImageView;
+
+import uk.co.senab.photoview.PhotoViewAttacher;
 
 /**
  * Created by mwongera on 2/22/17.
  */
 
-public class Resuscitation extends AppCompatActivity {
+public class Resuscitation extends Activity {
 
-    Button button1, button2;
+    ImageView imgv;
+    AlertDialog dialog;
 
+    PhotoViewAttacher mAttacher;
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_resuscitation);
-
-        addListenerOnButton();
-    }
-
-    public void addListenerOnButton() {
-        button1 = (Button) findViewById(R.id.button1);
-        button2 = (Button) findViewById(R.id.button2);
-
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Resuscitation.this, BasicSupport.class);
-                startActivity(intent);
-            }
-        });
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Resuscitation.this, InfantSupport.class);
-                startActivity(intent);
-            }
-        });
-
+        imgv = (ImageView) findViewById(R.id.imageView1);
+        mAttacher = new PhotoViewAttacher(imgv);
+        getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#f9a614")));
 
     }
-
 
 }
