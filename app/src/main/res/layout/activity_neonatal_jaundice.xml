@@ -2,8 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-  
-  >
+
+    >
 
     <ImageView
         android:id="@+id/imageView1"
@@ -15,5 +15,14 @@
         android:layout_alignParentTop="true"
         android:src="@drawable/neonataljaundice" />
 
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="#7000"
+        android:text="Press and Hold for more Options"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </RelativeLayout>
