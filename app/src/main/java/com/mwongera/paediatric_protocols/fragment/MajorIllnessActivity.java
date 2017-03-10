@@ -13,6 +13,11 @@ import android.widget.ListView;
 import com.mwongera.paediatric_protocols.Asthma;
 import com.mwongera.paediatric_protocols.Convulsions;
 import com.mwongera.paediatric_protocols.HIV;
+import com.mwongera.paediatric_protocols.MajorIllnessDescriptionActivity;
+import com.mwongera.paediatric_protocols.Malaria;
+import com.mwongera.paediatric_protocols.Malnutrition;
+import com.mwongera.paediatric_protocols.Meningitis;
+import com.mwongera.paediatric_protocols.Pneumonia;
 import com.mwongera.paediatric_protocols.R;
 import com.mwongera.paediatric_protocols.Tuberculosis;
 

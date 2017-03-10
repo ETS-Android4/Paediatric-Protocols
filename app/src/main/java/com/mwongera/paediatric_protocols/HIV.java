@@ -43,7 +43,7 @@ public class HIV extends ListActivity{
             startActivity(i);
 
         } else if (ps == 1) {
-            Intent i = new Intent(this, PMTCT.class);
+            Intent i = new Intent(this, PMCT.class);
             startActivity(i);
         }
     }

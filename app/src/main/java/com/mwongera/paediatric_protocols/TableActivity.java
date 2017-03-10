@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.mwongera.paediatric_protocols.fragment.AnthropometryWeightE;
+import com.mwongera.paediatric_protocols.fragment.MajorIllnessActivity;
 import com.mwongera.paediatric_protocols.fragment.Procedures;
 import com.mwongera.paediatric_protocols.fragment.ResusciationEmergencyCare;
 import com.mwongera.paediatric_protocols.fragment.TriageOfSickChildren;

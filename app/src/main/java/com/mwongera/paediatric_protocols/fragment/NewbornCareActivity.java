@@ -12,7 +12,9 @@ import android.widget.ListView;
 
 import com.mwongera.paediatric_protocols.NeonatalJaundice;
 import com.mwongera.paediatric_protocols.NeonatalSepsis;
+import com.mwongera.paediatric_protocols.NewBornFluids;
 import com.mwongera.paediatric_protocols.R;
+import com.mwongera.paediatric_protocols.Resuscitation;
 
 /**
  * Created by mwongera on 3/5/17.
@@ -48,7 +50,7 @@ public class NewbornCareActivity extends Fragment {
     private void openWorkplace(int ps) {
 
         if (ps == 0) {
-            Intent i = new Intent(getActivity(), Resusciation.class);
+            Intent i = new Intent(getActivity(), Resuscitation.class);
             startActivity(i);
 
         } else if (ps == 1) {
