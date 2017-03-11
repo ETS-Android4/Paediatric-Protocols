@@ -17,10 +17,13 @@ import android.widget.LinearLayout;
 import com.github.florent37.materialviewpager.MaterialViewPagerHelper;
 import com.github.florent37.materialviewpager.header.MaterialViewPagerHeaderDecorator;
 import com.github.ksoichiro.android.observablescrollview.ObservableWebView;
+import com.mwongera.paediatric_protocols.BasicSupport;
 import com.mwongera.paediatric_protocols.ClickListener;
+import com.mwongera.paediatric_protocols.InfantSupport;
 import com.mwongera.paediatric_protocols.MyAdapter;
 import com.mwongera.paediatric_protocols.R;
 import com.mwongera.paediatric_protocols.Resuscitation;
+import com.mwongera.paediatric_protocols.ShockActivity;
 import com.mwongera.paediatric_protocols.item;
 
 import java.util.ArrayList;
@@ -81,10 +84,20 @@ public class TriageFragment extends Fragment implements ClickListener{
     }
     @Override
     public void itemClicked(View view, int position) {
-        if(position == 2) {
-            Intent intent = new Intent(getActivity(), Resuscitation.class);
+        if(position == 0) {
+            Intent intent = new Intent(getActivity(), TriageOfSickChildren.class);
             getActivity().startActivity(intent);
-        } else {
+        }else if(position == 1) {
+            Intent intent = new Intent(getActivity(), BasicSupport.class);
+            getActivity().startActivity(intent);
+        }else if(position == 2) {
+            Intent intent = new Intent(getActivity(), InfantSupport.class);
+            getActivity().startActivity(intent);
+        }else if(position == 2) {
+            Intent intent = new Intent(getActivity(), Procedures.class);
+            getActivity().startActivity(intent);
+        }
+        else {
             System.out.println("position...."+position);
         }
     }
