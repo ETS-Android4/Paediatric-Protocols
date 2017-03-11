@@ -13,10 +13,19 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.github.florent37.materialviewpager.header.MaterialViewPagerHeaderDecorator;
+import com.mwongera.paediatric_protocols.Asthma;
 import com.mwongera.paediatric_protocols.ClickListener;
+import com.mwongera.paediatric_protocols.Convulsions;
+import com.mwongera.paediatric_protocols.MajorIllnessDescriptionActivity;
+import com.mwongera.paediatric_protocols.Malaria;
+import com.mwongera.paediatric_protocols.ManagementinSAM;
+import com.mwongera.paediatric_protocols.Meningitis;
 import com.mwongera.paediatric_protocols.MyAdapter;
+import com.mwongera.paediatric_protocols.Pneumonia;
 import com.mwongera.paediatric_protocols.R;
 import com.mwongera.paediatric_protocols.Resuscitation;
+import com.mwongera.paediatric_protocols.ShockActivity;
+import com.mwongera.paediatric_protocols.Tuberculosis;
 import com.mwongera.paediatric_protocols.item;
 
 import java.util.ArrayList;
@@ -86,10 +95,32 @@ public class MajorConditionsFragment extends Fragment implements ClickListener {
     }
     @Override
     public void itemClicked(View view, int position) {
-        if(position == 2) {
-            Intent intent = new Intent(getActivity(), Resuscitation.class);
+        if(position == 0) {
+            Intent intent = new Intent(getActivity(), Asthma.class);
             getActivity().startActivity(intent);
-        } else {
+        }else if(position == 1) {
+            Intent intent = new Intent(getActivity(), Convulsions.class);
+            getActivity().startActivity(intent);
+        } else if(position == 2) {
+            Intent intent = new Intent(getActivity(), MajorIllnessDescriptionActivity.class);
+            getActivity().startActivity(intent);
+        }else if(position == 3) {
+            Intent intent = new Intent(getActivity(), Malaria.class);
+            getActivity().startActivity(intent);
+        }else if(position == 4) {
+            Intent intent = new Intent(getActivity(), ManagementinSAM.class);
+            getActivity().startActivity(intent);
+        }else if(position == 5) {
+            Intent intent = new Intent(getActivity(), Meningitis.class);
+            getActivity().startActivity(intent);
+        }else if(position == 6) {
+            Intent intent = new Intent(getActivity(), Pneumonia.class);
+            getActivity().startActivity(intent);
+        }else if(position == 7) {
+            Intent intent = new Intent(getActivity(), Tuberculosis.class);
+            getActivity().startActivity(intent);
+        }
+        else {
             System.out.println("position...."+position);
         }
     }
