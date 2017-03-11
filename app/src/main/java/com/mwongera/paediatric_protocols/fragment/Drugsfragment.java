@@ -17,6 +17,7 @@ import com.mwongera.paediatric_protocols.Anthropometry;
 import com.mwongera.paediatric_protocols.ClickListener;
 import com.mwongera.paediatric_protocols.DrugDescriptionActivity;
 import com.mwongera.paediatric_protocols.FluidinDiarrhoea;
+import com.mwongera.paediatric_protocols.MalnutritionFeeding;
 import com.mwongera.paediatric_protocols.MyAdapter;
 import com.mwongera.paediatric_protocols.PlanAActivity;
 import com.mwongera.paediatric_protocols.PlanBActivity;
@@ -122,6 +123,10 @@ public class Drugsfragment extends Fragment implements ClickListener {
             Intent intent = new Intent(getActivity(), FluidinDiarrhoea.class);
             getActivity().startActivity(intent);
         }else if(position == 7) {
+            Intent intent = new Intent(getActivity(), MalnutritionFeeding.class);
+            getActivity().startActivity(intent);
+        }
+        else if(position == 7) {
             Intent intent = new Intent(getActivity(), Anthropometry.class);
             getActivity().startActivity(intent);
         }
