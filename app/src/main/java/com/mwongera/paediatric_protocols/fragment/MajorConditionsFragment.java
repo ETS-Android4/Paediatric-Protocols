@@ -16,6 +16,7 @@ import com.github.florent37.materialviewpager.header.MaterialViewPagerHeaderDeco
 import com.mwongera.paediatric_protocols.Asthma;
 import com.mwongera.paediatric_protocols.ClickListener;
 import com.mwongera.paediatric_protocols.Convulsions;
+import com.mwongera.paediatric_protocols.HIV;
 import com.mwongera.paediatric_protocols.MajorIllnessDescriptionActivity;
 import com.mwongera.paediatric_protocols.Malaria;
 import com.mwongera.paediatric_protocols.ManagementinSAM;
@@ -81,6 +82,8 @@ public class MajorConditionsFragment extends Fragment implements ClickListener {
         itemList.add(item);
         item = new item("Diarrhoea/Dehydration", "");
         itemList.add(item);
+        item = new item("HIV", "");
+        itemList.add(item);
         item= new item("Malaria", "");
         itemList.add(item);
         item= new item("Malnutrition", "");
@@ -104,19 +107,23 @@ public class MajorConditionsFragment extends Fragment implements ClickListener {
         } else if(position == 2) {
             Intent intent = new Intent(getActivity(), MajorIllnessDescriptionActivity.class);
             getActivity().startActivity(intent);
-        }else if(position == 3) {
+        } else if(position == 3) {
+            Intent intent = new Intent(getActivity(), HIV.class);
+            getActivity().startActivity(intent);
+        }
+          else if(position == 4) {
             Intent intent = new Intent(getActivity(), Malaria.class);
             getActivity().startActivity(intent);
-        }else if(position == 4) {
+        }else if(position == 5) {
             Intent intent = new Intent(getActivity(), ManagementinSAM.class);
             getActivity().startActivity(intent);
-        }else if(position == 5) {
+        }else if(position == 6) {
             Intent intent = new Intent(getActivity(), Meningitis.class);
             getActivity().startActivity(intent);
-        }else if(position == 6) {
+        }else if(position == 7) {
             Intent intent = new Intent(getActivity(), Pneumonia.class);
             getActivity().startActivity(intent);
-        }else if(position == 7) {
+        }else if(position == 8) {
             Intent intent = new Intent(getActivity(), Tuberculosis.class);
             getActivity().startActivity(intent);
         }
