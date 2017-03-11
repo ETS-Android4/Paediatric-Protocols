@@ -13,11 +13,17 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.github.florent37.materialviewpager.header.MaterialViewPagerHeaderDecorator;
+import com.mwongera.paediatric_protocols.Anthropometry;
 import com.mwongera.paediatric_protocols.ClickListener;
 import com.mwongera.paediatric_protocols.DrugDescriptionActivity;
+import com.mwongera.paediatric_protocols.FluidinDiarrhoea;
 import com.mwongera.paediatric_protocols.MyAdapter;
+import com.mwongera.paediatric_protocols.PlanAActivity;
+import com.mwongera.paediatric_protocols.PlanBActivity;
+import com.mwongera.paediatric_protocols.PlanCActivity;
 import com.mwongera.paediatric_protocols.R;
 import com.mwongera.paediatric_protocols.Resuscitation;
+import com.mwongera.paediatric_protocols.ShockActivity;
 import com.mwongera.paediatric_protocols.item;
 
 import java.util.ArrayList;
@@ -94,10 +100,32 @@ public class Drugsfragment extends Fragment implements ClickListener {
 
     @Override
     public void itemClicked(View view, int position) {
-        if(position == 2) {
-            Intent intent = new Intent(getActivity(), Resuscitation.class);
+        if(position == 0) {
+            Intent intent = new Intent(getActivity(), DrugsActivity.class);
             getActivity().startActivity(intent);
-        } else {
+        }else if(position == 1) {
+            Intent intent = new Intent(getActivity(), MaintenanceFluids.class);
+            getActivity().startActivity(intent);
+        }else if(position == 2) {
+            Intent intent = new Intent(getActivity(), ShockActivity.class);
+            getActivity().startActivity(intent);
+        }else if(position == 3) {
+            Intent intent = new Intent(getActivity(), PlanAActivity.class);
+            getActivity().startActivity(intent);
+        }else if(position == 4) {
+            Intent intent = new Intent(getActivity(), PlanBActivity.class);
+            getActivity().startActivity(intent);
+        }else if(position == 5) {
+            Intent intent = new Intent(getActivity(), PlanCActivity.class);
+            getActivity().startActivity(intent);
+        }else if(position == 6) {
+            Intent intent = new Intent(getActivity(), FluidinDiarrhoea.class);
+            getActivity().startActivity(intent);
+        }else if(position == 7) {
+            Intent intent = new Intent(getActivity(), Anthropometry.class);
+            getActivity().startActivity(intent);
+        }
+        else {
             System.out.println("position...."+position);
         }
     }
