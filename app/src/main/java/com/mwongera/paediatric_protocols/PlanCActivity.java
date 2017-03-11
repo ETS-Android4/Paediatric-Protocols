@@ -36,7 +36,7 @@ public class PlanCActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_plan_c);
-        getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#f9a614")));
+        //getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#f9a614")));
         btn=(Button)findViewById(R.id.button1);
         btn1=(Button)findViewById(R.id.button2);
         txtstep1=(TextView)findViewById(R.id.textstep1);

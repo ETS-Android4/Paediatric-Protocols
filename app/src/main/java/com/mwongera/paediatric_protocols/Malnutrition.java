@@ -22,7 +22,7 @@ public class Malnutrition extends ListActivity {
         ListView ls=getListView();
         String []mal=getResources().getStringArray(R.array.malnutrition);
         setListAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,mal));
-        getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#f9a614")));
+       // getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#f9a614")));
     }
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {

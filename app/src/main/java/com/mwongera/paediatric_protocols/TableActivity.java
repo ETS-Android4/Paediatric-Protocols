@@ -28,7 +28,7 @@ public class TableActivity extends ListActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // setContentView(R.layout.activity_table);
-        getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#f9a614")));
+        //getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#f9a614")));
         ListView lst = getListView();
         items = getResources().getStringArray(R.array.TOC);
         setListAdapter(new ArrayAdapter<String>(this,

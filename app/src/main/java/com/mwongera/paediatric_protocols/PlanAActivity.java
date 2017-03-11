@@ -27,7 +27,7 @@ public class PlanAActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_plan_a);
-        getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#f9a614")));
+       // getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#f9a614")));
         final String customHtml ="<html><heading>Plan A </heading><p> 1) Continue breast feeding and encourage feeding if > 6 months";
         webv=(WebView)findViewById(R.id.webView1);
 

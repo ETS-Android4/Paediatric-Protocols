@@ -27,7 +27,7 @@ public class PMCT extends Activity {
         setContentView(R.layout.activity_pmtct);
         imgv = (ImageView) findViewById(R.id.imageView1);
         mAttacher = new PhotoViewAttacher(imgv);
-        getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#f9a614")));
+        //getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#f9a614")));
 
     }
 

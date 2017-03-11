@@ -110,8 +110,7 @@ public class MajorConditionsFragment extends Fragment implements ClickListener {
         } else if(position == 3) {
             Intent intent = new Intent(getActivity(), HIV.class);
             getActivity().startActivity(intent);
-        }
-          else if(position == 4) {
+        } else if(position == 4) {
             Intent intent = new Intent(getActivity(), Malaria.class);
             getActivity().startActivity(intent);
         }else if(position == 5) {

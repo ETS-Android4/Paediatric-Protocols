@@ -35,7 +35,7 @@ public class NewBornFluids extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_born_fluids);
-        getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#f9a614")));
+       // getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#f9a614")));
         inputWeight=(EditText)findViewById(R.id.editText1);
         txtvolume=(TextView)findViewById(R.id.textvolume);
         spinner=(Spinner)findViewById(R.id.spinner1);

@@ -32,7 +32,7 @@ public class PlanBActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_plan_b);
-        getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#f9a614")));
+       // getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#f9a614")));
         results=(TextView)findViewById(R.id.textResults);
         notes=(WebView)findViewById(R.id.webView1);
         inputweight=(EditText)findViewById(R.id.weight);

@@ -31,7 +31,7 @@ public class NeonatalJaundice extends Activity{
         imgv = (ImageView) findViewById(R.id.imageView1);
         mAttacher = new PhotoViewAttacher(imgv);
         createAlertbox();
-        getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#f9a614")));
+        //getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#f9a614")));
 
 
         mAttacher.setOnLongClickListener(new View.OnLongClickListener() {

@@ -34,7 +34,7 @@ public class MalnutritionFeeding extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_malnutrition_feeding);
 
-        getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#f9a614")));
+        //getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#f9a614")));
 
         inputWeight=(EditText)findViewById(R.id.editText1);
         tresults1=(TextView)findViewById(R.id.textacute);

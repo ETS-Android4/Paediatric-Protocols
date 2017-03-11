@@ -20,7 +20,7 @@ public class DrugActivity1 extends ListActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_drugs);
-        getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#f9a614")));
+        //getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#f9a614")));
         ListView lst= getListView();
         drugs=getResources().getStringArray(R.array.Drugs);
 

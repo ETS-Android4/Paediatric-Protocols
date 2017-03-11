@@ -20,7 +20,7 @@ public class HIV extends ListActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_major_illness);
-        getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#f9a614")));
+        //getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#f9a614")));
         lst=getListView();
         String illness[]= getResources().getStringArray(R.array.HIV);
         setListAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,illness));
