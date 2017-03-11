@@ -31,6 +31,40 @@
         </activity>
         <activity android:name=".Resuscitation" />
         <activity android:name=".BasicSupport" />
+        <activity android:name=".Anthropometry" />
+        <activity android:name=".AnthropometryWeightImages" />
+        <activity android:name=".Asthma" />
+        <activity android:name=".Convulsions" />
+        <activity android:name=".DrugActivity1" />
+        <activity android:name=".FeedingActivity" />
+        <activity android:name=".FluidDiarrhoeaCalculation" />
+        <activity android:name=".FluidinDiarrhoea" />
+        <activity android:name=".HIV" />
+        <activity android:name=".InfantSupport" />
+        <activity android:name=".Jaundice" />
+        <activity android:name=".MajorIllnessDescriptionActivity" />
+        <activity android:name=".Malaria" />
+        <activity android:name=".MalariaDoses" />
+        <activity android:name=".MalariaTreatmentPreparation" />
+        <activity android:name=".Malnutrition" />
+        <activity android:name=".MalnutritionFeeding" />
+        <activity android:name=".ManagementinSAM" />
+        <activity android:name=".Meningitis" />
+        <activity android:name=".NeonatalJaundice" />
+        <activity android:name=".NeonatalSepsis" />
+        <activity android:name=".NewbornCare" />
+        <activity android:name=".NewBornFluids" />
+        <activity android:name=".PITC" />
+        <activity android:name=".PlanAActivity" />
+        <activity android:name=".PlanBActivity" />
+        <activity android:name=".PlanCActivity" />
+        <activity android:name=".PMCT" />
+        <activity android:name=".Pneumonia" />
+        <activity android:name=".Sepsis" />
+        <activity android:name=".ShockActivity" />
+        <activity android:name=".TableActivity" />
+        <activity android:name=".TreatmentFailure" />
+        <activity android:name=".Tuberculosis" />
     </application>
 
 </manifest>
