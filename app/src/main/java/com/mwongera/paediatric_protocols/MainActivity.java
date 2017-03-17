@@ -1,11 +1,9 @@
 package com.mwongera.paediatric_protocols;
-
-import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentStatePagerAdapter;
-import android.support.v4.app.ListFragment;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Toast;
@@ -37,27 +35,35 @@ public class MainActivity extends DrawerActivity {
 
         setDrawerTheme(
                 new DrawerTheme(this)
-                        .setBackgroundColorRes(R.color.window_background_3)
-                        .setTextColorPrimaryRes(R.color.text_color_primary_3)
-                        .setTextColorSecondaryRes(R.color.text_color_secondary_3)
+                        .setBackgroundColorRes(R.color.text_color_primary_3)
+                        .setTextColorPrimaryRes(R.color.color_accent)
         );
-        addItems(new DrawerItem()
-                        .setTextPrimary(getString(R.string.lorem_ipsum_short))
-                        .setTextSecondary(getString(R.string.lorem_ipsum_long)),
+        addItems(new DrawerFragmentItem()
+                        .setFragment(new Drugsfragment())
+                        .setTextPrimary(getString(R.string.drugs_fragment))
+                        .setImage(ContextCompat.getDrawable(this, R.drawable.pills)),
                 new DrawerFragmentItem()
-                        .setFragment(new ListFragment())
-                        .setTextPrimary(getString(R.string.lorem_ipsum_medium)),
+                        .setFragment(new TriageFragment())
+                        .setTextPrimary(getString(R.string.triage_fragment))
+                        .setImage(ContextCompat.getDrawable(this, R.drawable.hospital)),
                 new DrawerFragmentItem()
-                        .setFragment(new Fragment())
-                        .setImage(ContextCompat.getDrawable(this, R.drawable.ic_flag_white))
-                        .setTextPrimary(getString(R.string.lorem_ipsum_short))
-                        .setTextSecondary(getString(R.string.lorem_ipsum_long))
+                        .setFragment(new MajorConditionsFragment())
+                        .setTextPrimary(getString(R.string.major_conditions_fragment))
+                        .setImage(ContextCompat.getDrawable(this, R.drawable.heart)),
+                new DrawerFragmentItem()
+                        .setFragment(new NewbornCareFragment())
+                        .setTextPrimary(getString(R.string.newborn_care_fragment))
+                        .setImage(ContextCompat.getDrawable(this, R.drawable.medicine)),
+                new DrawerFragmentItem()
+                        .setFragment(new NewsFragment())
+                        .setImage(ContextCompat.getDrawable(this, R.drawable.text_lines))
+                        .setTextPrimary(getString(R.string.news_fragment))
+
         );
         setOnItemClickListener(new DrawerItem.OnItemClickListener() {
             @Override
             public void onClick(DrawerItem item, long id, int position) {
                 selectItem(position);
-                Toast.makeText(MainActivity.this, "Clicked item #" + position, Toast.LENGTH_SHORT).show();
             }
         });
 

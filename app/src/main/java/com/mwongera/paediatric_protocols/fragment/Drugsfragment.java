@@ -77,23 +77,23 @@ public class Drugsfragment extends Fragment implements ClickListener {
     }
 
     private void prepareItem() {
-        item item = new item("Essential Drugs", "");
+        item item = new item("Essential Drugs");
         itemList.add(item);
-        item = new item("Maintenance Fluids", "");
+        item = new item("Maintenance Fluids");
         itemList.add(item);
-        item = new item("Dehydration-Shock management", "");
+        item = new item("Dehydration-Shock management");
         itemList.add(item);
-        item= new item("Dehydration-Plan A", "");
+        item= new item("Dehydration-Plan A");
         itemList.add(item);
-        item = new item("Dehydration-Plan B", "");
+        item = new item("Dehydration-Plan B");
         itemList.add(item);
-        item = new item("Dehydration-Plan C", "");
+        item = new item("Dehydration-Plan C");
         itemList.add(item);
-        item= new item("Malnutrition-Fluid management", "");
+        item= new item("Malnutrition-Fluid management");
         itemList.add(item);
-        item= new item("Malnutrition-Feeding", "");
+        item= new item("Malnutrition-Feeding");
         itemList.add(item);
-        item= new item("Anthropometry","");
+        item= new item("Anthropometry");
         itemList.add(item);
 
         //mAdapter.notifyDataSetChanged();
@@ -134,6 +134,10 @@ public class Drugsfragment extends Fragment implements ClickListener {
             System.out.println("position...."+position);
         }
     }
+    public void showFragment(int position) {
+
+    }
+
 
 
     public static Drugsfragment newInstance() {

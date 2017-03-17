@@ -13,6 +13,9 @@ import android.widget.ListView;
 
 import com.mwongera.paediatric_protocols.DrugDescriptionActivity;
 import com.mwongera.paediatric_protocols.R;
+import com.mwongera.paediatric_protocols.item;
+
+import java.util.ArrayList;
 
 /**
  * Created by mwongera on 3/11/17.
@@ -22,6 +25,7 @@ public class DrugsActivity extends Fragment {
 
 
     String drugs[];
+    ArrayList<item> arrayList = new ArrayList<item>();
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

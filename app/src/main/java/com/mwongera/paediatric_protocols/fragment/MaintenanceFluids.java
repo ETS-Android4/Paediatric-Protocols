@@ -23,6 +23,7 @@ import uk.co.senab.photoview.PhotoViewAttacher;
  */
 public class MaintenanceFluids extends Fragment{
 
+
     ImageView imgv;
     AlertDialog dialog;
 
