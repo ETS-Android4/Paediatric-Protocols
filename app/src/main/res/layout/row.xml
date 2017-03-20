@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/card"
-    android:layout_marginTop="5dp"
-    android:layout_marginLeft="5dp"
-    android:layout_marginRight="5dp"
-    card_view:cardCornerRadius="5dp">
+    android:layout_marginTop="0dp"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+    card_view:cardCornerRadius="2dp">
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -27,7 +27,7 @@
             android:id="@+id/title"
             android:paddingBottom="10dp"
             android:paddingLeft="10dp"
-            android:textColor="#CC0033"
+            android:textColor="@color/color_accent"
             android:textSize="24dp"
             />
     </LinearLayout>

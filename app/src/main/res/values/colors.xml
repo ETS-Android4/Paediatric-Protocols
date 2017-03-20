@@ -28,11 +28,13 @@
     <!-- Blue Grey 800 -->
     <color name="window_background_3">#263238</color>
     <!-- White 100% -->
-    <color name="text_color_primary_3">#FFFFFF</color>
+    <color name="text_color_primary_3">#ffffff</color>
     <!-- White 70% -->
     <color name="text_color_secondary_3">#B3FFFFFF</color>
     <color name="statusBarColor">@color/blue</color>
     <color name="blue">#303F9F</color>
     <color name="drawerArrowColor">@android:color/white</color>
     <color name="primary_material_light">#e16f6f</color>
+    <color name="navigationBarColor">@android:color/black</color>
+    <color name="primary_text_default_material_light">#ffffff</color>
 </resources>

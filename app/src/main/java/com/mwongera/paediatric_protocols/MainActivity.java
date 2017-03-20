@@ -28,9 +28,6 @@ import com.mwongera.paediatric_protocols.fragment.TriageFragment;
 public class MainActivity extends DrawerActivity {
     private MaterialViewPager mViewPager;
     private Toolbar toolbar;
-    private DrawerLayout mDrawerLayout;
-    private ActionBarDrawerToggle mDrawerToggle;
-    private LinearLayout mDrawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
