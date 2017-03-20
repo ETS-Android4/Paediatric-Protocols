@@ -1,5 +1,6 @@
 package com.mwongera.paediatric_protocols.fragment;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -21,7 +22,7 @@ import uk.co.senab.photoview.PhotoViewAttacher;
 /**
  * Created by mwongera on 2/22/17.
  */
-public class MaintenanceFluids extends Fragment{
+public class MaintenanceFluids extends Activity{
 
 
     ImageView imgv;
@@ -37,17 +38,17 @@ public class MaintenanceFluids extends Fragment{
     Button btn1,btn2;
     String results1,results2,results3,results4;
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_maintainace_fluids);
 
-        View rootView = inflater.inflate(R.layout.activity_maintainace_fluids, container, false);
-        inputWeight=(EditText) rootView.findViewById(R.id.editText1);
-        txtShock=(TextView) rootView.findViewById(R.id.textShock);
-        txtMaintaince=(TextView) rootView.findViewById(R.id.textMaintainance);
-        txtAlternative=(TextView) rootView.findViewById(R.id.textAlternative);
-        txtbolus=(TextView) rootView.findViewById(R.id.textBolus);
-        btn1=(Button)rootView.findViewById(R.id.button1);
-        btn2=(Button)rootView.findViewById(R.id.button2);
+        inputWeight=(EditText) findViewById(R.id.editText1);
+        txtShock=(TextView) findViewById(R.id.textShock);
+        txtMaintaince=(TextView) findViewById(R.id.textMaintainance);
+        txtAlternative=(TextView) findViewById(R.id.textAlternative);
+        txtbolus=(TextView) findViewById(R.id.textBolus);
+        btn1=(Button) findViewById(R.id.button1);
+        btn2=(Button) findViewById(R.id.button2);
         btn1.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -69,7 +70,7 @@ public class MaintenanceFluids extends Fragment{
                     //add a keyboard remover function
                     calculateFeeding(weight);
                 }else{
-                    Toast.makeText(getActivity(), "Enter details correctly",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Enter details correctly",Toast.LENGTH_SHORT).show();
                 }
 
 
@@ -96,7 +97,6 @@ public class MaintenanceFluids extends Fragment{
 
 
 
-        return rootView;
     }
     private void calculateFeeding(double weight) {
 

@@ -34,4 +34,5 @@
     <color name="statusBarColor">@color/blue</color>
     <color name="blue">#303F9F</color>
     <color name="drawerArrowColor">@android:color/white</color>
+    <color name="primary_material_light">#e16f6f</color>
 </resources>

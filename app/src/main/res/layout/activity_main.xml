@@ -4,6 +4,7 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingTop="10dp"
     >
 
     <com.github.florent37.materialviewpager.MaterialViewPager
@@ -23,6 +24,7 @@
         app:viewpager_transparentToolbar="true"
         app:viewpager_animatedHeaderImage="true"
         app:viewpager_disableToolbar="false"
+
 
 
         xmlns:app="http://schemas.android.com/apk/res-auto"

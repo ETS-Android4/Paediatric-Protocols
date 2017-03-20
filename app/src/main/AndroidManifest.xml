@@ -29,6 +29,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity android:name=".fragment.MaintenanceFluids"></activity>
         <activity android:name=".Resuscitation" />
         <activity android:name=".BasicSupport" />
         <activity android:name=".Anthropometry" />

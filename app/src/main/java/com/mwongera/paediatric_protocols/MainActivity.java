@@ -3,9 +3,13 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.github.florent37.materialviewpager.MaterialViewPager;
@@ -24,7 +28,9 @@ import com.mwongera.paediatric_protocols.fragment.TriageFragment;
 public class MainActivity extends DrawerActivity {
     private MaterialViewPager mViewPager;
     private Toolbar toolbar;
-
+    private DrawerLayout mDrawerLayout;
+    private ActionBarDrawerToggle mDrawerToggle;
+    private LinearLayout mDrawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +38,13 @@ public class MainActivity extends DrawerActivity {
         setContentView(R.layout.activity_main);
 
         setTitle("");
+
+        mViewPager = (MaterialViewPager) findViewById(R.id.materialViewPager);
+        toolbar = mViewPager.getToolbar();
+
+        if (toolbar != null) {
+            setSupportActionBar(toolbar);
+        }
 
         setDrawerTheme(
                 new DrawerTheme(this)
@@ -67,12 +80,7 @@ public class MainActivity extends DrawerActivity {
             }
         });
 
-        mViewPager = (MaterialViewPager) findViewById(R.id.materialViewPager);
-        toolbar = mViewPager.getToolbar();
 
-        if (toolbar != null) {
-            setSupportActionBar(toolbar);
-        }
 
         mViewPager.getViewPager().setAdapter(new FragmentStatePagerAdapter(getSupportFragmentManager()) {
             @Override
