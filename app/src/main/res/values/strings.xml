@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">Paediatric_Protocols</string>
     <string name="drawer_open">Menu open</string>
     <string name="drawer_close">Menu closed</string>
@@ -205,4 +205,17 @@ for 24 hrs then 62.5–250 micrograms daily in 1–2 doses</p></html></string>
     <string name="title_activity_maintainace_fluids">Maintainace Fluids</string>
     <string name="title_activity_new_born_fluids">NewBorn Fluids and Feeds</string>
     <string name="title_activity_aboutus">Aboutus</string>
+
+    <!-- Actions -->
+    <string name="action_toggle">Toggle indicator</string>
+    <string name="action_add_item">Add item</string>
+    <string name="action_remove_item">Remove item</string>
+    <string name="action_previous">Previous</string>
+    <string name="action_next">Next</string>
+    <string name="action_finish">Finish</string>
+    <string name="action_info">Photo info</string>
+    <string name="action_photo">View photo</string>
+
+    <string name="title_template_step1">PITC <xliff:g id="step_number">%1$d</xliff:g>: HIV</string>
+    <string name="title_template_step2">PMTC <xliff:g id="step_number">%1$d</xliff:g>: HIV</string>
 </resources>

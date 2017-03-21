@@ -68,6 +68,8 @@
         <activity android:name=".Tuberculosis" />
         <activity android:name=".fragment.TriageOfSickChildren" />
         <activity android:name=".fragment.Procedures" />
+        <activity android:name=".fragment.HivSlideActivity">
+        </activity>
 
     </application>
 
