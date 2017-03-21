@@ -24,27 +24,8 @@ public class PMTCFragment extends Fragment {
 
     ImageView imgv;
     AlertDialog dialog;
-    public static final String ARG_PAGE = "page";
-    private int mPageNumber;
 
     PhotoViewAttacher mAttacher;
-
-    public static PMTCFragment create(int pageNumber) {
-        PMTCFragment fragment = new PMTCFragment();
-        Bundle args = new Bundle();
-        args.putInt(ARG_PAGE, pageNumber);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    public PMTCFragment() {
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        mPageNumber = getArguments().getInt(ARG_PAGE);
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -56,7 +37,7 @@ public class PMTCFragment extends Fragment {
 
         // Set the title view to show the page number.
         ((TextView) rootView.findViewById(android.R.id.text1)).setText(
-                getString(R.string.title_template_step2, mPageNumber + 1));
+                getString(R.string.title_template_step2));
 
         return rootView;
 

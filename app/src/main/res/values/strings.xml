@@ -216,6 +216,6 @@ for 24 hrs then 62.5–250 micrograms daily in 1–2 doses</p></html></string>
     <string name="action_info">Photo info</string>
     <string name="action_photo">View photo</string>
 
-    <string name="title_template_step1">PITC <xliff:g id="step_number">%1$d</xliff:g>: HIV</string>
-    <string name="title_template_step2">PMTC <xliff:g id="step_number">%1$d</xliff:g>: HIV</string>
+    <string name="title_template_step1">PITC <xliff:g id="step_number"></xliff:g></string>
+    <string name="title_template_step2">PMTC <xliff:g id="step_number"></xliff:g></string>
 </resources>
