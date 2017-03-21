@@ -139,11 +139,6 @@ public class Drugsfragment extends Fragment implements ClickListener {
             System.out.println("position...."+position);
         }
     }
-    public void showFragment(int position) {
-
-    }
-
-
 
     public static Drugsfragment newInstance() {
         return new Drugsfragment();

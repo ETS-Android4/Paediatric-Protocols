@@ -67,6 +67,7 @@
         <activity android:name=".TreatmentFailure" />
         <activity android:name=".Tuberculosis" />
         <activity android:name=".fragment.TriageOfSickChildren" />
+        <activity android:name=".fragment.Procedures" />
 
     </application>
 
