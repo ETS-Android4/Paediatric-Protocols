@@ -130,9 +130,8 @@ public class Drugsfragment extends Fragment implements ClickListener {
         }else if(position == 7) {
             Intent intent = new Intent(getActivity(), MalnutritionFeeding.class);
             getActivity().startActivity(intent);
-        }
-        else if(position == 7) {
-            Intent intent = new Intent(getActivity(), Anthropometry.class);
+        }else if(position == 8) {
+            Intent intent = new Intent(getActivity(), AnthropometrySlideActivity.class);
             getActivity().startActivity(intent);
         }
         else {

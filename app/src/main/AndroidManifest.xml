@@ -70,6 +70,8 @@
         <activity android:name=".fragment.Procedures" />
         <activity android:name=".fragment.HivSlideActivity">
         </activity>
+        <activity android:name=".fragment.AnthropometrySlideActivity">
+        </activity>
 
     </application>
 

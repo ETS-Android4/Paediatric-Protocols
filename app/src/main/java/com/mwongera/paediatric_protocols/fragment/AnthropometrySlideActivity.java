@@ -102,22 +102,22 @@ public class AnthropometrySlideActivity extends FragmentActivity {
             switch(position){
                 case 0:
                     mWFH0 = new WFH0_fragment();
-                    return WFH0_fragment;
+                    return mWFH0;
                 case 1:
                     mWeightestimation = new WeightEstimationFragment();
-                    return WeightEstimationFragment;
+                    return mWeightestimation;
                 case 2:
                     mWFH1 = new WFH1_fragment();
-                    return WFH1_fragment;
+                    return mWFH1;
                 case 3:
                     mWFH2 = new WFH2_fragment();
-                    return WFH2_fragment;
+                    return mWFH2;
                 case 4:
                     mWFH3 = new WFH3_fragment();
-                    return WFH3_fragment;
+                    return mWFH3;
                 case 5:
                     mWFH4 = new WFH4_fragment();
-                    return WFH4_fragment;
+                    return mWFH4;
 
                 default: break;
 

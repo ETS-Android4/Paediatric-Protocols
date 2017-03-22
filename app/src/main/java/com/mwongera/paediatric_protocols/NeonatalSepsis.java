@@ -44,7 +44,7 @@ public class NeonatalSepsis extends Activity {
             }
         });
 
-        getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#f9a614")));
+        //getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#f9a614")));
     }
     public void createAlertbox(){
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,

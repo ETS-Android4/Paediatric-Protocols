@@ -93,7 +93,7 @@ public class TriageFragment extends Fragment implements ClickListener{
         }else if(position == 2) {
             Intent intent = new Intent(getActivity(), InfantSupport.class);
             getActivity().startActivity(intent);
-        }else if(position == 2) {
+        }else if(position == 3) {
             Intent intent = new Intent(getActivity(), Procedures.class);
             getActivity().startActivity(intent);
         }

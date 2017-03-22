@@ -97,8 +97,7 @@ public class NewbornCareFragment extends Fragment implements ClickListener {
         }else if(position == 3) {
             Intent intent = new Intent(getActivity(), NeonatalJaundice.class);
             getActivity().startActivity(intent);
-        }
-        else {
+        }else {
             System.out.println("position...."+position);
         }
     }
