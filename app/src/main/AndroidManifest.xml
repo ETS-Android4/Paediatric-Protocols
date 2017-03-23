@@ -72,6 +72,8 @@
         </activity>
         <activity android:name=".fragment.AnthropometrySlideActivity">
         </activity>
+        <activity android:name=".fragment.DrugsActivity">
+        </activity>
 
     </application>
 

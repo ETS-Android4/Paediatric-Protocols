@@ -1,6 +1,8 @@
 package com.mwongera.paediatric_protocols.fragment;
 
 
+import android.app.Activity;
+import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -21,39 +23,34 @@ import java.util.ArrayList;
  * Created by mwongera on 3/11/17.
  */
 
-public class DrugsActivity extends Fragment {
+public class DrugsActivity extends ListActivity {
 
 
     String drugs[];
     ArrayList<item> arrayList = new ArrayList<item>();
+    ListView lst;
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+     protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        //setContentView(R.layout.activity_drugs);
 
-        View rootView = inflater.inflate(R.layout.activity_drugs, container, false);
-
-        ListView lst= (ListView)rootView.findViewById(R.id.listView1);
+        lst=getListView();
         drugs=getResources().getStringArray(R.array.Drugs);
-        ArrayAdapter<String> mine=	new ArrayAdapter<String> (getActivity(),android.R.layout.simple_list_item_1,drugs);
-        lst.setAdapter(mine);
+        setListAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,drugs));
+    }
 
-        lst.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+    @Override
+    protected void onListItemClick(ListView l, View v, int position, long id) {
+        // TODO Auto-generated method stub
+        super.onListItemClick(l, v, position, id);
+        openWorkplace(position);
 
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view,
-                                    int position, long id) {
-                //do something
-                openWorkplace(position);
-            }
-        });
-
-        return rootView;
     }
 
 
 
     private void openWorkplace(int ps) {
-        Intent i = new Intent(getActivity(), DrugDescriptionActivity.class);
+        Intent i = new Intent(DrugsActivity.this, DrugDescriptionActivity.class);
         String drugtype=drugs[ps];
         i.putExtra("drugtype", drugtype);
         i.putExtra("position", ps+"");

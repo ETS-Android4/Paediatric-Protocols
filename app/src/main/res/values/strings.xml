@@ -218,4 +218,9 @@ for 24 hrs then 62.5–250 micrograms daily in 1–2 doses</p></html></string>
 
     <string name="title_template_step1">PITC <xliff:g id="step_number"></xliff:g></string>
     <string name="title_template_step2">PMTC <xliff:g id="step_number"></xliff:g></string>
+    <string name="title_template_step3">Weight Estimation <xliff:g id="step_number"></xliff:g></string>
+    <string name="title_template_step4">WFH 1 <xliff:g id="step_number"></xliff:g></string>
+    <string name="title_template_step5">WFH 2 <xliff:g id="step_number"></xliff:g></string>
+    <string name="title_template_step6">WFH 3 <xliff:g id="step_number"></xliff:g></string>
+    <string name="title_template_step7">WFH 4 <xliff:g id="step_number"></xliff:g></string>
 </resources>
