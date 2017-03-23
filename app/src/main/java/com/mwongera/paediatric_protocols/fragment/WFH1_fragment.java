@@ -35,7 +35,7 @@ public class WFH1_fragment extends Fragment {
 
         // Set the title view to show the page number.
         ((TextView) rootView.findViewById(android.R.id.text1)).setText(
-                getString(R.string.title_template_step4));
+                getString(R.string.title_template_step5));
 
         return rootView;
 

@@ -101,11 +101,11 @@ public class AnthropometrySlideActivity extends FragmentActivity {
         public Fragment getItem(int position) {
             switch(position){
                 case 0:
-                    mWFH0 = new WFH0_fragment();
-                    return mWFH0;
-                case 1:
                     mWeightestimation = new WeightEstimationFragment();
                     return mWeightestimation;
+                case 1:
+                    mWFH0 = new WFH0_fragment();
+                    return mWFH0;
                 case 2:
                     mWFH1 = new WFH1_fragment();
                     return mWFH1;

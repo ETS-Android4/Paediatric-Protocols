@@ -223,4 +223,6 @@ for 24 hrs then 62.5–250 micrograms daily in 1–2 doses</p></html></string>
     <string name="title_template_step5">WFH 2 <xliff:g id="step_number"></xliff:g></string>
     <string name="title_template_step6">WFH 3 <xliff:g id="step_number"></xliff:g></string>
     <string name="title_template_step7">WFH 4 <xliff:g id="step_number"></xliff:g></string>
+    <string name="title_template_step8">WFH 5 <xliff:g id="step_number"></xliff:g></string>
+
 </resources>
