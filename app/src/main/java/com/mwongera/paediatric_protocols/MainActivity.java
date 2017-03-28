@@ -1,4 +1,5 @@
 package com.mwongera.paediatric_protocols;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentStatePagerAdapter;
@@ -7,6 +8,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -26,8 +28,11 @@ import com.mwongera.paediatric_protocols.fragment.NewsFragment;
 import com.mwongera.paediatric_protocols.fragment.TriageFragment;
 
 public class MainActivity extends DrawerActivity {
+
+    private DrawerLayout mDrawerLayout;
     private MaterialViewPager mViewPager;
     private Toolbar toolbar;
+    private ActionBarDrawerToggle mDrawerToggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +48,7 @@ public class MainActivity extends DrawerActivity {
             setSupportActionBar(toolbar);
         }
 
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         setDrawerTheme(
                 new DrawerTheme(this)
                         .setBackgroundColorRes(R.color.text_color_primary_3)

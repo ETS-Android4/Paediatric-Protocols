@@ -139,6 +139,8 @@ public class Drugsfragment extends Fragment implements ClickListener {
         }
     }
 
+    
+
     public static Drugsfragment newInstance() {
         return new Drugsfragment();
     }

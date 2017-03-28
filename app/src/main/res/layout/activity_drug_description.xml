@@ -38,6 +38,7 @@
     <EditText
         android:id="@+id/editText1"
         android:hint="weight"
+        android:textColor="@android:color/black"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -48,6 +49,7 @@
     </EditText>
    <EditText
         android:id="@+id/editText2"
+        android:textColor="@android:color/black"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"

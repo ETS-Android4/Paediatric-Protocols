@@ -17,6 +17,7 @@
         android:layout_alignParentRight="true"
         android:hint="Input weight"
         android:layout_alignParentTop="true"
+        android:textColor="@android:color/black"
         android:ems="10"
         android:inputType="numberDecimal"
         >
