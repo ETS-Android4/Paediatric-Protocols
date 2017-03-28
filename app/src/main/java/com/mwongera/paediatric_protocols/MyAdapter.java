@@ -1,5 +1,6 @@
 package com.mwongera.paediatric_protocols;
 
+import android.graphics.Typeface;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -42,12 +43,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             });
         }
     }
+
     public void setClickListener(ClickListener clickListener){
         this.clickListener = clickListener;
     }
     @Override
     public MyAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.row, parent, false);
+
         return new MyViewHolder(itemView);
     }
     @Override

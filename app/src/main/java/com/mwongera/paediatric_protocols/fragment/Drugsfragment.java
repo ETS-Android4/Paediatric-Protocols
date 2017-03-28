@@ -50,15 +50,18 @@ public class Drugsfragment extends Fragment implements ClickListener {
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mDrawerToggle;
 
+    public Drugsfragment(){}
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         drugs=getResources().getStringArray(R.array.Drugs);
         View view = inflater.inflate(R.layout.fragment_recyclerview, container, false);
 
-        Typeface myTypeface = Typeface.createFromAsset(getActivity().getAssets(), "fonts/");
         TextView tv = (TextView) view.findViewById(R.id.title);
+        Typeface myTypeface = Typeface.createFromAsset(getActivity().getAssets(), "ClassicGrotesqueProRegular.ttf");
         tv.setTypeface(myTypeface);
+
 
         return view;
 
