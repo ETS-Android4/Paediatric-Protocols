@@ -1,13 +1,34 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#fff"
+    android:background="#c2c2c2"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".ShockActivity" >
+
+
+    <LinearLayout
+        android:id="@+id/layoer72"
+        android:layout_width="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        <TextView
+            android:id="@+id/textDrug"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:background="#ff0099cc"
+            android:text="Dehydration Plan-A"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="30dp" />
+
+
+    </LinearLayout>
 
     <EditText
         android:id="@+id/weight"
@@ -20,6 +41,8 @@
         android:textColor="@android:color/black"
         android:ems="10"
         android:inputType="numberDecimal"
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/layoer72"
         >
 
         <requestFocus />
@@ -36,19 +59,29 @@
 
         >
 
-        <Button
+        <android.support.v7.widget.AppCompatButton
             android:id="@+id/button1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="50"
-            android:text="Calculate" />
+            android:text="Calculate"
+            android:textColor="@color/text_color_primary_3"
+            android:backgroundTint="@color/holo_blue_dark"
+            android:background="@color/holo_blue_dark"
+            android:layout_marginRight="2dp"
+            />
 
-        <Button
+        <android.support.v7.widget.AppCompatButton
             android:id="@+id/button2"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="50"
-            android:text="clear" />
+            android:text="clear"
+            android:textColor="@color/text_color_primary_3"
+            android:backgroundTint="@color/holo_blue_dark"
+            android:background="@color/holo_blue_dark"
+            android:layout_marginLeft="2dp"
+            />
 
     </LinearLayout>
     <LinearLayout
@@ -66,10 +99,8 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/layoer1"
-
             android:lines="3"
             android:background="#fff79a"
-            android:text="Medium Text"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <WebView

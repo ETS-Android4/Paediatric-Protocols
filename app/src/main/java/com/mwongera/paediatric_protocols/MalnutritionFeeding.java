@@ -44,6 +44,7 @@ public class MalnutritionFeeding extends Activity {
         btn1=(Button)findViewById(R.id.button1);
         btn2=(Button)findViewById(R.id.button2);
 
+
         btn1.setOnClickListener(new View.OnClickListener() {
 
             @Override

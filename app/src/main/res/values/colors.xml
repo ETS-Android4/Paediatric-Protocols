@@ -4,7 +4,7 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="genre">#666666</color>
-    <color name="year">#888888</color>
+    <color name="year">#c2c2c2</color>
     <color name="list_divider">#098947</color>
     <color name="list_row_start_color">#ffffff</color>
     <color name="list_row_end_color">#ffffff</color>
@@ -37,5 +37,6 @@
     <color name="primary_material_light">#e16f6f</color>
     <color name="navigationBarColor">@android:color/black</color>
     <color name="primary_text_default_material_light">#ffffff</color>
+
 
 </resources>

@@ -52,7 +52,7 @@ public class MainActivity extends DrawerActivity {
         setDrawerTheme(
                 new DrawerTheme(this)
                         .setBackgroundColorRes(R.color.text_color_primary_3)
-                        .setTextColorPrimaryRes(R.color.color_accent)
+                        .setTextColorPrimaryRes(R.color.navigationBarColor)
         );
         addItems(new DrawerFragmentItem()
                         .setFragment(new Drugsfragment())

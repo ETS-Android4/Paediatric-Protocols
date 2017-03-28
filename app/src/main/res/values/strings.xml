@@ -5,11 +5,11 @@
     <string name="hello_world">Custom drawer implementation for Material design apps.\n\nMade by <b>Heinrich Reimer</b></string>
     <string name="hello_world2">Example of using <i>DrawerFrameLayout</i> for the drawer.\nThis drawer has a custom max width of 250dp.\n\nCheck out the sample code on GitHub!</string>
     <string name="hello_world3">Example of using <i>DrawerActivity</i> for the drawer.\nThis drawer shows theming and has a custom <i>Toolbar</i> set.\n\nVery simple ;)</string>
-    <string name="drugs_fragment" translatable="false">DRUGS</string>
-    <string name="triage_fragment" translatable="false">TRIAGE/EMERGENCY</string>
-    <string name="major_conditions_fragment" translatable="false">MAJOR CONDITIONS</string>
-    <string name="newborn_care_fragment" translatable="false">NEWBORN CARE</string>
-    <string name="news_fragment" translatable="false">NEWS</string>
+    <string name="drugs_fragment" translatable="false">Drugs</string>
+    <string name="triage_fragment" translatable="false">Triage/Emergency</string>
+    <string name="major_conditions_fragment" translatable="false">Major conditions</string>
+    <string name="newborn_care_fragment" translatable="false">Newborn care</string>
+    <string name="news_fragment" translatable="false">News</string>
     <string name="exit">EXIT</string>
 
     <string name="drawer_frame_layout">DrawerFrameLayout</string>
