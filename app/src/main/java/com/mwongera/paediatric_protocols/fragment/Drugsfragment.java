@@ -1,6 +1,7 @@
 package com.mwongera.paediatric_protocols.fragment;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -13,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.github.florent37.materialviewpager.header.MaterialViewPagerHeaderDecorator;
 import com.mwongera.paediatric_protocols.Anthropometry;
@@ -52,7 +54,14 @@ public class Drugsfragment extends Fragment implements ClickListener {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         drugs=getResources().getStringArray(R.array.Drugs);
-        return inflater.inflate(R.layout.fragment_recyclerview, container, false);
+        View view = inflater.inflate(R.layout.fragment_recyclerview, container, false);
+
+        Typeface myTypeface = Typeface.createFromAsset(getActivity().getAssets(), "fonts/");
+        TextView tv = (TextView) view.findViewById(R.id.title);
+        tv.setTypeface(myTypeface);
+
+        return view;
+
     }
 
     @Override

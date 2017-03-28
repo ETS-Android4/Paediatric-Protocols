@@ -33,7 +33,9 @@
 
     <style name="Appbase3" parent="Theme.AppCompat.Light.NoActionBar" />
 
-    <style name="AppTheme2" parent="Theme.AppCompat.Light.NoActionBar" />
+    <style name="AppTheme2" parent="Theme.AppCompat.Light.NoActionBar" >
+        <item name="android:textColorPrimaryInverse">@color/navigationBarColor</item>
+    </style>
 
     <style name="AppTheme3" parent="Theme.AppCompat.Light.NoActionBar" />
 
