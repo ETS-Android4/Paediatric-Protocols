@@ -59,7 +59,7 @@ public class Drugsfragment extends Fragment implements ClickListener {
         View view = inflater.inflate(R.layout.fragment_recyclerview, container, false);
 
         TextView tv = (TextView) view.findViewById(R.id.title);
-        Typeface myTypeface = Typeface.createFromAsset(getActivity().getAssets(), "ClassicGrotesqueProRegular.ttf");
+        Typeface myTypeface = Typeface.createFromAsset(getActivity().getAssets(), "ClassicGrotesquePro_Regular.ttf");
         tv.setTypeface(myTypeface);
 
 
