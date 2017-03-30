@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.widget.ActionBarOverlayLayout;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -61,8 +62,10 @@ public class Drugsfragment extends Fragment implements ClickListener {
         //TextView tv = (TextView) view.findViewById(R.id.title);
         //Typeface myTypeface = Typeface.createFromAsset(getActivity().getAssets(), "ClassicGrotesquePro_Regular.ttf");
         //tv.setTypeface(myTypeface);
+        //TextView mTxtTitle = (TextView) view.findViewById(R.id.txtTitle);
+        //mTxtTitle.setText(getArguments().getString(TEXT_FRAGMENT));
 
-
+       // view.setLayoutParams(new ActionBarOverlayLayout.LayoutParams(ActionBarOverlayLayout.LayoutParams.MATCH_PARENT, ActionBarOverlayLayout.LayoutParams.MATCH_PARENT ));
         return view;
 
     }
