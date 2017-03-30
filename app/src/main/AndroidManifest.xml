@@ -74,6 +74,19 @@
         </activity>
         <activity android:name=".fragment.DrugsActivity">
         </activity>
+        <activity android:name=".Drugs_drawer"
+            android:theme="@style/DrawerTheme"
+            >
+        </activity>
+        <activity android:name=".MajorConditions_drawer"
+            android:theme="@style/DrawerTheme"
+            ></activity>
+        <activity android:name=".Newborn_Drawer"
+            android:theme="@style/DrawerTheme"
+            ></activity>
+        <activity android:name=".Triage_Drawer"
+            android:theme="@style/DrawerTheme"
+            ></activity>
 
     </application>
 

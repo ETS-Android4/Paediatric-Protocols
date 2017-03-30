@@ -101,14 +101,28 @@ public class MainActivity extends DrawerActivity {
                             }
                         })
                 ,
-                new DrawerFragmentItem()
-                        .setFragment(new MajorConditionsFragment())
+                new DrawerItem()
                         .setTextPrimary(getString(R.string.major_conditions_fragment))
-                        .setImage(ContextCompat.getDrawable(this, R.drawable.heart)),
-                new DrawerFragmentItem()
-                        .setFragment(new NewbornCareFragment())
+                        .setImage(ContextCompat.getDrawable(this, R.drawable.heart))
+                        .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
+                            @Override
+                            public void onClick(DrawerItem drawerItem, long id, int position) {
+                                Intent i = new Intent(MainActivity.this, MajorConditions_drawer.class);
+                                startActivity(i);
+                            }
+                        })
+                ,
+                new DrawerItem()
                         .setTextPrimary(getString(R.string.newborn_care_fragment))
-                        .setImage(ContextCompat.getDrawable(this, R.drawable.medicine)),
+                        .setImage(ContextCompat.getDrawable(this, R.drawable.medicine))
+                        .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
+                            @Override
+                            public void onClick(DrawerItem drawerItem, long id, int position) {
+                                Intent i = new Intent(MainActivity.this, Newborn_Drawer.class);
+                                startActivity(i);
+                            }
+                        })
+                ,
                 new DrawerFragmentItem()
                         .setFragment(new NewsFragment())
                         .setImage(ContextCompat.getDrawable(this, R.drawable.text_lines))
