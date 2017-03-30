@@ -51,7 +51,7 @@ public class Drugs_drawer extends AppCompatActivity implements ClickListener {
     }
 
     private void prepareItem() {
-        item item = new item(R.drawable.two,"Cake1");
+        item item = new item(R.drawable.,"Cake1");
         itemList.add(item);
         item = new item(R.drawable.three,"Cake2");
         itemList.add(item);
