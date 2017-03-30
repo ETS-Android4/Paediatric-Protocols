@@ -97,23 +97,23 @@ public class Drugsfragment extends Fragment implements ClickListener {
     }
 
     private void prepareItem() {
-        item item = new item("Essential Drugs");
+        item item = new item(R.drawable.pill3,"Essential Drugs");
         itemList.add(item);
-        item = new item("Maintenance Fluids");
+        item = new item(R.drawable.signs,"Maintenance Fluids");
         itemList.add(item);
-        item = new item("Dehydration-Shock management");
+        item = new item(R.drawable.signs,"Dehydration-Shock management");
         itemList.add(item);
-        item= new item("Dehydration-Plan A");
+        item= new item(R.drawable.signs,"Dehydration-Plan A");
         itemList.add(item);
-        item = new item("Dehydration-Plan B");
+        item = new item(R.drawable.signs,"Dehydration Plan B");
         itemList.add(item);
-        item = new item("Dehydration-Plan C");
+        item = new item(R.drawable.signs,"Dehydration Plan C");
         itemList.add(item);
-        item= new item("Malnutrition-Fluid management");
+        item= new item(R.drawable.signs,"Malnutrition-Fluid management");
         itemList.add(item);
-        item= new item("Malnutrition-Feeding");
+        item= new item(R.drawable.signs,"Malnutrition-Feeding");
         itemList.add(item);
-        item= new item("Anthropometry");
+        item= new item(R.drawable.pictures,"Anthropometry");
         itemList.add(item);
 
         //mAdapter.notifyDataSetChanged();

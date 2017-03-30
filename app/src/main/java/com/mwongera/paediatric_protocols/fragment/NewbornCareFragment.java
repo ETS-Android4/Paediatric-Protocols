@@ -70,15 +70,15 @@ public class NewbornCareFragment extends Fragment implements ClickListener {
         }
 
     private void prepareItem() {
-        item item = new item("Resuscitation");
+        item item = new item(R.drawable.mother,"Resuscitation");
         itemList.add(item);
-        item = new item("Fluids & Feeding");
+        item = new item(R.drawable.mother,"Fluids & Feeding");
         itemList.add(item);
-        item = new item("Sepsis");
+        item = new item(R.drawable.signs,"Sepsis");
         itemList.add(item);
-        item = new item("Jaundice");
+        item= new item(R.drawable.signs,"Jaundice");
         itemList.add(item);
-        item = new item("CPAP");
+        item = new item(R.drawable.signs,"CPAP");
         itemList.add(item);
 
         //mAdapter.notifyDataSetChanged();

@@ -76,23 +76,23 @@ public class MajorConditionsFragment extends Fragment implements ClickListener {
     }
 
     private void prepareItem() {
-        item item = new item("Asthma");
+        item item = new item(R.drawable.heart2,"Asthma");
         itemList.add(item);
-        item = new item("Convulsions");
+        item = new item(R.drawable.heart2,"Convulsions");
         itemList.add(item);
-        item = new item("Diarrhoea/Dehydration");
+        item = new item(R.drawable.heart2,"Diarrhoea/Dehydration");
         itemList.add(item);
-        item = new item("HIV");
+        item= new item(R.drawable.heart2,"HIV");
         itemList.add(item);
-        item= new item("Malaria");
+        item = new item(R.drawable.heart2,"Malaria");
         itemList.add(item);
-        item= new item("Malnutrition");
+        item = new item(R.drawable.heart2,"Malnutrition");
         itemList.add(item);
-        item= new item("Meningitis");
+        item= new item(R.drawable.heart2,"Meningitis");
         itemList.add(item);
-        item= new item("Pneumonia");
+        item= new item(R.drawable.heart2,"Pneumonia");
         itemList.add(item);
-        item= new item("Pulmonary Tuberculosis");
+        item= new item(R.drawable.heart2,"Pulmonary Tuberculosis");
         itemList.add(item);
         //mAdapter.notifyDataSetChanged();
     }

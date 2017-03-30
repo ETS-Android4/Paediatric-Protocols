@@ -72,13 +72,13 @@ public class TriageFragment extends Fragment implements ClickListener{
     }
 
     private void prepareItem() {
-        item item = new item("Triage");
+        item item = new item(R.drawable.medicalsignal,"Triage");
         itemList.add(item);
-        item = new item("Basic life support");
+        item = new item(R.drawable.medicalsignal,"Basic Life Support");
         itemList.add(item);
-        item = new item("Infant/Child with signs of life");
+        item = new item(R.drawable.medicalsignal,"Infant/Child with signs of life");
         itemList.add(item);
-        item= new item("Procedures");
+        item= new item(R.drawable.medicalsignal,"Procedures");
         itemList.add(item);
         //mAdapter.notifyDataSetChanged();
     }

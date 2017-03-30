@@ -21,7 +21,7 @@ import java.util.List;
  * Created by mwongera on 3/30/17.
  */
 
-public class Drugs_drawer extends AppCompatActivity implements ClickListener {
+public class Newborn_Drawer extends AppCompatActivity implements ClickListener {
 
 
     private List<item> itemList = new ArrayList<>();
@@ -55,57 +55,33 @@ public class Drugs_drawer extends AppCompatActivity implements ClickListener {
     }
 
     private void prepareItem() {
-        item item = new item(R.drawable.pill3,"Essential Drugs");
+        item item = new item(R.drawable.mother,"Resuscitation");
         itemList.add(item);
-        item = new item(R.drawable.signs,"Maintenance Fluids");
+        item = new item(R.drawable.mother,"Fluids & Feeding");
         itemList.add(item);
-        item = new item(R.drawable.signs,"Dehydration-Shock management");
+        item = new item(R.drawable.mother,"Sepsis");
         itemList.add(item);
-        item= new item(R.drawable.signs,"Dehydration-Plan A");
+        item= new item(R.drawable.mother,"Jaundice");
         itemList.add(item);
-        item = new item(R.drawable.signs,"Dehydration Plan B");
-        itemList.add(item);
-        item = new item(R.drawable.signs,"Dehydration Plan C");
-        itemList.add(item);
-        item= new item(R.drawable.signs,"Malnutrition-Fluid management");
-        itemList.add(item);
-        item= new item(R.drawable.signs,"Malnutrition-Feeding");
-        itemList.add(item);
-        item= new item(R.drawable.pictures,"Anthropometry");
+        item = new item(R.drawable.mother,"CPAP");
         itemList.add(item);
         //mAdapter.notifyDataSetChanged();
     }
     @Override
     public void itemClicked(View view, int position) {
         if(position == 0) {
-            Intent intent = new Intent(this, DrugsActivity.class);
+            Intent intent = new Intent(this, Resuscitation.class);
             startActivity(intent);
         }else if(position == 1) {
-            Intent intent = new Intent(this, MaintenanceFluids.class);
+            Intent intent = new Intent(this, NewBornFluids.class);
             startActivity(intent);
         }else if(position == 2) {
-            Intent intent = new Intent(this, ShockActivity.class);
+            Intent intent = new Intent(this, NeonatalSepsis.class);
             startActivity(intent);
         }else if(position == 3) {
-            Intent intent = new Intent(this, PlanAActivity.class);
+            Intent intent = new Intent(this, NeonatalJaundice.class);
             startActivity(intent);
-        }else if(position == 4) {
-            Intent intent = new Intent(this, PlanBActivity.class);
-            startActivity(intent);
-        }else if(position == 5) {
-            Intent intent = new Intent(this, PlanCActivity.class);
-            startActivity(intent);
-        }else if(position == 6) {
-            Intent intent = new Intent(this, FluidinDiarrhoea.class);
-            startActivity(intent);
-        }else if(position == 7) {
-            Intent intent = new Intent(this, MalnutritionFeeding.class);
-            startActivity(intent);
-        }else if(position == 8) {
-            Intent intent = new Intent(this, AnthropometrySlideActivity.class);
-            startActivity(intent);
-        }
-        else {
+        }else {
             System.out.println("position...."+position);
         }
     }

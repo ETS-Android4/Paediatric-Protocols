@@ -13,6 +13,8 @@ import android.widget.LinearLayout;
 import com.mwongera.paediatric_protocols.fragment.AnthropometrySlideActivity;
 import com.mwongera.paediatric_protocols.fragment.DrugsActivity;
 import com.mwongera.paediatric_protocols.fragment.MaintenanceFluids;
+import com.mwongera.paediatric_protocols.fragment.Procedures;
+import com.mwongera.paediatric_protocols.fragment.TriageOfSickChildren;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,8 +23,7 @@ import java.util.List;
  * Created by mwongera on 3/30/17.
  */
 
-public class Drugs_drawer extends AppCompatActivity implements ClickListener {
-
+public class Triage_Drawer extends AppCompatActivity implements ClickListener {
 
     private List<item> itemList = new ArrayList<>();
     private RecyclerView recyclerView;
@@ -55,60 +56,36 @@ public class Drugs_drawer extends AppCompatActivity implements ClickListener {
     }
 
     private void prepareItem() {
-        item item = new item(R.drawable.pill3,"Essential Drugs");
+        item item = new item(R.drawable.medicalsignal,"Triage");
         itemList.add(item);
-        item = new item(R.drawable.signs,"Maintenance Fluids");
+        item = new item(R.drawable.medicalsignal,"Basic Life Support");
         itemList.add(item);
-        item = new item(R.drawable.signs,"Dehydration-Shock management");
+        item = new item(R.drawable.medicalsignal,"Infant/Child with signs of life");
         itemList.add(item);
-        item= new item(R.drawable.signs,"Dehydration-Plan A");
-        itemList.add(item);
-        item = new item(R.drawable.signs,"Dehydration Plan B");
-        itemList.add(item);
-        item = new item(R.drawable.signs,"Dehydration Plan C");
-        itemList.add(item);
-        item= new item(R.drawable.signs,"Malnutrition-Fluid management");
-        itemList.add(item);
-        item= new item(R.drawable.signs,"Malnutrition-Feeding");
-        itemList.add(item);
-        item= new item(R.drawable.pictures,"Anthropometry");
+        item= new item(R.drawable.medicalsignal,"Procedures");
         itemList.add(item);
         //mAdapter.notifyDataSetChanged();
     }
     @Override
     public void itemClicked(View view, int position) {
         if(position == 0) {
-            Intent intent = new Intent(this, DrugsActivity.class);
+            Intent intent = new Intent(this, TriageOfSickChildren.class);
             startActivity(intent);
         }else if(position == 1) {
-            Intent intent = new Intent(this, MaintenanceFluids.class);
+            Intent intent = new Intent(this, BasicSupport.class);
             startActivity(intent);
         }else if(position == 2) {
-            Intent intent = new Intent(this, ShockActivity.class);
+            Intent intent = new Intent(this, InfantSupport.class);
             startActivity(intent);
         }else if(position == 3) {
-            Intent intent = new Intent(this, PlanAActivity.class);
-            startActivity(intent);
-        }else if(position == 4) {
-            Intent intent = new Intent(this, PlanBActivity.class);
-            startActivity(intent);
-        }else if(position == 5) {
-            Intent intent = new Intent(this, PlanCActivity.class);
-            startActivity(intent);
-        }else if(position == 6) {
-            Intent intent = new Intent(this, FluidinDiarrhoea.class);
-            startActivity(intent);
-        }else if(position == 7) {
-            Intent intent = new Intent(this, MalnutritionFeeding.class);
-            startActivity(intent);
-        }else if(position == 8) {
-            Intent intent = new Intent(this, AnthropometrySlideActivity.class);
+            Intent intent = new Intent(this, Procedures.class);
             startActivity(intent);
         }
         else {
             System.out.println("position...."+position);
         }
     }
+
 
 
 }

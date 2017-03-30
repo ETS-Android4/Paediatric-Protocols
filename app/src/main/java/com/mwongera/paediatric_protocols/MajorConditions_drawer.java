@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 
 import com.mwongera.paediatric_protocols.fragment.AnthropometrySlideActivity;
 import com.mwongera.paediatric_protocols.fragment.DrugsActivity;
+import com.mwongera.paediatric_protocols.fragment.HivSlideActivity;
 import com.mwongera.paediatric_protocols.fragment.MaintenanceFluids;
 
 import java.util.ArrayList;
@@ -21,8 +22,7 @@ import java.util.List;
  * Created by mwongera on 3/30/17.
  */
 
-public class Drugs_drawer extends AppCompatActivity implements ClickListener {
-
+public class MajorConditions_drawer extends AppCompatActivity implements ClickListener {
 
     private List<item> itemList = new ArrayList<>();
     private RecyclerView recyclerView;
@@ -55,60 +55,59 @@ public class Drugs_drawer extends AppCompatActivity implements ClickListener {
     }
 
     private void prepareItem() {
-        item item = new item(R.drawable.pill3,"Essential Drugs");
+        item item = new item(R.drawable.heart2,"Asthma");
         itemList.add(item);
-        item = new item(R.drawable.signs,"Maintenance Fluids");
+        item = new item(R.drawable.heart2,"Convulsions");
         itemList.add(item);
-        item = new item(R.drawable.signs,"Dehydration-Shock management");
+        item = new item(R.drawable.heart2,"Diarrhoea/Dehydration");
         itemList.add(item);
-        item= new item(R.drawable.signs,"Dehydration-Plan A");
+        item= new item(R.drawable.heart2,"HIV");
         itemList.add(item);
-        item = new item(R.drawable.signs,"Dehydration Plan B");
+        item = new item(R.drawable.heart2,"Malaria");
         itemList.add(item);
-        item = new item(R.drawable.signs,"Dehydration Plan C");
+        item = new item(R.drawable.heart2,"Malnutrition");
         itemList.add(item);
-        item= new item(R.drawable.signs,"Malnutrition-Fluid management");
+        item= new item(R.drawable.heart2,"Meningitis");
         itemList.add(item);
-        item= new item(R.drawable.signs,"Malnutrition-Feeding");
+        item= new item(R.drawable.heart2,"Pneumonia");
         itemList.add(item);
-        item= new item(R.drawable.pictures,"Anthropometry");
+        item= new item(R.drawable.heart2,"Pulmonary Tuberculosis");
         itemList.add(item);
         //mAdapter.notifyDataSetChanged();
     }
     @Override
     public void itemClicked(View view, int position) {
         if(position == 0) {
-            Intent intent = new Intent(this, DrugsActivity.class);
+            Intent intent = new Intent(this, Asthma.class);
             startActivity(intent);
         }else if(position == 1) {
-            Intent intent = new Intent(this, MaintenanceFluids.class);
+            Intent intent = new Intent(this, Convulsions.class);
             startActivity(intent);
-        }else if(position == 2) {
-            Intent intent = new Intent(this, ShockActivity.class);
+        } else if(position == 2) {
+            Intent intent = new Intent(this, MajorIllnessDescriptionActivity.class);
             startActivity(intent);
-        }else if(position == 3) {
-            Intent intent = new Intent(this, PlanAActivity.class);
+        } else if(position == 3) {
+            Intent intent = new Intent(this, HivSlideActivity.class);
             startActivity(intent);
-        }else if(position == 4) {
-            Intent intent = new Intent(this, PlanBActivity.class);
+        } else if(position == 4) {
+            Intent intent = new Intent(this, Malaria.class);
             startActivity(intent);
         }else if(position == 5) {
-            Intent intent = new Intent(this, PlanCActivity.class);
+            Intent intent = new Intent(this, ManagementinSAM.class);
             startActivity(intent);
         }else if(position == 6) {
-            Intent intent = new Intent(this, FluidinDiarrhoea.class);
+            Intent intent = new Intent(this, Meningitis.class);
             startActivity(intent);
         }else if(position == 7) {
-            Intent intent = new Intent(this, MalnutritionFeeding.class);
+            Intent intent = new Intent(this, Pneumonia.class);
             startActivity(intent);
         }else if(position == 8) {
-            Intent intent = new Intent(this, AnthropometrySlideActivity.class);
+            Intent intent = new Intent(this, Tuberculosis.class);
             startActivity(intent);
         }
         else {
             System.out.println("position...."+position);
         }
     }
-
 
 }

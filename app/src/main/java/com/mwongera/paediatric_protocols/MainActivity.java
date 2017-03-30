@@ -1,4 +1,5 @@
 package com.mwongera.paediatric_protocols;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -78,14 +79,28 @@ public class MainActivity extends DrawerActivity {
                         .setBackgroundColorRes(R.color.text_color_primary_3)
                         .setTextColorPrimaryRes(R.color.navigationBarColor)
         );
-        addItems(new DrawerFragmentItem()
-                        .setFragment(new Drugsfragment())
+        addItems(new DrawerItem()
                         .setTextPrimary(getString(R.string.drugs_fragment))
-                        .setImage(ContextCompat.getDrawable(this, R.drawable.pills)),
-                new DrawerFragmentItem()
-                        .setFragment(new TriageFragment())
+                        .setImage(ContextCompat.getDrawable(this, R.drawable.pills))
+                        .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
+                            @Override
+                            public void onClick(DrawerItem drawerItem, long id, int position) {
+                                Intent i = new Intent(MainActivity.this, Drugs_drawer.class);
+                                startActivity(i);
+                            }
+                        })
+                ,
+                new DrawerItem()
                         .setTextPrimary(getString(R.string.triage_fragment))
-                        .setImage(ContextCompat.getDrawable(this, R.drawable.hospital)),
+                        .setImage(ContextCompat.getDrawable(this, R.drawable.hospital))
+                        .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
+                            @Override
+                            public void onClick(DrawerItem drawerItem, long id, int position) {
+                                Intent i = new Intent(MainActivity.this, Triage_Drawer.class);
+                                startActivity(i);
+                            }
+                        })
+                ,
                 new DrawerFragmentItem()
                         .setFragment(new MajorConditionsFragment())
                         .setTextPrimary(getString(R.string.major_conditions_fragment))
