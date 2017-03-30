@@ -51,19 +51,23 @@ public class Drugs_drawer extends AppCompatActivity implements ClickListener {
     }
 
     private void prepareItem() {
-        item item = new item(R.drawable.,"Cake1");
+        item item = new item(R.drawable.,"Essential Drugs");
         itemList.add(item);
-        item = new item(R.drawable.three,"Cake2");
+        item = new item(R.drawable.three,"Maintenance Fluids");
         itemList.add(item);
-        item = new item(R.drawable.four,"Cake3");
+        item = new item(R.drawable.four,"Dehydration-Shock management");
         itemList.add(item);
-        item= new item(R.drawable.one,"Cake4");
+        item= new item(R.drawable.one,"Dehydration-Plan A");
         itemList.add(item);
-        item = new item(R.drawable.three,"Cake2");
+        item = new item(R.drawable.three,"Dehydration Plan B");
         itemList.add(item);
-        item = new item(R.drawable.four,"Cake3");
+        item = new item(R.drawable.four,"Dehydration Plan C");
         itemList.add(item);
-        item= new item(R.drawable.one,"Cake4");
+        item= new item(R.drawable.one,"Malnutrition-Fluid management");
+        itemList.add(item);
+        item= new item(R.drawable.one,"Malnutrition-Feeding");
+        itemList.add(item);
+        item= new item(R.drawable.one,"Anthropometry");
         itemList.add(item);
         //mAdapter.notifyDataSetChanged();
     }
