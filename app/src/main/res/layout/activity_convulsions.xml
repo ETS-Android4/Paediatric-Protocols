@@ -14,7 +14,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:src="@drawable/convulsions1" />
+        android:src="@drawable/convulsions" />
 
     <TextView
         android:id="@+id/textView1"

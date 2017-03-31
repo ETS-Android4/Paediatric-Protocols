@@ -2,11 +2,13 @@ package com.mwongera.paediatric_protocols;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 
@@ -59,7 +61,7 @@ public class Drugs_drawer extends AppCompatActivity implements ClickListener {
         itemList.add(item);
         item = new item(R.drawable.signs,"Maintenance Fluids");
         itemList.add(item);
-        item = new item(R.drawable.signs,"Dehydration-Shock management");
+        item = new item(R.drawable.signs,"Dehydration-Shock");
         itemList.add(item);
         item= new item(R.drawable.signs,"Dehydration-Plan A");
         itemList.add(item);
@@ -108,6 +110,17 @@ public class Drugs_drawer extends AppCompatActivity implements ClickListener {
         else {
             System.out.println("position...."+position);
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            // Respond to the action bar's Up/Home button
+            case android.R.id.home:
+                NavUtils.navigateUpFromSameTask(this);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 

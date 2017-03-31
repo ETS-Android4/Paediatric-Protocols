@@ -180,19 +180,19 @@ public class MainActivity extends DrawerActivity {
                     case 0:
                         return HeaderDesign.fromColorResAndUrl(
                                 R.color.green,
-                                "http://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2014/06/wallpaper_51.jpg");
+                                "https://wallpaperscraft.com/image/medicine_pharmacy_pills_fake_law_98419_1920x1080.jpg");
                     case 1:
                         return HeaderDesign.fromColorResAndUrl(
                                 R.color.blue,
-                                "http://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2014/06/wallpaper_51.jpg");
+                                "http://cdn.playbuzz.com/cdn/e654eda5-1512-49b8-a4a9-19fffc103bfa/008ea10b-81cc-4167-8944-7031900e19d8.png");
                     case 2:
                         return HeaderDesign.fromColorResAndUrl(
                                 R.color.cyan,
-                                "http://www.droid-life.com/wp-content/uploads/2014/10/lollipop-wallpapers10.jpg");
+                                "https://www.premiumswitzerland.com/img/image_db/dermatology_main-1920.jpg");
                     case 3:
                         return HeaderDesign.fromColorResAndUrl(
                                 R.color.red,
-                                "http://www.tothemobile.com/wp-content/uploads/2014/07/original.jpg");
+                                "http://cdn.wall-pix.net/albums/art-photography/00005471.jpg");
                     case 4:
                         return HeaderDesign.fromColorResAndUrl(
                                 R.color.red,

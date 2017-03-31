@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.github.florent37.materialviewpager.header.MaterialViewPagerHeaderDecorator;
+import com.mwongera.paediatric_protocols.CPAP;
 import com.mwongera.paediatric_protocols.ClickListener;
 import com.mwongera.paediatric_protocols.MyAdapter;
 import com.mwongera.paediatric_protocols.NeonatalJaundice;
@@ -97,7 +98,10 @@ public class NewbornCareFragment extends Fragment implements ClickListener {
         }else if(position == 3) {
             Intent intent = new Intent(getActivity(), NeonatalJaundice.class);
             getActivity().startActivity(intent);
-        }else {
+        }else if(position == 4) {
+            Intent intent = new Intent(getActivity(), CPAP.class);
+            getActivity().startActivity(intent);
+        } else {
             System.out.println("position...."+position);
         }
     }

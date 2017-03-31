@@ -101,7 +101,7 @@ public class Drugsfragment extends Fragment implements ClickListener {
         itemList.add(item);
         item = new item(R.drawable.signs,"Maintenance Fluids");
         itemList.add(item);
-        item = new item(R.drawable.signs,"Dehydration-Shock management");
+        item = new item(R.drawable.signs,"Dehydration-Shock");
         itemList.add(item);
         item= new item(R.drawable.signs,"Dehydration-Plan A");
         itemList.add(item);

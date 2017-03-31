@@ -47,7 +47,7 @@ public class NewsFragment extends Fragment {
             }
         });
 
-        mWebView.loadUrl("http://mobile.francetvinfo.fr/");
+        mWebView.loadUrl("http://feeds.bbci.co.uk/news/health/rss.xml");
 
         MaterialViewPagerHelper.registerWebView(getActivity(), mWebView, null);
     }

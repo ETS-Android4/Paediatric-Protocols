@@ -32,13 +32,13 @@ public class Jaundice extends Activity{
         switch(pos){
             case 0:
                 //img.setImageResource(R.drawable.my_image);
-                imgv.setImageResource(R.drawable.jaundice_treatment_1);
+                imgv.setImageResource(R.drawable.neonatalJaundice2);
                 break;
             case 1:
-                imgv.setImageResource(R.drawable.jaundice_treatment_2);
+                imgv.setImageResource(R.drawable.neonatalJaundice3);
                 break;
             case 2:
-                imgv.setImageResource(R.drawable.sepsis_treatment);
+                imgv.setImageResource(R.drawable.neonatalSepsis2);
                 break;
             case 3:
                 Intent ii= new Intent (Jaundice.this,DrugActivity1.class);

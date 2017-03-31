@@ -24,7 +24,7 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
-            android:src="@drawable/hivinfant" />
+            android:src="@drawable/hiv1" />
 
 
     </LinearLayout>
