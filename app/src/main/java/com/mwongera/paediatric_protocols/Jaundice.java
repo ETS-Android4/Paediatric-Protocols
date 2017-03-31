@@ -3,8 +3,6 @@ package com.mwongera.paediatric_protocols;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.widget.ImageView;
 
@@ -32,13 +30,13 @@ public class Jaundice extends Activity{
         switch(pos){
             case 0:
                 //img.setImageResource(R.drawable.my_image);
-                imgv.setImageResource(R.drawable.neonatalJaundice2);
+                imgv.setImageResource(R.drawable.neonataljaundice2);
                 break;
             case 1:
-                imgv.setImageResource(R.drawable.neonatalJaundice3);
+                imgv.setImageResource(R.drawable.neonataljaundice3);
                 break;
             case 2:
-                imgv.setImageResource(R.drawable.neonatalSepsis2);
+                imgv.setImageResource(R.drawable.neonatalsepsis2);
                 break;
             case 3:
                 Intent ii= new Intent (Jaundice.this,DrugActivity1.class);

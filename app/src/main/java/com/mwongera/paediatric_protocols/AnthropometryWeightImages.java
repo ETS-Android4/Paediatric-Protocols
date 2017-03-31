@@ -33,7 +33,7 @@ public class AnthropometryWeightImages extends Activity {
         switch(pos){
             case 0:
                 //img.setImageResource(R.drawable.my_image);
-                imgv.setImageResource(R.drawable.westimation);
+                imgv.setImageResource(R.drawable.wtestimation);
                 break;
             case 1:
                 imgv.setImageResource(R.drawable.wfh1);

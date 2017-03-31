@@ -12,6 +12,6 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:src="@drawable/newbornResuscitation" />
+        android:src="@drawable/newbornresuscitation" />
 
 </RelativeLayout>
