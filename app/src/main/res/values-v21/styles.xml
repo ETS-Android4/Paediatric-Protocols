@@ -6,7 +6,7 @@
 
     <style name="AppTheme" parent="AppBaseTheme">
 
-        <item name="android:textColorPrimary">@android:color/black</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
         <item name="android:windowTranslucentStatus" tools:targetApi="19">true</item>
 
@@ -19,7 +19,7 @@
         <item name="colorAccent">@color/color_accent</item>
 
         <item name="android:statusBarColor">@color/statusBarColor</item>
-        <item name="android:navigationBarColor" tools:targetApi="21">@color/navigationBarColor
+        <item name="android:navigationBarColor" tools:targetApi="21">@color/text_color_primary_3
         </item>
         <item name="android:windowDrawsSystemBarBackgrounds" tools:targetApi="21">true</item>
         <item name="actionBarStyle">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>

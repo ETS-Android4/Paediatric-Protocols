@@ -1,5 +1,5 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name">Paediatric_Protocols</string>
+    <string name="app_name">Paediatric Protocols</string>
     <string name="drawer_open">Menu open</string>
     <string name="drawer_close">Menu closed</string>
     <string name="hello_world">Custom drawer implementation for Material design apps.\n\nMade by <b>Heinrich Reimer</b></string>

@@ -12,8 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:viewpager_logoMarginTop="100dp"
-        app:viewpager_color="@color/colorPrimary"
-        app:viewpager_headerHeight="150dp"
+        app:viewpager_color="@color/text_color_primary_3"
+        app:viewpager_headerHeight="120dp"
         app:viewpager_headerAlpha="1.0"
         app:viewpager_hideLogoWithFade="false"
         app:viewpager_hideToolbarAndTitle="true"
@@ -24,7 +24,6 @@
         app:viewpager_transparentToolbar="true"
         app:viewpager_animatedHeaderImage="true"
         app:viewpager_disableToolbar="false"
-
 
 
         xmlns:app="http://schemas.android.com/apk/res-auto"

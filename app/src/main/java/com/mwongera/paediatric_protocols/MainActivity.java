@@ -48,6 +48,7 @@ public class MainActivity extends DrawerActivity {
 
         mViewPager = (MaterialViewPager) findViewById(R.id.materialViewPager);
         toolbar = mViewPager.getToolbar();
+
         setSupportActionBar(toolbar);
 
         if (toolbar != null) {
@@ -67,6 +68,7 @@ public class MainActivity extends DrawerActivity {
         mDrawerToggle.syncState();
         mDrawerLayout.addDrawerListener(mDrawerToggle);
 
+
         setOnItemClickListener(new DrawerItem.OnItemClickListener() {
             @Override
             public void onClick(DrawerItem item, long id, int position) {
@@ -81,7 +83,7 @@ public class MainActivity extends DrawerActivity {
         );
         addItems(new DrawerItem()
                         .setTextPrimary(getString(R.string.drugs_fragment))
-                        .setImage(ContextCompat.getDrawable(this, R.drawable.pills))
+                        .setImage(ContextCompat.getDrawable(this, R.drawable.pills2))
                         .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
                             @Override
                             public void onClick(DrawerItem drawerItem, long id, int position) {
@@ -92,7 +94,7 @@ public class MainActivity extends DrawerActivity {
                 ,
                 new DrawerItem()
                         .setTextPrimary(getString(R.string.triage_fragment))
-                        .setImage(ContextCompat.getDrawable(this, R.drawable.hospital))
+                        .setImage(ContextCompat.getDrawable(this, R.drawable.medicalsignal))
                         .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
                             @Override
                             public void onClick(DrawerItem drawerItem, long id, int position) {
@@ -103,7 +105,7 @@ public class MainActivity extends DrawerActivity {
                 ,
                 new DrawerItem()
                         .setTextPrimary(getString(R.string.major_conditions_fragment))
-                        .setImage(ContextCompat.getDrawable(this, R.drawable.heart))
+                        .setImage(ContextCompat.getDrawable(this, R.drawable.heart2))
                         .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
                             @Override
                             public void onClick(DrawerItem drawerItem, long id, int position) {
@@ -114,7 +116,7 @@ public class MainActivity extends DrawerActivity {
                 ,
                 new DrawerItem()
                         .setTextPrimary(getString(R.string.newborn_care_fragment))
-                        .setImage(ContextCompat.getDrawable(this, R.drawable.medicine))
+                        .setImage(ContextCompat.getDrawable(this, R.drawable.mother))
                         .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
                             @Override
                             public void onClick(DrawerItem drawerItem, long id, int position) {
