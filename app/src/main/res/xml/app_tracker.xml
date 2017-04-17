@@ -13,9 +13,67 @@
 
     <bool name="ga_reportUncaughtExceptions">true</bool>
 
-    <screenName name=".activity.MainActivity">Home Screen</screenName>
+    <screenName name=".MaintenanceFluids">MaintenanceFluids</screenName>
 
-    <screenName name=".activity.SecondActivity">Second Screen</screenName>
+    <screenName name=".ShockActivity">Shock management</screenName>
+
+    <screenName name=".PlanAActivity">Plan A</screenName>
+
+    <screenName name=".PlanBActivity">Plan B</screenName>
+
+    <screenName name=".PlanCActivity">Plan C</screenName>
+
+    <screenName name=".FluidInDiarrhoea">Fluid in Diarrhoea</screenName>
+
+    <screenName name=".MalnutritionFeeding">Malnutrition Feeding</screenName>
+
+    <screenName name=".AnthropometrySlideActivity">Anthropometry</screenName>
+
+    <screenName name=".ShockActivity">Shock management</screenName>
+
+    <screenName name=".Asthma">Asthma</screenName>
+
+    <screenName name=".Convulsions">Convulsions</screenName>
+
+    <screenName name=".HivSlideActivity">HIV</screenName>
+
+    <screenName name=".MajorIllnessDescriptionActivity">Major Illness Description</screenName>
+
+    <screenName name=".Malaria">Malaria</screenName>
+
+    <screenName name=".ManagementSamSlideActivity">Management in Sam</screenName>
+
+    <screenName name=".Meningitis">Meningitis</screenName>
+
+    <screenName name=".Pneumonia">Pneumonia</screenName>
+
+    <screenName name=".Tuberculosis">Tuberculosis</screenName>
+
+    <screenName name=".Resuscitation">Resuscitation</screenName>
+
+    <screenName name=".NewbornFluids">Newborn Fluids</screenName>
+
+    <screenName name=".NeonatalSepsis">Neonatal Sepsis</screenName>
+
+    <screenName name=".NeonatalJaundice">Neonatal Jaundice</screenName>
+
+    <screenName name=".CPAP">CPAP</screenName>
+
+    <screenName name=".fragment.TriageOfSickChildren">Triage of sick children</screenName>
+
+    <screenName name=".BasicSupport">Basic Support</screenName>
+
+    <screenName name=".InfantSupport">Infant Support</screenName>
+
+    <screenName name=".Procedures">Procedures</screenName>
+
+    <screenName name=".Drugs_drawer">Drugs</screenName>
+
+    <screenName name=".Triage_Drawer">Triage</screenName>
+
+    <screenName name=".MajorConditions_drawer">Major Conditions</screenName>
+
+    <screenName name=".Newborn_drawer">Newborn Care</screenName>
 
     <!--
       See Project Structure -> Analytics -> Google Analytics -> Learn More
