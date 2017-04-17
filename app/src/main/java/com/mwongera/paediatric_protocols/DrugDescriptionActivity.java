@@ -130,7 +130,7 @@ public class DrugDescriptionActivity extends Activity{
             case 2:
                 //Amikacin Age 1mo to 18 yrs, 15mg/kg once daily; same dosing can be used in newborns.
                 if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("years") || (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("months"))){
-                    if (agedd>=1 && agedd<=18){
+                    if (agedd>=1 && agedd<=12){
                         drugDetails= (15*weight2+" mg once daily");
                         description="Ideally Amikacin trough concentration should be monitored (if available). If serious gram negative infection / resistance to gentamicin higher doses may be used with monitoring";
                         results.setText(drugDetails);
@@ -147,15 +147,15 @@ public class DrugDescriptionActivity extends Activity{
                 //Aminophylline
                 //(iv)
                 //Newborn Loading dose 6mg/kg  iv over 1 hour or rectal,
-                //Maintenance (iv or oral): Age	0-7	days - 2.5mg/kg ///////////////////////////depends more on age
+                //Maintenance (iv or oral): Age	0-6	days - 2.5mg/kg ///////////////////////////depends more on age
                 if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("days")){
                     if(agedd>=1&&agedd<=7){
                         drugDetails="Newborn Loading dose "+ 6*weight2+" mg  iv over 1 hour or rectal" +
-                                "\n Maintenance (iv or oral):Age 0-7 days- "+ 2.5*weight2+" mg 12hrly " +
+                                "\n Maintenance (iv or oral):Age 0-6 days- "+ 2.5*weight2+" mg 12hrly " +
                                 "\n Asthma:"+6*weight2+"mg iv first dose over 30 mins";
 
 
-                    }else if(agedd>7&&agedd<=28){
+                    }else if(agedd>6&&agedd<=28){
                         drugDetails="Newborn Loading dose "+ 6*weight2+" mg  iv over 1 hour or rectal" +
                                 "\n Maintenance (iv or oral):Age 7-28 days- "+ 4*weight2+" mg 12hrly " +
                                 "\n Asthma:"+6*weight2+"mg iv first dose over 30 mins";

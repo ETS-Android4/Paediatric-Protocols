@@ -36,15 +36,12 @@ public class AnthropometryWeightImages extends Activity {
                 imgv.setImageResource(R.drawable.wtestimation);
                 break;
             case 1:
-                imgv.setImageResource(R.drawable.wfh1);
-                break;
-            case 2:
                 imgv.setImageResource(R.drawable.wfh2);
                 break;
-            case 3:
+            case 2:
                 imgv.setImageResource(R.drawable.wfh3);
                 break;
-            case 4:
+            case 3:
                 imgv.setImageResource(R.drawable.wfh4);
                 break;
 

@@ -1,6 +1,7 @@
 package com.mwongera.paediatric_protocols;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -206,6 +207,7 @@ public class MainActivity extends DrawerActivity {
 
         mViewPager.getViewPager().setOffscreenPageLimit(mViewPager.getViewPager().getAdapter().getCount());
         mViewPager.getPagerTitleStrip().setViewPager(mViewPager.getViewPager());
+        mViewPager.getPagerTitleStrip().setTextColor(Color.WHITE);
 
         View logo = findViewById(R.id.logo_white);
         if (logo != null) {

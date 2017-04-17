@@ -25,7 +25,6 @@ public class DrugActivity1 extends ListActivity {
         drugs=getResources().getStringArray(R.array.Drugs);
 
         setListAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,drugs));
-
     }
 
     //	@Override

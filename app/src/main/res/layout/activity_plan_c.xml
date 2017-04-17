@@ -35,23 +35,21 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:weightSum="100"
+        android:layout_marginTop="20dp"
         android:orientation="horizontal"
+        android:layout_below="@id/layoer72"
         >
 
         <EditText
             android:id="@+id/weight"
-            android:layout_width="200dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true"
             android:hint="Input weight"
-            android:layout_alignParentTop="true"
             android:textColor="@android:color/black"
             android:ems="10"
             android:layout_weight="50"
             android:inputType="numberDecimal"
-            android:layout_marginTop="40dp"
-            android:layout_below="@id/layoer72"
+            android:layout_marginTop="20dp"
             >
 
             <requestFocus />
@@ -59,10 +57,12 @@
 
         <Spinner
             android:id="@+id/spinner1"
-            android:entries="@array/age"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_width="204dp"
+            android:layout_height="match_parent"
+            android:spinnerMode="dialog"
+            android:prompt="@string/lang"
+            android:layout_weight="1"
+            android:entries="@array/age" />
     </LinearLayout>
 
     <LinearLayout

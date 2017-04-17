@@ -114,7 +114,7 @@ public class MajorConditionsFragment extends Fragment implements ClickListener {
             Intent intent = new Intent(getActivity(), Malaria.class);
             getActivity().startActivity(intent);
         }else if(position == 5) {
-            Intent intent = new Intent(getActivity(), ManagementinSAM.class);
+            Intent intent = new Intent(getActivity(), managementSamSlideActivity.class);
             getActivity().startActivity(intent);
         }else if(position == 6) {
             Intent intent = new Intent(getActivity(), Meningitis.class);

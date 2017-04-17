@@ -1,9 +1,20 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<!-- Dummy content. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/holo_blue_dark"
+    android:padding="2dp">
 
-    >
+    <TextView android:id="@android:id/text1"
+        style="?android:textAppearanceLarge"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp" />
+
 
     <ImageView
         android:id="@+id/imageView1"
@@ -15,14 +26,5 @@
         android:layout_alignParentTop="true"
         android:src="@drawable/samsteps" />
 
-    <!--     <TextView -->
-    <!--         android:id="@+id/textView1" -->
-    <!--         android:layout_width="wrap_content" -->
-    <!--         android:layout_height="wrap_content" -->
-    <!--         android:layout_alignParentTop="true" -->
-    <!--         android:layout_centerHorizontal="true" -->
-    <!--         android:background="#7000" -->
-    <!--         android:text="Press and Hold for more Options" -->
-    <!--         android:textAppearance="?android:attr/textAppearanceMedium" /> -->
 
-</RelativeLayout>
+</LinearLayout>

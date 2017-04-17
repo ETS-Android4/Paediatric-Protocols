@@ -1,0 +1,38 @@
+{
+  "project_info": {
+    "project_number": "985156334587",
+    "project_id": "kenya-paediatric-protocols"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:985156334587:android:a4ea73e12f28350d",
+        "android_client_info": {
+          "package_name": "bpp.kelvian.com"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBM3hsciAK5YASIhl17PeiLf-T-KSaB40o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-61280431-2"
+          }
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

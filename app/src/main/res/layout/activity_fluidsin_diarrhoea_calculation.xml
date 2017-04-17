@@ -4,6 +4,7 @@
 
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="#c2c2c2"
 
     tools:context=".ShockActivity" >
 
@@ -19,10 +20,11 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:gravity="center"
-            android:background="#fecd64"
-            android:text="Fluid Management in Diarrhoea"
+            android:background="#ff0099cc"
+            android:text="Fluid management in diarrhoea"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textSize="14dp" />
+            android:textSize="30dp" />
+
 
 
     </LinearLayout>
@@ -31,7 +33,7 @@
         android:id="@+id/layoer2"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="70dp"
         android:weightSum="100"
         android:orientation="horizontal" >
 
@@ -73,19 +75,25 @@
             android:orientation="horizontal"
             android:weightSum="100" >
 
-            <Button
+            <android.support.v7.widget.AppCompatButton
                 android:id="@+id/button1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="50"
-                android:text="Calculate" />
+                android:text="Calculate"
+                android:textColor="@color/text_color_primary_3"
+                android:backgroundTint="@color/holo_blue_dark"
+                />
 
-            <Button
+            <android.support.v7.widget.AppCompatButton
                 android:id="@+id/button2"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="50"
-                android:text="clear" />
+                android:text="clear"
+                android:textColor="@color/text_color_primary_3"
+                android:backgroundTint="@color/holo_blue_dark"
+                />
         </LinearLayout>
 
         <TextView
