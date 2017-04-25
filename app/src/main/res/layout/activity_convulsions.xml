@@ -2,8 +2,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:background="@color/holo_blue_dark"
-    tools:context=".Convulsions" >
+    tools:context=".Convulsions">
 
     <ImageView
         android:id="@+id/imageView1"
@@ -24,5 +25,15 @@
         android:background="#7000"
         android:text="Press and Hold for more Options"
         android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/medical_ad">
+    </com.google.android.gms.ads.AdView>
 
 </RelativeLayout>

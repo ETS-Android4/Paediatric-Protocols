@@ -27,7 +27,7 @@
 
     <screenName name=".MalnutritionFeeding">Malnutrition Feeding</screenName>
 
-    <screenName name=".AnthropometrySlideActivity">Anthropometry</screenName>
+    <screenName name=".fragment.AnthropometrySlideActivity">Anthropometry</screenName>
 
     <screenName name=".ShockActivity">Shock management</screenName>
 
@@ -35,7 +35,7 @@
 
     <screenName name=".Convulsions">Convulsions</screenName>
 
-    <screenName name=".HivSlideActivity">HIV</screenName>
+    <screenName name=".fragment.HivSlideActivity">HIV</screenName>
 
     <screenName name=".MajorIllnessDescriptionActivity">Major Illness Description</screenName>
 
@@ -65,7 +65,7 @@
 
     <screenName name=".InfantSupport">Infant Support</screenName>
 
-    <screenName name=".Procedures">Procedures</screenName>
+    <screenName name=".fragment.Procedures">Procedures</screenName>
 
     <screenName name=".Drugs_drawer">Drugs</screenName>
 

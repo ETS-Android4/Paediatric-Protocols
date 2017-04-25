@@ -11,6 +11,7 @@
     <string name="newborn_care_fragment" translatable="false">Newborn care</string>
     <string name="news_fragment" translatable="false">News</string>
     <string name="exit">EXIT</string>
+    <string name="medical_ad">ca-app-pub-8054249482026169/1080007530</string>
 
     <string name="drawer_frame_layout">DrawerFrameLayout</string>
     <string name="drawer_activity">DrawerActivity</string>

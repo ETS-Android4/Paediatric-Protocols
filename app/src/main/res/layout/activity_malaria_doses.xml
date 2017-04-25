@@ -2,8 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/holo_blue_dark"
-    >
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:background="@color/holo_blue_dark">
 
     <ImageView
         android:id="@+id/imageView1"
@@ -13,6 +13,16 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:src="@drawable/malaria3" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/medical_ad">
+    </com.google.android.gms.ads.AdView>
 
     <!--     <TextView -->
     <!--         android:id="@+id/textView1" -->
