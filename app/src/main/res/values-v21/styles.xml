@@ -31,4 +31,12 @@
         <item name="spinBars">true</item>
         <item name="color">@color/drawerArrowColor</item>
     </style>
+
+    <style name="RedTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/redPrimary</item>
+        <item name="colorPrimaryDark">@color/redPrimaryDark</item>
+        <item name="colorAccent">@color/finestWhite</item>
+        <item name="android:textColorPrimary">@color/finestWhite</item>
+        <item name="android:textColorSecondary">@color/finestSilver</item>
+    </style>
 </resources>

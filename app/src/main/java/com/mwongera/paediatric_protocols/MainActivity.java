@@ -133,6 +133,17 @@ public class MainActivity extends DrawerActivity {
                         .setFragment(new NewsFragment())
                         .setImage(ContextCompat.getDrawable(this, R.drawable.text_lines))
                         .setTextPrimary(getString(R.string.news_fragment))
+                ,
+                new DrawerItem()
+                        .setTextPrimary(getString(R.string.news_fragment))
+                        .setImage(ContextCompat.getDrawable(this, R.drawable.text_lines))
+                        .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
+                            @Override
+                            public void onClick(DrawerItem drawerItem, long id, int position) {
+                                Intent i = new Intent(MainActivity.this, News_Drawer.class);
+                                startActivity(i);
+                            }
+                        })
 
         );
 
