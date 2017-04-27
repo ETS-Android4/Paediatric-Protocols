@@ -35,6 +35,7 @@ import com.mwongera.paediatric_protocols.fragment.Drugsfragment;
 import com.mwongera.paediatric_protocols.fragment.MajorConditionsFragment;
 import com.mwongera.paediatric_protocols.fragment.NewbornCareFragment;
 import com.mwongera.paediatric_protocols.fragment.NewsFragment;
+import com.mwongera.paediatric_protocols.fragment.RssFragment;
 import com.mwongera.paediatric_protocols.fragment.TriageFragment;
 
 public class MainActivity extends DrawerActivity {
@@ -130,17 +131,17 @@ public class MainActivity extends DrawerActivity {
                         })
                 ,
                 new DrawerFragmentItem()
-                        .setFragment(new NewsFragment())
+                        .setFragment(new RssFragment())
                         .setImage(ContextCompat.getDrawable(this, R.drawable.text_lines))
                         .setTextPrimary(getString(R.string.news_fragment))
                 ,
                 new DrawerItem()
-                        .setTextPrimary(getString(R.string.news_fragment))
-                        .setImage(ContextCompat.getDrawable(this, R.drawable.text_lines))
+                        .setTextPrimary(getString(R.string.about))
+                        .setImage(ContextCompat.getDrawable(this, R.drawable.ic_action_info))
                         .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
                             @Override
                             public void onClick(DrawerItem drawerItem, long id, int position) {
-                                Intent i = new Intent(MainActivity.this, News_Drawer.class);
+                                Intent i = new Intent(MainActivity.this, About.class);
                                 startActivity(i);
                             }
                         })
@@ -159,8 +160,6 @@ public class MainActivity extends DrawerActivity {
                         return MajorConditionsFragment.newInstance();
                     case 3:
                         return NewbornCareFragment.newInstance();
-                    case 4:
-                        return NewsFragment.newInstance();
                     default:
                         return Drugsfragment.newInstance();
                 }
@@ -183,8 +182,6 @@ public class MainActivity extends DrawerActivity {
                         return "MAJOR CONDITIONS";
                     case 3:
                         return "NEWBORN CARE";
-                    case 4:
-                        return "NEWS";
                 }
                 return "";
             }

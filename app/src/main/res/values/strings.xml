@@ -146,7 +146,8 @@ for 24 hrs then 62.5–250 micrograms daily in 1–2 doses</p></html></string>
         <item>Vitamin K</item>
         <item>Zinc Sulphate</item>
     </string-array>
-    <string name="about">Developed by \n Laban Ndwaru \n 0725 415 457 \n <a href='labanish.me.ke'>www.labanish.me.ke</a></string>
+    <string name="about">About</string>
+    <string name="about1">Developed by \n Mwongera Evans \n 0714 017 200 \n <a href='mwongeraE.github.io'>mwongeraE.github.io</a></string>
     <string name="title_activity_splash">Basic Paediatric Protocols</string>
     <string name="title_activity_table">Table of Contents</string>
     <string name="title_activity_major_illness">Major Illness</string>

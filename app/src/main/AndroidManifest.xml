@@ -125,17 +125,11 @@
 
             </activity>
 
-        <activity android:name=".News_Drawer"
-            android:theme="@style/DrawerTheme"
-            android:parentActivityName=".MainActivity" >
-            <!-- Parent activity meta-data to support 4.0 and lower -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
-
-        </activity>
-
         <activity android:name=".fragment.managementSamSlideActivity">
+        </activity>
+        <activity android:name=".RssActivity">
+        </activity>
+        <activity android:name=".About">
         </activity>
 
         <receiver android:name="com.google.android.gms.analytics.AnalyticsReceiver" android:enabled="true">
@@ -153,6 +147,7 @@
         </intent-filter>
     </receiver>
         <service android:name="com.google.android.gms.analytics.CampaignTrackingService"/>
+        <service android:name=".RssService" />
 
     </application>
 
