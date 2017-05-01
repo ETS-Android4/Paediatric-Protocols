@@ -3,7 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
-    android:background="@color/holo_blue_dark">
+    android:background="@drawable/Background">
 
 
     <ImageView
