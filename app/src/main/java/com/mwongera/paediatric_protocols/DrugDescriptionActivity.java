@@ -11,6 +11,10 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 import java.text.DecimalFormat;
 
 /**
@@ -47,7 +51,7 @@ public class DrugDescriptionActivity extends Activity{
         webview=(WebView)findViewById(R.id.webView1);
         aged=(Spinner)findViewById(R.id.spinner1);
         btn1=(Button)findViewById(R.id.button1);
-        btn2=(Button)findViewById(R.id.button2);
+        //btn2=(Button)findViewById(R.id.button2);
 
         //drug type description
         Intent i=getIntent();
@@ -81,22 +85,17 @@ public class DrugDescriptionActivity extends Activity{
 
             }
         });
-        btn2.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
+        MobileAds.initialize(getApplicationContext(), "ca-app-pub-3940256099942544~3347511713");
 
-                results.setText("");
-                inputAge.setText("");
-                inputWeight.setText("");
-                webview.clearView();
-            }
-        });
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
     }
     //come up with an algorithm for each drug.
     private void calculateDosage(Double weight2, int agedd,int pos) {
+
 
         //DO a switch case for all the drugs.
         switch (pos){
@@ -132,7 +131,9 @@ public class DrugDescriptionActivity extends Activity{
                 if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("years") || (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("months"))){
                     if (agedd>=1 && agedd<=12){
                         drugDetails= (15*weight2+" mg once daily");
-                        description="Ideally Amikacin trough concentration should be monitored (if available). If serious gram negative infection / resistance to gentamicin higher doses may be used with monitoring";
+                        description="Same dosing can be used in newborns. Slow iv over 3-5 min\n" +
+                                "Amikacin trough concentration should be monitored ( if available)\n" +
+                                "If serious gram - ve infection / resistance to gentamicin, higher doses may be used with monitoring";
                         results.setText(drugDetails);
                     }else if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("days")) {
                         drugDetails="";
@@ -147,15 +148,15 @@ public class DrugDescriptionActivity extends Activity{
                 //Aminophylline
                 //(iv)
                 //Newborn Loading dose 6mg/kg  iv over 1 hour or rectal,
-                //Maintenance (iv or oral): Age	0-6	days - 2.5mg/kg ///////////////////////////depends more on age
+                //Maintenance (iv or oral): Age	0-7	days - 2.5mg/kg ///////////////////////////depends more on age
                 if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("days")){
                     if(agedd>=1&&agedd<=7){
                         drugDetails="Newborn Loading dose "+ 6*weight2+" mg  iv over 1 hour or rectal" +
                                 "\n Maintenance (iv or oral):Age 0-6 days- "+ 2.5*weight2+" mg 12hrly " +
-                                "\n Asthma:"+6*weight2+"mg iv first dose over 30 mins";
+                                "\n Asthma:"+6*weight2+"mg iv first dose over 30 mins max 500mg";
 
 
-                    }else if(agedd>6&&agedd<=28){
+                    }else if(agedd>=7&&agedd<=28){
                         drugDetails="Newborn Loading dose "+ 6*weight2+" mg  iv over 1 hour or rectal" +
                                 "\n Maintenance (iv or oral):Age 7-28 days- "+ 4*weight2+" mg 12hrly " +
                                 "\n Asthma:"+6*weight2+"mg iv first dose over 30 mins";
@@ -172,7 +173,7 @@ public class DrugDescriptionActivity extends Activity{
                 description="<html><p>Newborn Loading dose 6mg/kg  iv over 1 hour or rectal,<br/>"+
                         "Maintenance (iv or oral): Age	0-7	days - 2.5mg/kg "+
                         "12hrly, Age 7-28 days-	4mg/kg 12hrly.<br/>"+
-                        "Asthma: 6mg/kg iv first dose over 30 mins</p></html>";
+                        "Asthma: 6mg/kg iv first dose over 30 mins max 500mg</p></html>";
 
 
                 results.setText(drugDetails);
@@ -188,8 +189,8 @@ public class DrugDescriptionActivity extends Activity{
                 results.setText(drugDetails);
                 break;
             case 5:
-                //Ampicillin Newborn: 50mg/kg/dose 12 hourly iv or im if aged <7days and 8 hourly if aged 7 – 28 days.
-                //Age 1m and over: 50mg/kg/dose 6 hourly iv / im
+                //Neonate: 50mg/kg/dose 12 hourly iv or  if aged < 7 days and 8 hourly if aged 8 - 28 days.
+                //Age 1m and over: 50mg/kg/dose (Max 500mg) 8 hourly
 
                 if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("days")) {
                     if (agedd<7){
@@ -297,10 +298,10 @@ public class DrugDescriptionActivity extends Activity{
                 //Artesunate Age 1m and over: 2.4mg/kg given iv/im at 0, 12 and 24
                 //hours then daily –
                 if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("months") || String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("years")){
-                    drugDetails= df.format(2.4*weight2)+" mg given iv/im at 0, 12 and 24 hours then daily for max of 7 days\n press here for preparation procedure";
+                    drugDetails= df.format(3*weight2)+" mg At 0,12, and 24h then daily for max 7 days\n press here for preparation procedure";
                     //description="change to full course oral ACT as soon as possible after 3 doses when infant/child drinking/breast feeding.";
-                    description="As soon as the child can eat drink (after 24 hours for artesunate) then change to a  full course of artemisinin combination therapy (ACT)"
-                            +"typically the 1st line oral anti-malarial Artemether Lumefantrine";
+                    description="Given iv / im for a minimum of 24 hours\n" +
+                            "As soon as the child can eat drink (after 24 hours for artesunate) then change to a full course of artemisinin combination therapy (ACT) typically the 1st line oral anti-malarial, Artemether Lumefantrine.";
                     results.setOnClickListener(new View.OnClickListener() {
                         public void onClick(View v) {
                             Intent i= new Intent (DrugDescriptionActivity.this,MalariaTreatmentPreparation.class);
@@ -507,14 +508,44 @@ public class DrugDescriptionActivity extends Activity{
                     drugDetails="10mls 12hrly of 240mg/5ml syrup " +
                             "\n 1 of 480mg tabs 12hrly";
                 }
-                description="<html><p>Co-trimoxazole pneumonia dozing 4mg/kg trimethoprim and 20mg/kg sulphamethoxazole</p></html>  ";
+                description="<html><p>Co-trimoxazole pneumonia dozing 4mg/kg trimethoprim and 20mg/kg sulphamethoxazole</p>" +
+                        "\n" +
+                        "<table>\n" +
+                        "  <tr>\n" +
+                        "    <th>Weight</th>\n" +
+                        "    <th>240mg/5ml (syrup)\n" +
+                        "12 hrly</th>\n" +
+                        "    <th>480mg (tabs)\n" +
+                        "12 hrly</th>\n" +
+                        "  </tr>\n" +
+                        "  <tr>\n" +
+                        "    <td>2 - 3kg </td>\n" +
+                        "    <td>2.5 mls </td>\n" +
+                        "    <td>1/4</td>\n" +
+                        "  </tr>\n" +
+                        "  <tr>\n" +
+                        "    <td>4 - 10kg \n</td>\n" +
+                        "    <td>5 mls </td>\n" +
+                        "    <td>1/2</td>\n" +
+                        "  </tr>\n" +
+                        "  <tr>\n" +
+                        "    <td>11 - 15 kg </td>\n" +
+                        "    <td>7.5 mls </td>\n" +
+                        "    <td>1/2</td>\n" +
+                        "  </tr>\n" +
+                        "  <tr>\n" +
+                        "    <td>16 - 20 kg </td>\n" +
+                        "    <td>10 mls </td>\n" +
+                        "    <td>1</td>\n" +
+                        "  </tr>\n" +
+                        "</table></html>  ";
                 webview.loadData(description, "text/html", "UTF-8");
                 results.setText(drugDetails);
 
                 break;
             case 19:
                 //Dexamethasone
-                drugDetails=df.format(0.6*weight2)+" mg stat for	severe	croup";
+                drugDetails=df.format(0.6*weight2)+" mg stat for severe	croup";
                 results.setText(drugDetails);
                 break;
             case 20:
@@ -536,14 +567,14 @@ public class DrugDescriptionActivity extends Activity{
                             +"<br/> 2 mls 50% Glucose"
                             +"<br/>18 mls 5% Glucose </p></html>  ";
                     if(agedd<=7){
-                        drugDetails=2*weight2 +"mls 10% dextrose iv over 5-10 minutes";
+                        drugDetails=2*weight2 +"mls 10% dextrose iv over 3-5 mins ";
 
                     }else if (agedd>7){
-                        drugDetails=(5*weight2)+" mls 10% dextrose iv over 5-10 mins";
+                        drugDetails=(5*weight2)+" mls 10% dextrose iv over 3-5 mins ";
                     }
 
                 }else if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("months")){
-                    drugDetails=(5*weight2)+" mls 10% dextrose iv over 5-10 mins";
+                    drugDetails=(5*weight2)+" mls 10% dextrose iv over 3-5 mins ";
                 }else if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("years")){
                     if (agedd>18){
                         drugDetails="use adult dosages ";
@@ -724,8 +755,13 @@ public class DrugDescriptionActivity extends Activity{
                 webview.loadData(description, "text/html", "UTF-8");
                 break;
             case 28:
+
+                //(For severe SCD only: Pain >3 episodes/ yr; stroke; transfusion ≥ 2/ yr; acute chest syndrome)
+                //Child 2-12 years initially 10-15mg/kg once daily, increased every 12 weeks in steps of 2.5 - 5 mg/kg daily according to response; usual dose 15 - 30 mg/kg daily (max. 35 mg/kg)
                 //Hydroxyurea
-                drugDetails=20*weight2+ "mg daily – Hb and white cells with neutrophil count must be done monthly.";
+                drugDetails="Child 2-12 years initially" + (10*weight2) +"-"+15*weight2+ " \n " +
+                        "increased every 12 weeks in steps of" + (2.5*weight2) + "-" + (5*weight2) + "daily according to response; \n" +
+                        "usual dose" + (15*weight2) + "-" + (30*weight2) + "daily (max. 35 mg/kg)" ;
                 description="<html></p>(for severe SCD only: Pain >3 episodes/yr; stroke;	transfusion	&gt;2/yr; acute chest syndrome)<br/>Stop treatment and consult specialist if neutrophils reduced</p></html>";
                 results.setText(drugDetails);
                 webview.loadData(description, "text/html", "UTF-8");
@@ -737,20 +773,18 @@ public class DrugDescriptionActivity extends Activity{
                 break;
             case 30:
                 //Iron tabs / syrup *
+                //2 - 4 mg elemental Fe/kg/24 hr max dose: 15 mg elemental Fe/day
                 if (weight2>=3 && weight2<=6){
-                    drugDetails="2.5mls of 140mg/5ml syrup 12hrly" ;
+                    drugDetails="Iron deficiency anaemia:" + (2*weight2) + "-" + (4*weight2) + "elemental. max dose: 15 mg elemental Fe/day";
 
                 }else if(weight2>=7 && weight2<=9){
-                    drugDetails="5mls of 140mg/5ml syrup twice daily" +
-                            "\n 0.25 of 200mg tabs twice daily";
+                    drugDetails="Prophylaxis: Pre-term infant" + (2*weight2) + "-" + (4*weight2) + "elemental Fe/kg/24 hr max dose: 15 mg elemental Fe/day";;
                 }else if(weight2>=10 && weight2<=14){
-                    drugDetails="10mls of 140mg/5ml syrup twice daily" +
-                            "\n 0.5 of 200mg tabs twice daily";
+                    drugDetails="Term:" + (1*weight2) + "-" + (2*weight2) + "elemental Fe/24 hr Max 15mg per day";;
                 }else if(weight2>=15 && weight2<=20){
-                    drugDetails="15mls of 140mg/5ml syrup twice daily" +
-                            "\n 0.5 of 200mg tabs twice daily";
+                    drugDetails="Child:" + (3*weight2) + "-" + (6*weight2) + "elemental Fe/kg/day";;
                 }
-                description="<html><p>200mg	Ferrous	sulphate tabs 140mg/5mls Ferrous fumarate syrup</p></html> ";
+                description="";
                 webview.loadData(description, "text/html", "UTF-8");
                 results.setText(drugDetails);
 
@@ -796,7 +830,7 @@ public class DrugDescriptionActivity extends Activity{
                         drugDetails=7.5*weight2+ " iv 12hrly ";
 
                     }else if (agedd>7){
-                        drugDetails=7.5*weight2+ " iv 8hrly or "+(7.5*weight2)/200 +" of 200mg tabs per dose 8 hrly";
+                        drugDetails=7.5*weight2+ " iv 12hrly or "+(7.5*weight2)/200 +" of 200mg tabs per dose 12 hrly";
                     }
 
                 }else if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("months")){
@@ -819,10 +853,10 @@ public class DrugDescriptionActivity extends Activity{
             case 34:
                 //Morphine
                 if(String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("days")){
-                    drugDetails= df.format(0.15*weight2)+" mg";
+                    drugDetails= df.format(0.05*weight2)+" mg";
                 }else if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("months")){
                     if (agedd>=1&&agedd<=11){
-                        drugDetails=  df.format(0.2*weight2)+" mg";
+                        drugDetails=  df.format(0.2*weight2)+" mg" + "every 4 - 6 hr as needed";
                     }
 
                 }else if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("years")){
@@ -1180,6 +1214,7 @@ public class DrugDescriptionActivity extends Activity{
         return message;
 
     }
+
 
 
 

@@ -20,6 +20,7 @@ import android.widget.TextView;
 import com.github.florent37.materialviewpager.header.MaterialViewPagerHeaderDecorator;
 import com.mwongera.paediatric_protocols.Anthropometry;
 import com.mwongera.paediatric_protocols.ClickListener;
+import com.mwongera.paediatric_protocols.DrugActivity1;
 import com.mwongera.paediatric_protocols.DrugDescriptionActivity;
 import com.mwongera.paediatric_protocols.FluidinDiarrhoea;
 import com.mwongera.paediatric_protocols.MalnutritionFeeding;
@@ -122,7 +123,7 @@ public class Drugsfragment extends Fragment implements ClickListener {
     @Override
     public void itemClicked(View view, int position) {
         if(position == 0) {
-            Intent intent = new Intent(getActivity(), DrugsActivity.class);
+            Intent intent = new Intent(getActivity(), DrugActivity1.class);
             getActivity().startActivity(intent);
         }else if(position == 1) {
             Intent intent = new Intent(getActivity(), MaintenanceFluids.class);

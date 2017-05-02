@@ -2,10 +2,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:background="#c2c2c2"
 
-    tools:context=".ShockActivity" >
+    tools:context=".ShockActivity">
 
     <LinearLayout
         android:id="@+id/layoer72"
@@ -13,13 +14,34 @@
         android:layout_alignParentTop="true"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="#FC9"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Basic Paediatrics Protocols - Kenya"
+                android:textColor="#000"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
         <TextView
             android:id="@+id/textDrug"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:gravity="center"
-            android:background="#ff0099cc"
+            android:background="#fff"
             android:text="Malnutrition Feeding"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textSize="30dp" />
@@ -32,17 +54,19 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:gravity="center"
         android:weightSum="100"
         android:layout_below="@id/layoer72"
-        android:orientation="horizontal" >
+        android:orientation="vertical" >
 
         <EditText
             android:id="@+id/editText1"
             android:hint="weight"
-            android:layout_width="100dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
+            android:padding="5dp"
             android:inputType="numberDecimal" >
 
             <requestFocus />
@@ -72,8 +96,11 @@
         android:id="@+id/layoer3"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:layout_below="@+id/layoer2"
-        android:orientation="vertical" >
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="13dp">
 
         <LinearLayout
             android:id="@+id/layoer1"
@@ -92,17 +119,6 @@
                 android:backgroundTint="@color/holo_blue_dark"
                 android:background="@color/holo_blue_dark"
                 android:layout_marginRight="2dp"
-                />
-
-            <android.support.v7.widget.AppCompatButton
-                android:id="@+id/button2"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="50"
-                android:text="clear"
-                android:textColor="@color/text_color_primary_3"
-                android:backgroundTint="@color/holo_blue_dark"
-                android:background="@color/holo_blue_dark"
                 />
         </LinearLayout>
 
@@ -149,6 +165,17 @@
             android:text="Reharbilitation"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textSize="16dp" />
+
     </LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/medical_ad"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"></com.google.android.gms.ads.AdView>
 
 </RelativeLayout>

@@ -27,7 +27,7 @@ public class MalnutritionFeeding extends Activity {
     TextView tresults1,tresults2, tresults3;
     WebView webview;
     Spinner oedemacheck;
-    Button btn1,btn2;
+    Button btn1;
     String results1,results2,results3,results4,results5;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +42,7 @@ public class MalnutritionFeeding extends Activity {
         tresults3=(TextView)findViewById(R.id.textReharb);
         oedemacheck=(Spinner)findViewById(R.id.spinner1);
         btn1=(Button)findViewById(R.id.button1);
-        btn2=(Button)findViewById(R.id.button2);
+        //btn2=(Button)findViewById(R.id.button2);
 
 
         btn1.setOnClickListener(new View.OnClickListener() {
@@ -68,24 +68,6 @@ public class MalnutritionFeeding extends Activity {
 
             }
         });
-        btn2.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-
-                tresults1.setText("");
-                tresults2.setText("");
-                tresults3.setText("");
-                inputWeight.setText("");
-
-            }
-        });
-
-
-
-
-
     }
     private void calculateFeeding(double weight2) {
 

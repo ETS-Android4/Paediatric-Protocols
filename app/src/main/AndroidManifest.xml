@@ -77,6 +77,7 @@
         <activity android:name=".PlanBActivity" />
         <activity android:name=".PlanCActivity" />
         <activity android:name=".PMCT" />
+        <activity android:name=".CPAP" />
         <activity android:name=".Pneumonia" />
         <activity android:name=".Sepsis" />
         <activity android:name=".ShockActivity" />
@@ -88,8 +89,6 @@
         <activity android:name=".fragment.HivSlideActivity">
         </activity>
         <activity android:name=".fragment.AnthropometrySlideActivity">
-        </activity>
-        <activity android:name=".fragment.DrugsActivity">
         </activity>
         <activity android:name=".Drugs_drawer"
             android:theme="@style/DrawerTheme"

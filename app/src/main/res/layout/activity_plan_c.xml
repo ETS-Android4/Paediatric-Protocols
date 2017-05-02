@@ -2,12 +2,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#c2c2c2"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".ShockActivity" >
+    tools:context=".ShockActivity">
 
 
     <LinearLayout
@@ -16,16 +17,37 @@
         android:layout_alignParentTop="true"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="#FC9"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Basic Paediatrics Protocols - Kenya"
+                android:textColor="#000"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
         <TextView
             android:id="@+id/textDrug"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:gravity="center"
-            android:background="#ff0099cc"
+            android:background="#fff"
             android:text="Dehydration Plan-C"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textSize="30dp" />
+            android:textSize="25dp" />
 
 
     </LinearLayout>
@@ -35,10 +57,9 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:weightSum="100"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal"
-        android:layout_below="@id/layoer72"
-        >
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_below="@+id/layoer72">
 
         <EditText
             android:id="@+id/weight"
@@ -59,10 +80,10 @@
             android:id="@+id/spinner1"
             android:layout_width="204dp"
             android:layout_height="match_parent"
-            android:spinnerMode="dialog"
-            android:prompt="@string/lang"
             android:layout_weight="1"
-            android:entries="@array/age" />
+            android:entries="@array/age"
+            android:prompt="@string/lang"
+            android:spinnerMode="dialog" />
     </LinearLayout>
 
     <LinearLayout
@@ -76,7 +97,7 @@
             android:id="@+id/layoer1"
             android:layout_width="fill_parent"
             android:layout_height="60dp"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:weightSum="100" >
 
             <android.support.v7.widget.AppCompatButton
@@ -91,17 +112,6 @@
                 android:layout_marginRight="2dp"
                 />
 
-            <android.support.v7.widget.AppCompatButton
-                android:id="@+id/button2"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="50"
-                android:text="clear"
-                android:textColor="@color/text_color_primary_3"
-                android:backgroundTint="@color/holo_blue_dark"
-                android:background="@color/holo_blue_dark"
-                android:layout_marginLeft="2dp"
-                />
         </LinearLayout>
 
         <TextView
@@ -113,7 +123,7 @@
             android:layout_centerVertical="true"
             android:layout_marginTop="12dp"
             android:gravity="center"
-            android:background="#ffe2e3"
+            android:background="#FC9"
             android:lines="4"
             android:text="Step1"
             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -148,4 +158,13 @@
             android:textSize="16dp" />
     </LinearLayout>
 
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/medical_ad"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"></com.google.android.gms.ads.AdView>
 </RelativeLayout>

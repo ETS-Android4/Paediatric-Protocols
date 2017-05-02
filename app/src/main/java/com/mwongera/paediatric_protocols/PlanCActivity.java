@@ -14,6 +14,10 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 /**
  * Created by mwongera on 3/5/17.
  */
@@ -38,7 +42,7 @@ public class PlanCActivity extends Activity {
         setContentView(R.layout.activity_plan_c);
         //getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#f9a614")));
         btn=(Button)findViewById(R.id.button1);
-        btn1=(Button)findViewById(R.id.button2);
+        //btn1=(Button)findViewById(R.id.button2);
         txtstep1=(TextView)findViewById(R.id.textstep1);
         txtstep2=(TextView)findViewById(R.id.textstep2);
         txtstep3=(TextView)findViewById(R.id.textngt);
@@ -90,22 +94,12 @@ public class PlanCActivity extends Activity {
 
 
         });
-        btn1.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-                weight.setText("");
-                txtstep1.setText("");
-                txtstep2.setText("");
-                //webview.clearView();
-                removetheKeyboard();
+        MobileAds.initialize(getApplicationContext(), "ca-app-pub-3940256099942544~3347511713");
 
-            }
-        });
-
-
-
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
     }
     public void removetheKeyboard(){
         //First remove the virtual keyboad.

@@ -11,6 +11,10 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 import java.text.DecimalFormat;
 
 /**
@@ -43,7 +47,7 @@ public class NewBornFluids extends Activity {
         txtrate=(TextView)findViewById(R.id.textRate);
         txtngt=(TextView)findViewById(R.id.textNGT);
         btn1=(Button)findViewById(R.id.button1);
-        btn2=(Button)findViewById(R.id.button2);
+        //btn2=(Button)findViewById(R.id.button2);
 
         //String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("years")
         btn1.setOnClickListener(new View.OnClickListener() {
@@ -77,19 +81,12 @@ public class NewBornFluids extends Activity {
 
 
         });
-        btn2.setOnClickListener(new View.OnClickListener() {
+        MobileAds.initialize(getApplicationContext(), "ca-app-pub-3940256099942544~3347511713");
 
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-                txtvolume.setText("");
-                txthrly.setText("");
-                txtrate.setText("");
-                inputWeight.setText("");
-                txtngt.setText("");
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
-            }
-        });
 
     }
 

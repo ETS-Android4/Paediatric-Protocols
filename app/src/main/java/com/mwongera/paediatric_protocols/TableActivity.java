@@ -2,15 +2,12 @@ package com.mwongera.paediatric_protocols;
 
 import android.app.ListActivity;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.mwongera.paediatric_protocols.fragment.AnthropometryWeightE;
-import com.mwongera.paediatric_protocols.fragment.DrugsActivity;
 import com.mwongera.paediatric_protocols.fragment.MajorIllnessActivity;
 import com.mwongera.paediatric_protocols.fragment.Procedures;
 import com.mwongera.paediatric_protocols.fragment.ResusciationEmergencyCare;
@@ -53,7 +50,7 @@ public class TableActivity extends ListActivity {
             startActivity(i);
 
         }else if(ps==0){
-            Intent i = new Intent(this, DrugsActivity.class);
+            Intent i = new Intent(this, DrugActivity1.class);
             startActivity(i);
 
         }else if(ps==5){

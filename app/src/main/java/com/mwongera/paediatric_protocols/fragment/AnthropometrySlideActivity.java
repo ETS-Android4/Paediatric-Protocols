@@ -25,9 +25,8 @@ public class AnthropometrySlideActivity extends FragmentActivity {
     private ViewPager mPager;
     private PagerAdapter mPagerAdapter;
 
-    private WFH0_fragment mWFH0;
-    private WeightEstimationFragment mWeightestimation;
     private WFH1_fragment mWFH1;
+    private WeightEstimationFragment mWeightestimation;
     private WFH2_fragment mWFH2;
     private WFH3_fragment mWFH3;
     private WFH4_fragment mWFH4;
@@ -104,18 +103,15 @@ public class AnthropometrySlideActivity extends FragmentActivity {
                     mWeightestimation = new WeightEstimationFragment();
                     return mWeightestimation;
                 case 1:
-                    mWFH0 = new WFH0_fragment();
-                    return mWFH0;
-                case 2:
                     mWFH1 = new WFH1_fragment();
                     return mWFH1;
-                case 3:
+                case 2:
                     mWFH2 = new WFH2_fragment();
                     return mWFH2;
-                case 4:
+                case 3:
                     mWFH3 = new WFH3_fragment();
                     return mWFH3;
-                case 5:
+                case 4:
                     mWFH4 = new WFH4_fragment();
                     return mWFH4;
 

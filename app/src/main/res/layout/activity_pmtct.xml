@@ -5,10 +5,47 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@drawable/Background"
+        android:background="@drawable/background"
         android:padding="2dp">
 
-        <TextView android:id="@android:id/text1"
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="#FC9"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Basic Paediatrics Protocols - Kenya"
+                android:textColor="#000"
+                android:textSize="15sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="HIV"
+                android:textColor="#000"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/hiv1" />
+
+    <TextView android:id="@android:id/text1"
             style="?android:textAppearanceLarge"
             android:textStyle="bold"
             android:textColor="@android:color/black"
@@ -17,16 +54,5 @@
             android:layout_marginBottom="16dp" />
 
 
-        <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
-            android:src="@drawable/hiv1" />
-
-
-    </LinearLayout>
+</LinearLayout>
 

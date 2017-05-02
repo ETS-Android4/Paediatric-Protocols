@@ -10,10 +10,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import com.mwongera.paediatric_protocols.fragment.AnthropometrySlideActivity;
-import com.mwongera.paediatric_protocols.fragment.DrugsActivity;
-import com.mwongera.paediatric_protocols.fragment.MaintenanceFluids;
-
 import java.util.ArrayList;
 import java.util.List;
 

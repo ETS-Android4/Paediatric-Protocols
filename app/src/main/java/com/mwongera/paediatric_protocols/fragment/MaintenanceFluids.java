@@ -13,6 +13,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.mwongera.paediatric_protocols.R;
 
 import java.text.DecimalFormat;
@@ -35,7 +38,7 @@ public class MaintenanceFluids extends Activity{
     EditText inputWeight;
     TextView txtShock,txtMaintaince,txtAlternative,txtbolus;
 
-    Button btn1,btn2;
+    Button btn1;
     String results1,results2,results3,results4;
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -48,7 +51,7 @@ public class MaintenanceFluids extends Activity{
         txtAlternative=(TextView) findViewById(R.id.textAlternative);
         txtbolus=(TextView) findViewById(R.id.textBolus);
         btn1=(Button) findViewById(R.id.button1);
-        btn2=(Button) findViewById(R.id.button2);
+        //btn2=(Button) findViewById(R.id.button2);
         btn1.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -80,22 +83,12 @@ public class MaintenanceFluids extends Activity{
 
 
         });
-        btn2.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
+        MobileAds.initialize(getApplicationContext(), "ca-app-pub-3940256099942544~3347511713");
 
-                txtShock.setText("");
-                txtAlternative.setText("");
-                txtMaintaince.setText("");
-                inputWeight.setText("");
-                txtbolus.setText("");
-
-            }
-        });
-
-
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
     }
     private void calculateFeeding(double weight) {

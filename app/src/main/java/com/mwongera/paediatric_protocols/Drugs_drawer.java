@@ -13,7 +13,6 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.mwongera.paediatric_protocols.fragment.AnthropometrySlideActivity;
-import com.mwongera.paediatric_protocols.fragment.DrugsActivity;
 import com.mwongera.paediatric_protocols.fragment.MaintenanceFluids;
 
 import java.util.ArrayList;
@@ -80,7 +79,7 @@ public class Drugs_drawer extends AppCompatActivity implements ClickListener {
     @Override
     public void itemClicked(View view, int position) {
         if(position == 0) {
-            Intent intent = new Intent(this, DrugsActivity.class);
+            Intent intent = new Intent(this, DrugActivity1.class);
             startActivity(intent);
         }else if(position == 1) {
             Intent intent = new Intent(this, MaintenanceFluids.class);

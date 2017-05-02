@@ -13,6 +13,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 /**
  * Created by mwongera on 3/5/17.
  */
@@ -37,7 +41,7 @@ public class PlanBActivity extends Activity {
         notes=(WebView)findViewById(R.id.webView1);
         inputweight=(EditText)findViewById(R.id.weight);
         btn=(Button)findViewById(R.id.button1);
-        btn1=(Button)findViewById(R.id.button2);
+        //btn1=(Button)findViewById(R.id.button2);
         btn.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -63,17 +67,12 @@ public class PlanBActivity extends Activity {
 
             }
         });
-        btn1.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-                results.setText("");
-                inputweight.setText("");
-                notes.clearView();
+        MobileAds.initialize(getApplicationContext(), "ca-app-pub-3940256099942544~3347511713");
 
-            }
-        });
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
     }
     public void removetheKeyboard(){
