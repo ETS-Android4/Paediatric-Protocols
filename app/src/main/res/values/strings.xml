@@ -227,4 +227,722 @@ for 24 hrs then 62.5–250 micrograms daily in 1–2 doses</p></html></string>
     <string name="title_template_step7">WFH 4 <xliff:g id="step_number"></xliff:g></string>
     <string name="title_template_step8">WFH 5 <xliff:g id="step_number"></xliff:g></string>
 
+    <string name="Adrenaline">
+        <![CDATA[
+        <h2>Adrenaline</h2>
+        <p>1 in 10,000 : Give 0.1ml/kg in resuscitation.</p>
+        <p>To make this strength dilute 1 ml of 1 in 1000 adrenaline in 9 mls water for injection to make 10mls</p>
+        <p>For severe viral croup 0.5 ml/kg of 1:1000 solution (max dose:5 ml) </p>
+        ]]>
+    </string>
+
+    <string name="Albendazole">
+        <![CDATA[
+        <h2>Albendazole </h2>
+        <p>Age < 2yrs , 200mg stat</p>
+        <p>Age ≥ 2yrs , 400mg stat</p>
+        ]]>
+    </string>
+
+    <string name="Amikacin">
+        <![CDATA[
+        <h2>Amikacin</h2>
+        <p>Age 1month to 12 yrs,15mg/kg once daily.</p>
+        <p>Same dosing can be used in newborns. Slow iv over 3-5 min</p>
+        <p>Amikacin trough concentration should be monitored ( if available)</p>
+        <p>If serious gram - ve infection / resistance to gentamicin, higher doses may be used with monitoring</p>
+        ]]>
+    </string>
+
+    <string name="Aminophylline">
+        <![CDATA[
+        <h2>Aminophylline(iv)</h2>
+        <p>ONLY used in hospital inpatients!</p>
+        <p>Newborn Loading dose 6mg/kg iv over 1 hour or rectal,</p>
+        <p>Maintenance (iv or oral) : Age 0 ≤ 6 days - 2.5mg/kg 12hrly, Age 7-28 days - 4mg/kg 12hrly.</p>
+        <p>Asthma: 5mg/kg iv first dose over 30 mins Max 500mg</p>
+        ]]>
+    </string>
+
+    <string name="Amoxicillin">
+        <![CDATA[
+        <h2>Amoxicillin</h2>
+        <p>Age >7days: Use 25mg/kg/dose 12 hourly for simple infections and 40-45mg/kg 12 hourly for pneumonia /p>
+        <p>Newborns:  25mg/kg 12hourly,</p>
+        ]]>
+    </string>
+
+    <string name="Ampicillin">
+        <![CDATA[
+        <h2>Ampicillin </h2>
+        <p>Neonate: 50mg/kg/dose 12 hourly iv or im if aged < 7 days and 8 hourly if aged 8 - 28 days.</p>
+        <p>Age 1m and over: 50mg/kg/dose (Max 500mg) 8 hourly</p>
+        ]]>
+    </string>
+
+    <string name="Artesunate">
+        <![CDATA[
+        <h2>Artesunate</h2>
+        <p>3mg/kg At 0,12, and 24h then daily for max 7 days</p>
+        <p>If weight >20Kg give 2.4mg/kg/dose</p>
+        <p>Given iv / im for a minimum of 24 hours</p>
+        <p>As soon as the child can eat drink (after 24 hours for artesunate) then change to a full course of artemisinin</p>
+        <p>combination therapy (ACT) typically the 1st line oral anti-malarial, Artemether Lumefantrine.</p>
+        ]]>
+    </string>
+
+    <string name="Beclomethasone">
+        <![CDATA[
+        <h2>Beclomethasone</h2>
+        <p>Age < 2yrs 50-100 micrograms 12 hrly,</p>
+        <p>Age ≥ 2yrs 100-200 micrograms 12 hrly.</p>
+        <p>Can double doses to improve control but check</p>
+        <p>technique and follow up carefully</p>
+        ]]>
+    </string>
+
+    <string name="Benzyl">
+        <![CDATA[
+        <h2>Benzyl Penicillin (X-pen)</h2>
+        <p>Age < 6days: 50,000 iu/kg/dose 12 hourly iv or im.</p>
+        <p>Age 7 days and over: 50,000 iu/kg/dose 6 hourly iv / im</p>
+        <p>Double Penicillin doses when treating meningitis and age >1 month.</p>
+        ]]>
+    </string>
+
+    <string name="Caffeine">
+        <![CDATA[
+        <h2>Caffeine Citrate </h2>
+        <p>Loading dose: oral: 20 mg/kg (or iV over 30 min) maintenance dose: 5 mg/kg daily oral (or iV over 30 min)</p>
+        ]]>
+    </string>
+
+    <string name="Carbamazepine">
+        <![CDATA[
+        <h2>Carbamazepine</h2>
+        <p>Age 1 m - 12 yrs: initially 5 mg/kg at night, increased as necessary by 2.5 - 5 mg/kg every 3 -7 days;</p>
+        <p>Usual maintenance dose 5 mg/kg 2-3 times daily.</p>
+        <p>Avoid abrupt withdrawal and watch carefully for side effects</p>
+        ]]>
+    </string>
+
+    <string name="Cefotaxime">
+        <![CDATA[
+        <h2>Cefotaxime</h2>
+        <p>Preferred to Ceftriaxone for treatment of neonatal meningitis if aged < 7 days:</p>
+        <p>Pre-term: 50mg/kg 12 hourly;</p>
+        <p>Term aged < 7 days: 50mg/kg 8 hourly</p>
+        ]]>
+    </string>
+
+    <string name="Calcium">
+        <![CDATA[
+        <h2>Calcium</h2>
+        <p>Monitor calcium especially if on Vitamin D or long term therapy</p>
+        <p><b>Severe hypocalcemia</b></p>
+        <p>V bolus of 10% calcium gluconate 0.5 ml/kg (0.11 mmol/kg) to a maximum of 20 ml/kg over 5 – 10 min then continuous IV infusion</p>
+        <p>over 24 h of 1.0 mmol/kg (maximum 8.8 mmol).</p>
+        <p><b>Mild hypocalcemia</b></p>
+        <p>Oral calcium 0.2 mmol/kg to a maximum of 10 mmol 6 hourly</p>
+        ]]>
+    </string>
+
+    <string name="Ceftriaxone">
+        <![CDATA[
+        <h2>Ceftriaxone</h2>
+        <p><b>Neonates:</b> Not recommended if Jaundiced or <7days.</p>
+        <p>Max 50mg/kg 24hourly</p>
+        <p><b>7 days:</b> Meningitis or Very severe sepsis 50mg/kg 12 hourly not to exceed 4g/day</p>
+        ]]>
+    </string>
+
+    <string name="Chloramphenicol">
+        <![CDATA[
+        <h2>Chloramphenicol</h2>
+        <p><b>Age >= 7 days:</b> 25mg/kg iv/im/po 6 hourly </p>
+        <p>Max 50mg/kg 24hourly</p>
+        ]]>
+    </string>
+
+    <string name="Ciprofloxacin">
+        <![CDATA[
+        <h2>Ciprofloxacin(oral)</h2>
+        <p><b>Dysentery dosing:</b> 15mg/kg/dose 12 hourly for 3 days</p>
+        <p>Note: may increase renal toxicity of gentamicin/amikacin</p>
+        ]]>
+    </string>
+
+    <string name="Clotrimazole">
+        <![CDATA[
+        <h2>Clotrimazole 1%</h2>
+        <p>Use Clotrimazole paint for oral thrush and apply 2-3 times daily until cleared</p>
+        ]]>
+    </string>
+
+    <string name="Cotrimoxazole">
+        <![CDATA[
+        <h2>Co-trimoxazole</h2>
+        <p>Co-trimoxazole pneumonia dozing 4mg/kg trimethoprim and 20mg/kg sulphamethoxazole</p>" +
+                        "\n" +
+                        "<table>\n" +
+                        "  <tr>\n" +
+                        "    <th>Weight</th>\n" +
+                        "    <th>240mg/5ml (syrup)\n" +
+                        "12 hrly</th>\n" +
+                        "    <th>480mg (tabs)\n" +
+                        "12 hrly</th>\n" +
+                        "  </tr>\n" +
+                        "  <tr>\n" +
+                        "    <td>2 - 3kg </td>\n" +
+                        "    <td>2.5 mls </td>\n" +
+                        "    <td>1/4</td>\n" +
+                        "  </tr>\n" +
+                        "  <tr>\n" +
+                        "    <td>4 - 10kg \n</td>\n" +
+                        "    <td>5 mls </td>\n" +
+                        "    <td>1/2</td>\n" +
+                        "  </tr>\n" +
+                        "  <tr>\n" +
+                        "    <td>11 - 15 kg </td>\n" +
+                        "    <td>7.5 mls </td>\n" +
+                        "    <td>1/2</td>\n" +
+                        "  </tr>\n" +
+                        "  <tr>\n" +
+                        "    <td>16 - 20 kg </td>\n" +
+                        "    <td>10 mls </td>\n" +
+                        "    <td>1</td>\n" +
+                        "  </tr>\n" +
+                        "</table>
+        ]]>
+    </string>
+
+    <string name="Dexamethasone">
+        <![CDATA[
+        <h2>Dexamethasone</h2>
+        <p>IV or IM 0.6mg/kg stat for severe croup</p>
+        ]]>
+    </string>
+
+    <string name="Dextrose">
+        <![CDATA[
+        <h2>Dextrose/glucose</h2>
+        <p>5mls/kg 10% dextrose iv over 3-5 mins</p>
+        <p><b>Neonate :</b> 2 mls/kg </p>
+        <p>TO MAKE 10% dextrose using 50%dextrose and water for injection: 10 mls syringe; 2mls 50% dextrose + 8mls</p>
+        <p>water. 20mls Syringe; 4mls 50% dextrose + 16mls water.</p>
+        <p>TO MAKE 10% dextrose using 50%dextrose and 5% dextrose: 10 mls syringe; 1mls 50% dextrose + 9mls water.</p>
+        <p>20mls Syringe; 2mls 50% dextrose + 18mls water.</p>
+        ]]>
+    </string>
+
+    <string name="Ceftazidime">
+        <![CDATA[
+        <h2>Ceftazidime</h2>
+        <p><b>1 mo-12 yrs :</b> 30-50 mg/kg IM/IV 8 hourly (Max: 6 g/day)</p>
+        <p><b>Age < 7 days or weight < 1200g : </b>50 mg/kg IM/IV 12 hourly</p>
+        <p><b>Age > 7 days or weight >1200 g : </b> 50 mg/kg IM/IV 8 hourly</p>
+        ]]>
+    </string>
+
+    <string name="Dihydrocodeine">
+        <![CDATA[
+        <h2>Dihydrocodeine</h2>
+        <p><b>Age 1- 4 yrs: <b/>0.5mg / kg every 4-6 hours</p>
+        <p><b>Age 4 - 12 yrs : </b>0.5 -1 mg/kg (max. 30 mg) every 4 - 6 hrs</p>
+        ]]>
+    </string>
+
+    <string name="DiazepamV">
+        <![CDATA[
+        <h2>Diazepam (iv) </h2>
+        <p>0.3mg/kg</p>
+        ]]>
+    </string>
+
+    <string name="DiazepamR">
+        <![CDATA[
+        <h2>Diazepam (rectal)</h2>
+        <p>0.5mg/kg </p>
+        <p>The whole syringe barrel of a 1ml or 2ml syringe should be inserted gently so that the pr dose is given at a depth of 4-5cm</p>
+        ]]>
+    </string>
+
+    <string name="Digoxin">
+        <![CDATA[
+        <h2>Digoxin (oral)</h2>
+        <p><b>Age 2-5 yrs: </b>initially 35 micrograms/kg in 3 divided doses for 24 hrs then 10 micrograms/kg daily in 1 - 2 doses </p>
+        <p><b>Age 5-10 yrs: </b>initially 25 micrograms/kg (max 750 micrograms) in 3 divided doses for 24 hours then 6</p>
+        <p>micrograms/kg daily (max.250 micrograms daily) in 1-2 doses</p>
+        <p><b>Age 10-12 yrs : </b>initially 0.75-1.5 mg in 3 divided doses for 24 hrs then 62.5-250 micrograms daily in 1-2 doses</p>
+        ]]>
+    </string>
+
+    <string name="Erythromycin">
+        <![CDATA[
+        <h2>Erythromycin</h2>
+        <p>30-50 mg/kg/day in 3-4 divided doses; max: 2 g/day </p>
+        ]]>
+    </string>
+
+    <string name="Flucloxacillin">
+        <![CDATA[
+        <h2>Flucloxacillin</h2>
+        <p><b>Neonates: </b>50mg/kg iv/im 12hourly</p>
+        <p>25mg/kg po 12 hourly</p>
+        <p><b> >7days: </b>50mg/kg iv/im 8 hourly</p>
+        <p>15mg/kg po 8 hourly</p>
+        ]]>
+    </string>
+
+    <string name="Gentamicin">
+        <![CDATA[
+        <h2>Gentamicin</h2>
+        <p>7.5 mg/kg/24 hr</p>
+        <p>Gentamicin used OD should be given im or as a slow iv push over 2-3 minutes</p>
+        <p>If a baby is not obvioulsy passing urine after more than 24 hours, consider stopping the Gentamicin</p>
+        ]]>
+    </string>
+
+    <string name="Hydroxyurea">
+        <![CDATA[
+        <h2>Hydroxyurea</h2>
+        <p>(For severe SCD only: Pain >3 episodes/ yr; stroke; transfusion ≥ 2/ yr; acute chest syndrome)</p>
+        <p>Child 2-12 years initially 10-15mg/kg once daily, increased every 12 weeks in steps of 2.5 - 5 mg/kg daily according</p>
+        <p>to response; usual dose 15 - 30 mg/kg daily (max. 35 mg/kg)</p>
+        ]]>
+    </string>
+
+    <string name="Ibuprofen">
+        <![CDATA[
+        <h2>Ibuprofen</h2>
+        <p>5 - 10 mg/kg 8 hourly</p>
+        ]]>
+    </string>
+
+    <string name="Iron">
+        <![CDATA[
+        <h2>Iron (Fe)</h2>
+        <p><b>Iron deficiency anaemia: </b>Pre-term infant: 2 - 4 mg elemental Fe/kg/day max dose: 15 mg elemental Fe/day</p>
+        <p><b>Child: </b>3 - 6 mg elemental Fe/kg/day</p>
+        <p><b>Prophylaxis: </b>Pre-term infant 2 - 4 mg elemental Fe/kg/24 hr max dose: 15 mg elemental Fe/day</p>
+        <p><b>Term: </b>1-2mg elemental Fe/24 hr Max 15mg per day </p>
+        ]]>
+    </string>
+
+    <string name="Lactulose">
+        <![CDATA[
+        <h2>Lactulose</h2>
+        <p><b>Hepatic Encephalopathy Infants: </b>1.7 - 6.7 g/day (2.5 - 10 mL) orally daily divided in 3 to 4 doses.</p>
+        <p>Adjust dosage to produce 2 - 3 soft stools per day</p>
+        <p><b>Children: 25-60 g/day /b><(40-90 mL) orally daily divided in 3-4 doses.</p>
+        <p>Adjust dosage to produce 2-3 soft stools/day</p>
+        <p><b>Chronic constipation: </b>Children: 0.7 - 2 gm/kg/day (1 to 3 mL/kg/day) orally in divided doses daily; not to exceed</p>
+        <p>40 g/day (60 mL/day)</p>
+        ]]>
+    </string>
+
+    <string name="Mebendazole">
+        <![CDATA[
+        <h2>Mebendazole</h2>
+        <p>(for age>1yr) 100mg bd for 3 days or 500mg stat</p>
+        ]]>
+    </string>
+
+    <string name="Metronidazole">
+        <![CDATA[
+        <h2>Metronidazole</h2>
+        <p><b>Neonate: </b>7.5mg/kg 12 hourly </p>
+        <p><b>Age <1mo: </b>7.5mg/kg iv 12 hourly</p>
+        <p><b>Age >1mo: </b>7.5mg/kg 1v 8 hourly</p>
+        <p><b>Oral: </b>7.5mg/kg 8 hourly</p>
+        ]]>
+    </string>
+
+    <string name="Morphine">
+        <![CDATA[
+        <h2>Morphine</h2>
+        <p><b>Neonate: </b>0.05 - 0.2 mg/kg/dose IM, SC, slow IV every 4hr</p>
+        <p><b>Infant and Child: </b>PO 0.2 - 0.5 mg/kg/dose every 4 - 6 hr as needed</p>
+        <p>IM IV/SC 0.1 - 0.2 mg/kg/dose every 2-4 hrs as needed max 15 mg/dose</p>
+        ]]>
+    </string>
+
+    <string name="Multivitamins">
+        <![CDATA[
+        <h2>Multivitamins</h2>
+        <p><b>Age <6 m: </b>2.5mls daily</p>
+        <p><b>Age > 6m: </b>5mls 12 hrly</p>
+        ]]>
+    </string>
+
+    <string name="Nystatin">
+        <![CDATA[
+        <h2>Nystatin</h2>
+        <p><b>Pre terms </b>0.5ml (50,000 U) to each side of the mouth 6 hourly(2 weeks if HIV +ve)</p>
+        <p><b>Terms </b>1ml (100,000 U) to each side of the mouth 6hrly (2 weeks if HIV+ve)</p>
+        ]]>
+    </string>
+
+    <string name="Paracetamol">
+        <![CDATA[
+        <h2>Paracetamol</h2>
+        <p>10-15mg / kg 6 to 8 hrly</p>
+        ]]>
+    </string>
+
+    <string name="Pethidine">
+        <![CDATA[
+        <h2>Pethidine, im</h2>
+        <p> 0.5 to 1mg / kg every 4- 6 hours</p>
+        ]]>
+    </string>
+
+    <string name="Phenobarbitone">
+        <![CDATA[
+        <h2>Phenobarbitone</h2>
+        <p>Loading with 15mg/kg (if NOT on maintenance phenobarb)</p>
+        <p>followed by 2.5mg - 5mg/kg daily, </p>
+        <table> Convulsions in the first 1 month of life should be treated with Phenobarbitone
+        20mg/kg stat, a further 5-10mg/kg can be given within 24 hours of the loading
+        dose with maintenance doses of 5mg/kg daily</table>
+        ]]>
+    </string>
+
+    <string name="Phenytoin">
+        <![CDATA[
+        <h2>Phenytoin</h2>
+        <p><b>Age 1m - 12 yrs </b>( IV, oral) 15-20 mg/kg at a rate not exceeding 1 mg/kg/minute as a loading dose</p>
+        <p>maintenance dose of 2.5 - 5 mg/kg twice daily (max. 150mg twice daily)</p>
+        <p>Similar dosing can be used in neonates.</p>
+        ]]>
+    </string>
+
+    <string name="Potassium">
+        <![CDATA[
+        <h2>Potassium</h2>
+        <p><b>Hypokalemia </b> oral 1 - 4 mmol/kg/day. Monitor serum potassium</p>
+        ]]>
+    </string>
+
+    <string name="Prednisolone">
+        <![CDATA[
+        <h2>Prednisolone - tabs</h2>
+        <p>Asthma 2mg / kg daily(usually for 3-5 days, stopped when symptoms largely resolved)</p>
+        ]]>
+    </string>
+
+    <string name="Valproate">
+        <![CDATA[
+        <h2>Valproate(sodium)</h2>
+        <p><b>Neonate</b> initially 20mg/kg once daily; maintenance 10 mg/kg twice daily PO</p>
+        <p>1 mo - 12yrs initially 10-15 mg/kg (max. 600mg) daily in 1-2 divided doses max 60 mg/kg daily. </p>
+        <p> Maintenance 25-30 mg/kg daily in 2 divided doses PO</p>
+        ]]>
+    </string>
+
+    <string name="VitaminA">
+        <![CDATA[
+        <h2>Vitamin A</h2>
+        <p>Once on admission,not to be repeated within 1 month. For malnutrition with eye disease repeat on day 2 and day 14</p>
+        <table border="1" width="300" height="150">
+        <tr>
+        <td><b>Age</b> , <b>Dosage Oral</b></td>
+        <td>< 6m , 50,000 u stat</td>
+        <td>6 - 12m , 100,000 u stat</td>
+        <td>> 12m  , 200,000 u stat</td>
+        </tr>
+        </table>
+        ]]>
+    </string>
+
+    <string name="VitaminD">
+        <![CDATA[
+        <h2>Vitamin D - Chole or ergocalciferol:</h2>
+        <p>Rickets: Low dose regimens daily for 8-12wks or one high dose. ± Calcium for first week of treatment.</p>
+        <table border="1" width="300" height="150">
+        <tr>
+        <td><b>Age</b> , <b>Dosage Oral</b></td>
+        <td>< 6m , 3,000 u = 75 micrograms</td>
+        <td>> 6m , 6,000 u = 150 micrograms</td>
+        <td>> 6m stat im regimen , 300,000 u = 7.5 mg Stat</td>
+        </tr>
+        </table>
+        ]]>
+    </string>
+
+    <string name="VitaminDD">
+        <![CDATA[
+        <h2>Vitamin D – Maintenance After treatment course</h2>
+        <table border="1" width="300" height="150">
+        <tr>
+        <td><b>Age</b> , <b>Dosage Oral</b></td>
+        <td>6 - 12m  , 200 - 400 u (5 – 10μg)</td>
+        <td>< 6m , 400 - 800 u (10 – 20μg)</td>
+        </tr>
+        </table>
+        ]]>
+    </string>
+
+    <string name="VitaminK">
+        <![CDATA[
+        <h2>Vitamin K</h2>
+        <p><b>Newborns: </b>1mg stat im (<1500g, 0.5mg im stat)</p>
+        <p><b>For liver disease: </b>0.3mg/kg stat, max 10mg </p>
+        ]]>
+    </string>
+
+    <string name="ZincSulphate">
+        <![CDATA[
+        <h2>Zinc Sulphate</h2>
+        <p><b>Age ≤ 6m: </b>10mg daily for 14 days</p>
+        <p><b>Age > 6 m: </b>20mg daily for 14 days</p>
+        ]]>
+    </string>
+
+    <string name="Quinine">
+        <![CDATA[
+        <h2>Quinine</h2>
+        <p>Loading 20mg/kg iv/im then 10mg/kg 8 hourly</p>
+        <p>Do not give more than 3mls per injection site.(IM)</p>
+        ]]>
+    </string>
+
+    <string name="Salbutamol">
+        <![CDATA[
+        <h2>Salbutamol</h2>
+        <p>IV therapy should only be used on an HDU, ideally with a monitor, and MUST be given slowly as directed</p>
+        <p>Oral salbutamol should ONLY be used if it is the only option available</p>
+        <p><b>IV in hospital only over 5 mins </b>- < 2 yrs 5 microgram/kg, ≥ 2 yrs up to 15 microgram/kg max dose 250 micrograms(0.25mg</p>
+        <p><b>Nebulised: </b>2.5mg/dose as required </p>
+        <p><b>Inhaled</b> (Acute exacerbation) (100 microgram per puff) 2 puffs via spacer repeated as required acutely or 2 puffs up to 4-6 hrly for acute wheeze for < 5 days</p>
+        <p><b>Oral (no longer recommended unless no inhaled therapy</b</p>
+        <p>Age 2-12yrs 1-2mg/dose 6 - 8hrly</p>
+        <p>(1 week only-not suitable for maintenance therapy)</p>
+        ]]>
+    </string>
+
+    <string name="accept">Accept</string>
+    <string name="eula_string">COPYRIGHTS:
+
+\nCopyright 2017 HealthEd Terms and Conditions. All Rights Reserved.
+
+\n\nHealthEd Solutions, described below, provides users with a wide array of services including,
+        without limitation,reference resources, sponsored programming, personalized content, continuing medical education and communication platforms (collectively, the “Services”).
+        The Services are provided to users of HealthEd Solutions subject to the following Terms of Use (the “Terms”).
+        You will always be able to view the most current version of these Terms by clicking on the Terms of Use link at the bottom of any page of a HealthEd Network website or without our mobile applications.
+        By using the Services, you agree to these Terms, whether or not you are a registered member of HealthEd Solutions.
+        These Terms govern your use of the Services and create a binding legal agreement that we may enforce against you in the event of a violation.
+        If you do not agree to all of these Terms of Use, do not use the Services!.
+
+\n\nScope of these Terms of Use
+\n\nHealthEd Solutions includes the HealthEd mobile device applications, which include The Basic Paediatric Protocols (the “HealthEd Apps”).
+
+\n\nHealthEd Solutions may offer other services to physicians and healthcare professionals outside of The Basic Paediatric Protocols.
+        These other services are not governed by these Terms but by the terms of use applicable to the property through which these services are offered.
+
+\n\nUse of the Services
+\n\nThe Services are intended for physicians and other healthcare professionals.
+        By using the Services, you represent and warrant that you have the right, authority,
+        and capacity to agree to and abide by these Terms and that you are not prohibited from using the Services or any portion thereof.
+
+\n\nThe information and tools that we make available through the Services are provided for educational and informational purposes only.
+        While we hope you find the Services useful to you as a healthcare professional, they are in no way intended to serve as a diagnostic service or platform,
+        to provide certainty with respect to a diagnosis, to recommend a particular product or therapy or to otherwise substitute for the clinical judgment of a qualified healthcare professional.
+        You agree that you will not use the Services with the intention of creating any kind of physician/patient relationship, e.g., to diagnose or treat users.
+        You are solely responsible for evaluating the information obtained from the Services and for your use or misuse of such information in connection with your treatment decisions or otherwise.
+        You agree that you shall be solely responsible for your compliance with all laws and standards of professional practice applicable to you and the practice of medicine or other relevant health profession.
+
+\n\n\If you are a consumer who chooses to access the professional-level information made available through the Services,
+        you should not rely on that information as professional medical advice or use the Services as a replacement for any relationship with your physician or other qualified healthcare professional.
+        For medical concerns, including decisions about medications and other treatments, consumers should always consult their physician or, in serious cases, seek immediate assistance from emergency medical personnel.
+
+\n\nSubject to your compliance with these Terms, you are granted a limited, non-exclusive, non-transferable and non-sublicensable
+        license to use the Services and to view the information and materials made available through the Services, including User Content,
+        as defined below, (“HealthEd Content”) solely for your personal and professional use.
+        You shall not use, copy, adapt, modify, prepare derivative works based upon, distribute, license, sell, transfer,
+        publicly display, publicly perform, transmit, stream, broadcast or otherwise exploit the Services,
+        HealthEd Content, the HealthEd Sites or the HealthEd Apps, except as expressly permitted in these Terms.
+        All rights not expressly granted herein are reserved to HealthEd Solutions and their respective licensors, as applicable.
+
+\n\nHealthEd Solutions may contain links to third-party websites or resources which are not part of HealthEd Solutions.
+        You agree that we are not responsible or liable for these websites and resources including, without limitation,
+        their availability or the content and information that they provide.
+        The inclusion in HealthEd Solutions of third party resources, including links to third party websites, does not imply our endorsement of these resources.
+
+\n\nYou agree that you will not engage in any of the following activities in connection with your use of the Services:
+
+\n\nForge headers or otherwise manipulate identifiers in order to disguise the origin of any content transmitted through the Services;
+Use, display, mirror or frame a HealthEd Site or HealthEd App, or any component thereof, or HealthEd’s trademark, logo or other proprietary information, without the written consent of HealthEd, as applicable;
+Remove any copyright, trademark or other proprietary rights notices contained within HealthEd Solutions, including those of HealthEd and any of their respective licensors;
+Infringe or use the  or HealthEd brand, logos and/or trademarks in any business name, email, URL or other context unless expressly approved in writing by HealthEd;
+Attempt to circumvent any protective technological measure associated with the Services;
+Attempt to access or search a HealthEd Site, HealthEd App or any content contained therein through the use of any engine, software, tool, agent,
+        device or mechanism (including scripts, bots, spiders, scraper, crawlers, data mining tools or the like)
+        other than through software generally available through web browsers;/
+
+\n\nPost, upload, transmit or otherwise distribute chain letters, pyramid schemes, advertising or spam;
+Impersonate or misrepresent your affiliation with another person or entity;
+Harvest or otherwise collect information about others, including email addresses;
+Interfere with or disrupt any of the Services or the associated computer or technical delivery systems;
+Interfere with, or attempt to interfere with, the access of any user, host or network, including, without limitation, sending a virus, overloading, flooding, spamming, or mail-bombing a HealthEd Site or a HealthEd App;
+Fail to respect another user’s privacy. This includes revealing another user’s password, phone number, address, instant messenger I.D. or address or any other personally identifiable information; or
+Use a HealthEd Site, HealthEd App, the Services or any HealthEd Content in any manner not permitted by these Terms.
+
+\n\nInformation that you Make Available through the Services
+Certain Services enable users to submit content which may include, without limitation, text, images, photographs, figures, charts, graphics, reports, data and sound (“User Content”).
+
+\n\nUser Content does not include Registration Information. When you submit User Content through the Services you automatically grant to us a perpetual, non-exclusive, worldwide, royalty-free, fully paid up, transferable,
+        sub-licensable (through multiple tiers) license to distribute, transmit, copy, host, publicly display and perform, excerpt, index, tag, modify, adapt, sell, create derivative works from,
+        and otherwise use and exploit such User Content in any media, form or format now known or hereafter developed,
+        both within and outside of HealthEd Solutions for any purpose that is consistent with the HealthEd Privacy Policy.
+        You agree that you are solely responsible for all User Content that you submit through the Services.
+        You represent and warrant that you either are the sole and exclusive owner of all User Content or you have all rights,
+        licenses, consents and releases that are necessary to grant to us the rights in such User Content as specified in these Terms.
+        You are solely responsible for ensuring that the User Content that you make available through the Services complies with applicable laws including,
+        without limitation, those relating to privacy, and also best clinical and ethical practices. Prior to submitting any User Content to the Services,
+        you must remove any information that identifies an individual or could reasonably enable the identification of an individual, e.g., name, e-mail address,
+        social security number, insurance number or other unique identification number, biometric identifiers, facial photographs, photographs of identifying marks such as tattoos or scars.
+        You shall be solely responsible for any claims arising from your failure to de-identify User Content that you submit through the Services.
+
+    \n\nYou agree that you will not use the Services to make available User Content that:
+
+     \n\n You do not have the right to make available under any contractual or fiduciary agreement or law;
+infringes, misappropriates or violates a third party’s patent, copyright, trademark, trade secret, moral rights or other intellectual property rights, or rights of publicity or privacy;
+results in the violation of any applicable law or regulation, including, but not limited to, the Health Insurance Portability and Accountability Act (HIPAA) or any other applicable privacy laws;
+
+        \n\n is unlawful, harmful, obscene, defamatory, threatening, harassing, abusive, slanderous, offensive, or embarrassing to any other person or entity;
+promotes discrimination, bigotry, racism, hatred, harassment or harm against any individual or group;
+promotes illegal activity;
+is fraudulent, false, misleading or deceptive;
+constitutes an advertisement or solicitation of business; or
+contains viruses or other harmful computer code designed to interrupt, destroy or limit the use of any computer software or hardware.
+
+\n\nProprietary Rights
+\n\nYou acknowledge and agree that HealthEd Solutions and any software used in connection with HealthEd Solutions (“Software”)
+        contain proprietary and confidential information that is protected by applicable intellectual property and other laws.
+        You further acknowledge and agree that the HealthEd Content is protected by copyrights, trademarks, service marks, patents
+        or other proprietary rights and laws. Except as expressly permitted by applicable law or as authorized by us or the applicable licensor,
+        you agree not to modify, rent, lease, loan, sell, distribute, transmit, broadcast, publicly perform, create derivative works from, or “scrape” for commercial or any other purpose,
+        HealthEd Solutions, the HealthEd Content or the Software, in whole or in part. Any use of HealthEd Solutions or the Services not expressly permitted by these Terms is a breach of these
+        Terms and may violate our and third parties’ intellectual property rights.
+
+\n\nYou may view information provided through the Services online, download individual articles to your computer or mobile device for later reading or print a copy of an article for yourself.
+        You may not remove any copyright notices from our materials. You agree not to access the Services by any means other than through the interface that is provided by us for use in accessing the Services.
+
+\n\nDealing with Third Parties
+\n\nYour correspondence or business dealings with, or participation in promotions of, advertisers or other third parties found on or through the Services,
+        including requests for and delivery of goods or services, and any other terms, conditions, warranties or representations associated with such dealings,
+        are solely between you and such third party. You agree that we shall not be responsible or liable for any loss or damage of any sort incurred as the
+        result of any such dealings or as the result of the introduction of such third parties through the Services.
+
+\n\nLaws that Govern this Agreement
+\n\nWe control those components of the Services made available through our respective websites from our offices within Nairobi, Kenya.
+        By accessing the Services, you agree that the statutes and laws of Kenya, without regard to choice of laws principles, will apply to all matters relating to use of the Services.
+
+        \n\nNotwithstanding the foregoing, you may be subject to certain obligations and responsibilities associated with the jurisdiction in which you practice medicine or another health profession.
+        We make no representation as to the legal compliance of the Services or the HealthEd Content and you are solely responsible for compliance with the laws of your jurisdiction,
+        with respect to your use and misuse of the Services and the HealthEd Content.
+
+        \n\nTermination and Modification
+
+        \n\nYou agree that we may, under certain circumstances and without prior notice, discontinue, temporarily or permanently, the Services (or any part thereof)
+        or eliminate your account and remove any User Content that you have made available through the Services, with or without notice, for any of the following reasons
+        (which are not intended to be exclusive):
+        (a) breaches or violations of these Terms or other incorporated agreements or guidelines,
+        (b) requests by law enforcement or other government agencies,
+        (c) a request by you,
+        (d) discontinuance or material modification to the Services (or any part thereof),
+        (e) technical or security issues or problems, (f) extended periods of inactivity, and/or
+        (g) your engagement in fraudulent or illegal activities.
+        You agree that all terminations for cause shall be made at our sole discretion,
+        and we shall not be liable to you or any third party for any termination of your account or access to the Services.
+
+        \n\nDisclaimer
+
+        \n\nHealthEd Solutions, SERVICES, HealthEd SITES, HealthEd APPS AND HealthEd CONTENT ARE PROVIDED “AS IS”,
+        WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED. WITHOUT LIMITING THE FOREGOING, WE EXPRESSLY DISCLAIM ANY WARRANTIES,
+        EXPRESS IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, QUIET ENJOYMENT OR NON-INFRINGEMENT,
+        AND ANY WARRANTIES ARISING OUT OF COURSE OF DEALING OR USAGE OF TRADE.WE MAKE NO WARRANTY THAT HealthEd Solutions, SERVICES, HealthEd SITES,
+        HealthEd APPS AND HealthEd CONTENT WILL MEET YOUR REQUIREMENTS OR BE AVAILABLE ON AN UNINTERRUPTED, SECURE, OR ERROR-FREE BASIS.
+        WE MAKE NO WARRANTY AS TO THE ACCURACY, TIMELINESS, COMPLETENESS OR RELIABILITY OF ANY CONTENT OBTAINED THROUGH THE SERVICES.
+        NO INFORMATION PROVIDED THROUGH THE SERVICES OR BY US IN ORAL OR WRITTEN FORM WILL CREATE ANY WARRANTY NOT EXPRESSLY MADE HEREIN
+        YOUR RELIANCE UPON THE CONTENT OBTAINED OR USED BY YOU THROUGH THE SERVICES IS SOLELY AT YOUR OWN RISK.
+        YOU ARE SOLELY RESPONSIBLE FOR ALL OF YOUR COMMUNICATIONS AND INTERACTIONS WITH OTHER USERS OF HealthEd Solutions.
+        YOU UNDERSTAND THAT WE DO NOT ASSUME RESPONSIBILITY FOR SCREENING ANY USER OF HealthEd Solutions NOR DO WE VERIFY OR TAKE RESPONSIBILITY FOR USER CONTENT.
+        WE DO NOT PROVIDE MEDICAL ADVICE AND WE DO NOT RECOMMEND OR ENDORSE ANY SPECIFIC PRODUCTS, PRODUCT USERS, THERAPIES, TESTS, PHYSICIANS, HEALTHCARE PROFESSIONS OR OPINIONS.
+
+        \n\nLiability
+
+        \n\nIn no event will , HealthEd or any other person or entity involved in creating, developing or delivering HealthEd Solutions, the HealthEd Sites,
+        the HealthEd Apps, the Services or the Content be liable for any damages (including, without limitation, incidental and consequential damages,
+        personal injury/wrongful death, lost profits, or damages resulting from lost data or business interruption) arising out of or in connection with these
+        Terms or from the use of or inability to access or use HealthEd Solutions, the HealthEd Sites, the HealthEd Apps, the Services or the HealthEd Content,
+        or from any communications or interactions with other persons with whom you communicate or interact as a result of your use of the Services, whether based on warranty, contract, tort, or any
+        other legal theory, and whether or not we, our licensors, ours suppliers, or any third parties mentioned with the Services are advised of the possibility of such damages.
+        We, our licensors, our suppliers, or any third parties mentioned within the Services are not liable for any personal injury, including death, caused by your use or misuse of the Services
+        or any information provided through the Services. Any claims arising in connection with your use of the Services must be brought within one (1) year of the date of the event giving rise to such action occurred.
+        Remedies under these Terms are exclusive and are limited to those expressly provided for in these Terms.
+        The limitations of damages set forth above are fundamental elements of the basis of the bargain between us and you
+
+        \n\nIndemnity
+
+        \n\nYou agree to defend, indemnify, and hold each of us and our respective officers, directors, employees, agents, licensors, and suppliers, harmless from and against any claims, actions or demands,
+        liabilities and settlements including without limitation, reasonable legal and accounting fees, resulting from, or alleged to result from, your access to or use of HealthEd Solutions,
+        the HealthEd Sites, the HealthEd Apps, the Services and the HealthEd Content or your violation of these Terms
+
+        \n\nNotice and Take Down Procedures and Copyright Agent
+
+        \n\nIf you believe any materials within HealthEd Solutions infringe your copyright, you may request removal of those materials
+        (or access thereto) by contacting HealthEd Customer Support at HealthEdSolutions@gmail.com and providing the following information:
+        \n\nIdentification of the copyrighted work that you believe to be infringed. Please describe the work, and where possible include a copy or the location
+        (e.g., URL) of an authorized version of the work.
+
+        \n\nIdentification of the material that you believe to be infringing and its location. Please describe the material, and provide us with its URL or
+        any other pertinent information that will allow us to locate the material.
+        \n\nYour name, address, telephone number and (if available) e-mail address.
+        A statement that you have a good faith belief that the complained of use of the materials is not authorized by the copyright owner, its agent, or the law.
+        A statement that the information that you have supplied is accurate, and indicating that “under penalty of perjury,”
+        you are the copyright owner or are authorized to act on the copyright owner’s behalf.
+        A signature or the electronic equivalent from the copyright holder or authorized representative.
+        We may terminate the account of any user who we determine is a repeat infringers
+
+        \n\nModifications
+
+        \n\nWe reserve the right, at our sole discretion, to modify, discontinue or terminate any of the Services, the HealthEd Content or these Terms,
+        at any time and without prior notice. If we modify these Terms in a material way, we will provide notice of such modification within HealthEd Solutions.
+        By continuing to access or use the Services after we have modified these Terms, you agree to be bound by the modified Terms.
+        If the modified Terms are not acceptable to you, you agree to immediately stop using HealthEd Solutions and the Services.
+
+        \n\nComplete Agreement
+        \n\nExcept as expressly provided in a particular “legal notice” on the website, these Terms constitute the entire agreement between you, 
+        and HealthEd with respect to your use (and prior use) of HealthEd Solutions and the associated Services and HealthEd Content.
+        These Terms constitute the entire and exclusive understanding and agreement between , HealthEd and you regarding HealthEd Network and
+        the Services and these Terms supersede and replace any and all prior oral or written understandings or agreements between , HealthEd and you regarding HealthEd Solutions and the Services.
+
+        \n\nAssignment
+        \n\nYou may not assign or transfer these Terms, by operation of law or otherwise, without  and HealthEd’s prior written consent. Any attempt by you to assign or transfer these Terms,
+        without such consent, will be null and of no effect.  or HealthEd may assign or transfer these Terms, at its sole discretion, without restriction.
+        Subject to the foregoing, these Terms will bind and inure to the benefit of the parties, their successors and permitted assigns.
+
+        \n\nNotices
+        \n\nAny notices or other communications permitted or required hereunder, including those regarding material modifications to these Terms, will be in a written form and given:
+        (i) by us via email (in each case to the email address included in your Registration Information); or
+        (ii) by posting within HealthEd Solutions. For notices made by e-mail, the date of receipt will be deemed the date on which such notice is transmitted.
+
+        \n\nNo Waiver
+        \n\nOur failure to enforce any right or provision of these Terms will not constitute a waiver of future enforcement of that right or provision.
+        Except as expressly set forth in these Terms,the exercise by either party of any of its remedies under these Terms will be without prejudice to its
+        other remedies under these Terms or otherwise.
+
+        \n\nSurvival
+        \n\nAll provisions of these Terms shall survive termination of your HealthEd Network account except for your license to access and use the Services and the HealthEd Content.
+
+        \n\nContact Us
+        \n\nIf you have questions about the Services or these Terms, or you wish to provide feedback, please contact us at healthedsol@gmail.com. By submitting feedback and suggestions,
+        you grant a non-exclusive, perpetual, irrevocable, and royalty-free license to any intellectual property rights you may have in your feedback and suggestions to us to use to improve the Services
+
+        \n\nLast updated: May 11, 2017.
+
+    </string>
+
 </resources>

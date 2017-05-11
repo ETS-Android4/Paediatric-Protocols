@@ -1,3 +1,10 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -117,6 +124,7 @@
                 android:text="Calculate"
                 android:textColor="@color/text_color_primary_3"
                 android:backgroundTint="@color/holo_blue_dark"
+                android:layout_margin="10dp"
                 />
         </LinearLayout>
 
@@ -144,6 +152,16 @@
             android:layout_marginTop="12dp"
             android:layout_weight="10" />
 
+        <WebView
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/webView"
+            android:layout_below="@+id/webView1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            />
+
         <com.google.android.gms.ads.AdView
             android:id="@+id/adView"
             android:layout_width="wrap_content"
@@ -155,8 +173,8 @@
             ads:adUnitId="@string/medical_ad">
         </com.google.android.gms.ads.AdView>
 
+
     </LinearLayout>
 
-
-
 </RelativeLayout>
+</ScrollView>
