@@ -40,5 +40,8 @@ public class WeightEstimationFragment extends Fragment {
         return rootView;
 
     }
+    public static WeightEstimationFragment newInstance() {
+        return new WeightEstimationFragment();
+    }
 
 }

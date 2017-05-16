@@ -40,5 +40,8 @@ public class WFH0_fragment extends Fragment {
         return rootView;
 
     }
+    public static WFH0_fragment newInstance() {
+        return new WFH0_fragment();
+    }
 
 }
