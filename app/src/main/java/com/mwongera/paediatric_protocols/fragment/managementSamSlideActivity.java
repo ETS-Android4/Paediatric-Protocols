@@ -25,8 +25,8 @@ public class managementSamSlideActivity extends FragmentActivity {
     private ViewPager mPager;
     private PagerAdapter mPagerAdapter;
 
-    private WFH1_fragment mWFH1;
-    private samsteps msamsteps;
+    private WFH0_fragment mWFH1;
+    private samsteps mSamsteps;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,10 +97,10 @@ public class managementSamSlideActivity extends FragmentActivity {
         public Fragment getItem(int position) {
             switch(position){
                 case 0:
-                    msamsteps = new samsteps();
-                    return msamsteps;
+                    mSamsteps = new samsteps();
+                    return mSamsteps;
                 case 1:
-                    mWFH1 = new WFH1_fragment();
+                    mWFH1 = new WFH0_fragment();
                     return mWFH1;
 
                 default: break;

@@ -77,7 +77,10 @@ public class Newborn_Drawer extends AppCompatActivity implements ClickListener {
         }else if(position == 3) {
             Intent intent = new Intent(this, NeonatalJaundice.class);
             startActivity(intent);
-        }else {
+        }else if(position == 4) {
+            Intent intent = new Intent(this, CPAP.class);
+            startActivity(intent);
+        } else {
             System.out.println("position...."+position);
         }
     }

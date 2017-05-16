@@ -1,4 +1,5 @@
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"
+    >
     <string name="app_name">Paediatric Protocols</string>
     <string name="drawer_open">Menu open</string>
     <string name="drawer_close">Menu closed</string>
@@ -426,12 +427,12 @@ for 24 hrs then 62.5–250 micrograms daily in 1–2 doses</p></html></string>
     <string name="Dextrose">
         <![CDATA[
         <h2>Dextrose/glucose</h2>
-        <p>5mls/kg 10% dextrose iv over 3-5 mins</p>
+        <p>5mls/kg 10%% dextrose iv over 3-5 mins</p>
         <p><b>Neonate :</b> 2 mls/kg </p>
-        <p>TO MAKE 10% dextrose using 50%dextrose and water for injection: 10 mls syringe; 2mls 50% dextrose + 8mls</p>
-        <p>water. 20mls Syringe; 4mls 50% dextrose + 16mls water.</p>
-        <p>TO MAKE 10% dextrose using 50%dextrose and 5% dextrose: 10 mls syringe; 1mls 50% dextrose + 9mls water.</p>
-        <p>20mls Syringe; 2mls 50% dextrose + 18mls water.</p>
+        <p>TO MAKE 10%% dextrose using 50%%dextrose and water for injection: 10 mls syringe; 2mls 50%% dextrose + 8mls</p>
+        <p>water. 20mls Syringe; 4mls 50%% dextrose + 16mls water.</p>
+        <p>TO MAKE 10%% dextrose using 50%%dextrose and 5% dextrose: 10 mls syringe; 1mls 50%% dextrose + 9mls water.</p>
+        <p>20mls Syringe; 2mls 50%% dextrose + 18mls water.</p>
         ]]>
     </string>
 
@@ -447,8 +448,8 @@ for 24 hrs then 62.5–250 micrograms daily in 1–2 doses</p></html></string>
     <string name="Dihydrocodeine">
         <![CDATA[
         <h2>Dihydrocodeine</h2>
-        <p><b>Age 1- 4 yrs: <b/>0.5mg / kg every 4-6 hours</p>
-        <p><b>Age 4 - 12 yrs : </b>0.5 -1 mg/kg (max. 30 mg) every 4 - 6 hrs</p>
+        <p><b>Age 1- 4 yrs: <b/> <p>0.5mg / kg every 4-6 hours</p> </p>
+        <p><b>Age 4 - 12 yrs : </b> <p>0.5 -1 mg/kg (max. 30 mg) every 4 - 6 hrs</p></p>
         ]]>
     </string>
 
@@ -534,7 +535,7 @@ for 24 hrs then 62.5–250 micrograms daily in 1–2 doses</p></html></string>
         <h2>Lactulose</h2>
         <p><b>Hepatic Encephalopathy Infants: </b>1.7 - 6.7 g/day (2.5 - 10 mL) orally daily divided in 3 to 4 doses.</p>
         <p>Adjust dosage to produce 2 - 3 soft stools per day</p>
-        <p><b>Children: 25-60 g/day /b><(40-90 mL) orally daily divided in 3-4 doses.</p>
+        <p><b>Children: 25-60 g/day </b><(40-90 mL) orally daily divided in 3-4 doses.</p>
         <p>Adjust dosage to produce 2-3 soft stools/day</p>
         <p><b>Chronic constipation: </b>Children: 0.7 - 2 gm/kg/day (1 to 3 mL/kg/day) orally in divided doses daily; not to exceed</p>
         <p>40 g/day (60 mL/day)</p>

@@ -24,7 +24,7 @@ public class NewbornCare extends AppCompatActivity {
 
     public void addListenerOnButton() {
         button1 = (Button) findViewById(R.id.button1);
-        button2 = (Button) findViewById(R.id.button2);
+        //button2 = (Button) findViewById(R.id.button2);
        // button3 = (Button) findViewById(R.id.button3);
         //button4 = (Button) findViewById(R.id.button4);
 

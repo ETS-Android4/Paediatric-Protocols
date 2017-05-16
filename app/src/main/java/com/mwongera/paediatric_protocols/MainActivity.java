@@ -49,7 +49,7 @@ public class MainActivity extends DrawerActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setTitle("");
+        setTitle("Paediatric Protocols - Ke");
 
         mViewPager = (MaterialViewPager) findViewById(R.id.materialViewPager);
         toolbar = mViewPager.getToolbar();
@@ -151,7 +151,7 @@ public class MainActivity extends DrawerActivity {
         mViewPager.getViewPager().setAdapter(new FragmentStatePagerAdapter(getSupportFragmentManager()) {
             @Override
             public Fragment getItem(int position) {
-                switch (position % 5) {
+                switch (position % 4) {
                     case 0:
                         return Drugsfragment.newInstance();
                     case 1:
@@ -168,12 +168,12 @@ public class MainActivity extends DrawerActivity {
 
             @Override
             public int getCount() {
-                return 5;
+                return 4;
             }
 
             @Override
             public CharSequence getPageTitle(int position) {
-                switch (position % 5) {
+                switch (position % 4) {
                     case 0:
                         return "DRUGS/FLUIDS";
                     case 1:
@@ -193,24 +193,20 @@ public class MainActivity extends DrawerActivity {
                 switch (page) {
                     case 0:
                         return HeaderDesign.fromColorResAndUrl(
-                                R.color.green,
+                                R.color.finestWhite,
                                 "https://wallpaperscraft.com/image/medicine_pharmacy_pills_fake_law_98419_1920x1080.jpg");
                     case 1:
                         return HeaderDesign.fromColorResAndUrl(
-                                R.color.blue,
+                                R.color.finestWhite,
                                 "http://cdn.playbuzz.com/cdn/e654eda5-1512-49b8-a4a9-19fffc103bfa/008ea10b-81cc-4167-8944-7031900e19d8.png");
                     case 2:
                         return HeaderDesign.fromColorResAndUrl(
-                                R.color.cyan,
+                                R.color.finestWhite,
                                 "https://www.premiumswitzerland.com/img/image_db/dermatology_main-1920.jpg");
                     case 3:
                         return HeaderDesign.fromColorResAndUrl(
-                                R.color.red,
+                                R.color.finestWhite,
                                 "http://cdn.wall-pix.net/albums/art-photography/00005471.jpg");
-                    case 4:
-                        return HeaderDesign.fromColorResAndUrl(
-                                R.color.red,
-                                "http://www.tothemobile.com/wp-content/uploads/2014/07/original.jpg");
                 }
                 return null;
             }
@@ -219,6 +215,8 @@ public class MainActivity extends DrawerActivity {
         mViewPager.getViewPager().setOffscreenPageLimit(mViewPager.getViewPager().getAdapter().getCount());
         mViewPager.getPagerTitleStrip().setViewPager(mViewPager.getViewPager());
         mViewPager.getPagerTitleStrip().setTextColor(Color.WHITE);
+
+        new AppEula(this).show();
 
     }
 

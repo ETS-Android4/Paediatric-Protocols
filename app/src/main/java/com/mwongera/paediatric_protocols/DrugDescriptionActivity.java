@@ -108,7 +108,7 @@ public class  DrugDescriptionActivity extends Activity {
                 drugDetails = ("" + df.format(0.5 * weight2) + " ml of 1:1000 solution (max 5ml) for severe viral group");
 
                 results.setText(drugDetails);
-                webview.loadData(description, "text/html", "UTF-8");
+                //webview.loadData(description, "text/html", "UTF-8");
                 // get our html content
                 String htmlAsString0 = getString(R.string.Adrenaline);
                 webview1.loadDataWithBaseURL(null, htmlAsString0, "text/html", "utf-8", null);
@@ -152,7 +152,7 @@ public class  DrugDescriptionActivity extends Activity {
 
                 }
 
-                webview.loadData(description, "text/html", "UTF-8");
+                //webview.loadData(description, "text/html", "UTF-8");
                 // get our html content
                 String htmlAsString2 = getString(R.string.Amikacin);
                 webview1.loadDataWithBaseURL(null, htmlAsString2, "text/html", "utf-8", null);
@@ -163,37 +163,26 @@ public class  DrugDescriptionActivity extends Activity {
                 //Newborn Loading dose 6mg/kg  iv over 1 hour or rectal,
                 //Maintenance (iv or oral): Age	0-7	days - 2.5mg/kg ///////////////////////////depends more on age
                 if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("days")) {
-                    if (agedd >= 1 && agedd <= 28) {
-                        drugDetails = "Newborn Loading dose " + 6 * weight2 + " mg  iv over 1 hour or rectal" +
-                                "\n Maintenance (iv or oral):Age 0-6 days- " + 2.5 * weight2 + " mg 12hrly " +
-                                "\n Maintenance (iv or oral):Age above 6 days- " + 4 * weight2 + " mg 12hrly " +
-                                "\n Asthma:" + 5 * weight2 + "mg iv first dose over 30 mins max 500mg";
+                    if (agedd < 28) {
+                        drugDetails = "Loading dose " + 6 * weight2 + " mg  iv over 1 hour or rectal" +
+                                "\n Maintenance (iv or oral):" + 2.5 * weight2 + " mg 12hrly ";
 
 
                     } else if (agedd >= 7 && agedd <= 28) {
-                        drugDetails = "Newborn Loading dose " + 6 * weight2 + " mg  iv over 1 hour or rectal" +
-                                "\n Maintenance (iv or oral):Age 7-28 days- " + 4 * weight2 + " mg 12hrly " +
-                                "\n Asthma:" + 6 * weight2 + "mg iv first dose over 30 mins";
-
+                        drugDetails = "Newborn Loading dose " + 4 * weight2 + " mg  12 hourly";
 
                     }
 
                 } else {
-                    drugDetails = "Newborn Loading dose " + 6 * weight2 + " mg  iv over 1 hour or rectal" +
-                            "\n Maintenance (iv or oral):Age 7-28 days- " + 4 * weight2 + " mg 12hrly " +
-                            "\n Asthma:" + 6 * weight2 + "mg iv first dose over 30 mins";
+                    drugDetails = "Asthma:" + 5 * weight2 + "mg iv first dose over 30 mins max 500mg";
 
                 }
-                description = "<html><p>Newborn Loading dose 6mg/kg  iv over 1 hour or rectal,<br/>" +
-                        "Maintenance (iv or oral): Age	0-7	days - 2.5mg/kg " +
-                        "12hrly, Age 7-28 days-	4mg/kg 12hrly.<br/>" +
-                        "Asthma: 6mg/kg iv first dose over 30 mins max 500mg</p></html>";
 
 
                 results.setText(drugDetails);
                 ///calculate the maintainance doses
                 //description=" Age7-28 days "+4*weight2+" mg 12hrly<br/> ";
-                webview.loadData(description, "text/html", "UTF-8");
+                //webview.loadData(description, "text/html", "UTF-8");
                 // get our html content
                 String htmlAsString3 = getString(R.string.Aminophylline);
                 webview1.loadDataWithBaseURL(null, htmlAsString3, "text/html", "utf-8", null);
@@ -220,7 +209,7 @@ public class  DrugDescriptionActivity extends Activity {
                         drugDetails = (50 * weight2) + " mg dose 8 hourly or im";
                     }
 
-                } else if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("months") || String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("years")) {
+                } else {
 
                     drugDetails = (50 * weight2) + " mg (max 500mg) dose 6 hourly iv / im";
                 }
@@ -273,45 +262,49 @@ public class  DrugDescriptionActivity extends Activity {
 
                 }
                 results.setText(drugDetails);
-                webview.loadData(description, "text/html", "UTF-8");
+                webview1.loadData(description, "text/html", "UTF-8");
                 break;
             case 7:
                 //	Artemisinin -
                 //	Piperaquine
                 description = "Given OD for 3 days";
-                // check the ages
-                if ((String.valueOf(aged.getSelectedItem())
-                        .equalsIgnoreCase("months"))) {
-                    // months
-                    if (agedd >= 3 && agedd <= 35) {
-                        drugDetails = "1 paed tab";
+                if (weight < 50) {
+                    drugDetails = "Given OD for 3 days";
 
-                    } else if (agedd > 35 && agedd < 60) {
-                        drugDetails = "2 paed tabs";
+                }else {
+                    // check the ages
+                    if ((String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("months"))) {
+                        // months
+                        if (agedd >= 3 && agedd <= 35) {
+                            drugDetails = "1 paed tab";
 
+                        } else if (agedd > 35 && agedd < 60) {
+                            drugDetails = "2 paed tabs";
+
+                        } else {
+                            drugDetails = "Error, kindly check the inputs";
+                        }
+
+                    } else if ((String.valueOf(aged.getSelectedItem())
+                            .equalsIgnoreCase("years"))) {
+
+                        // years
+                        if (agedd >= 1 && agedd < 3) {
+                            drugDetails = "1 paed tab";
+                        } else if (agedd >= 3 && agedd <= 5) {
+                            drugDetails = "2 paed tab";
+                        } else if (agedd > 5 && agedd <= 11) {
+                            drugDetails = "1 adult tab";
+                        } else {
+                            drugDetails = "Error, kindly check the inputs";
+                        }
                     } else {
-                        drugDetails = "Error, kindly check the inputs";
+                        drugDetails = "Error in the Inputs";
                     }
-
-                } else if ((String.valueOf(aged.getSelectedItem())
-                        .equalsIgnoreCase("years"))) {
-
-                    // years
-                    if (agedd >= 1 && agedd < 3) {
-                        drugDetails = "1 paed tab";
-                    } else if (agedd >= 3 && agedd <= 5) {
-                        drugDetails = "2 paed tab";
-                    } else if (agedd > 5 && agedd <= 11) {
-                        drugDetails = "1 adult tab";
-                    } else {
-                        drugDetails = "Error, kindly check the inputs";
-                    }
-                } else {
-                    drugDetails = "Error in the Inputs";
                 }
 
                 results.setText(drugDetails);
-                webview.loadData(description, "text/html", "UTF-8");
+                webview1.loadData(description, "text/html", "UTF-8");
                 break;
             case 8:
                 //Artesunate Age 1m and over: 2.4mg/kg given iv/im at 0, 12 and 24
@@ -337,7 +330,7 @@ public class  DrugDescriptionActivity extends Activity {
                     drugDetails = "Error, make sure the child is above 1 Month";
                 }
                 results.setText(drugDetails);
-                webview.loadData(description, "text/html", "UTF-8");
+                //webview.loadData(description, "text/html", "UTF-8");
 
                 // get our html content
                 String htmlAsString6 = getString(R.string.Artesunate);
@@ -357,7 +350,7 @@ public class  DrugDescriptionActivity extends Activity {
                 }
                 description = "Can double doses to improve control but check technique and follow up carefully";
                 results.setText(drugDetails);
-                webview.loadData(description, "text/html", "UTF-8");
+                //webview.loadData(description, "text/html", "UTF-8");
 
                 // get our html content
                 String htmlAsString7 = getString(R.string.Beclomethasone);
@@ -368,15 +361,15 @@ public class  DrugDescriptionActivity extends Activity {
                 //Benzyl Penicillin (X-pen)Newborn:  50,000 iu/kg/dose 12 hourly iv or im.
                 if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("days")) {
                     if (agedd <= 7) {
-                        drugDetails = (50000 * weight2) + " iu/dose 12 hourly iv or im";
+                        drugDetails =df.format(weight2 * 50000) + " iu/dose 12 hourly iv or im";
                     } else {
-                        drugDetails = (50000 * weight2) + " iu/dose 6 hourly iv / im";
+                        drugDetails = df.format(weight2 * 50000) +" iu/dose 6 hourly iv / im";
                     }
                 } else {
                     drugDetails = "Double penicillin doses when treating meningitis and age is more than a month";
                 }
                 results.setText(drugDetails);
-                webview.loadData(description, "text/html", "UTF-8");
+                //webview.loadData(description, "text/html", "UTF-8");
 
                 // get our html content
                 String htmlAsString8 = getString(R.string.Benzyl);
@@ -396,14 +389,14 @@ public class  DrugDescriptionActivity extends Activity {
                         + "<br/>Calcium Lactate 300mg tabs contain 1mmol calcium"
                         + "<br/>Maybe required together with Vitamin	D for treating rickets in first 7 days but monitor calcium to prevent hypercalcaemia</p></html>";
                 results.setText(drugDetails);
-                webview.loadData(description, "text/html", "UTF-8");
+                webview1.loadData(description, "text/html", "UTF-8");
                 break;
             case 12:
                 //Carbamazepine Age 1 m –12 yrs: initially 5 mg/kg at night, increased
                 if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("days")) {
                     if (agedd >= 28) {
-                        drugDetails = (5 * weight2) + " mg  at night, increased as necessary by " + (2.5 * weight2) + "-" + 5 * weight2 + " mg every 3–7 days "
-                                + "\n usual maintenance dose " + 5 * weight2 + " mg 2–3 times daily.";
+                        drugDetails = df.format(5 * weight2) + " mg  at night, increased as necessary by " + df.format(2.5 * weight2) + "-" + df.format(5 * weight2) + " mg every 3–7 days "
+                                + "\n usual maintenance dose " + df.format(5 * weight2) + " mg 2–3 times daily.";
                     } else {
                         drugDetails = "";
                     }
@@ -412,7 +405,7 @@ public class  DrugDescriptionActivity extends Activity {
                 }
 
                 results.setText(drugDetails);
-                webview.loadData(description, "text/html", "UTF-8");
+                //webview.loadData(description, "text/html", "UTF-8");
 
                 // get our html content
                 String htmlAsString9 = getString(R.string.Carbamazepine);
@@ -433,7 +426,7 @@ public class  DrugDescriptionActivity extends Activity {
                 }
                 description = "Preferred to Ceftriaxone for treatment	of neonatal	meningitis if aged <7 days:";
                 results.setText(drugDetails);
-                webview.loadData(description, "text/html", "UTF-8");
+                //webview.loadData(description, "text/html", "UTF-8");
 
                 // get our html content
                 String htmlAsString10 = getString(R.string.Cefotaxime);
@@ -455,7 +448,7 @@ public class  DrugDescriptionActivity extends Activity {
                     }
                 }
                 results.setText(drugDetails);
-                webview.loadData(description, "text/html", "UTF-8");
+                //webview.loadData(description, "text/html", "UTF-8");
 
                 // get our html content
                 String htmlAsString11 = getString(R.string.Ceftazidime);
@@ -478,7 +471,7 @@ public class  DrugDescriptionActivity extends Activity {
                     }
                 }
                 results.setText(drugDetails);
-                webview.loadData(description, "text/html", "UTF-8");
+                //webview.loadData(description, "text/html", "UTF-8");
 
                 // get our html content
                 String htmlAsString12 = getString(R.string.Chloramphenicol);
@@ -487,17 +480,17 @@ public class  DrugDescriptionActivity extends Activity {
             case 16:
                 //Ciprofloxacin
                 if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("days")) {
-                    description = "<html><p>15mg/kg per dose 12hrly for 3 days</p></html>  ";
+
                     if (agedd <= 7) {
                         drugDetails = "Not recommended for neonates ";
 
                     } else if (agedd > 28) {
-                        drugDetails = "Dysentery dosing" + 15 * weight2 + " mg/dose 12hrly for 3 days ";
+                        drugDetails = "Dysentery dosing" + df.format(15 * weight2) + " mg/dose 12hrly for 3 days ";
                     }
 
                 }
                 results.setText(drugDetails);
-                webview.loadData(description, "text/html", "UTF-8");
+                //webview.loadData(description, "text/html", "UTF-8");
 
                 // get our html content
                 String htmlAsString13 = getString(R.string.Ciprofloxacin);
@@ -552,16 +545,16 @@ public class  DrugDescriptionActivity extends Activity {
 
                 // get our html content
                 String htmlAsString16 = getString(R.string.Dexamethasone);
-                webview.loadDataWithBaseURL(null, htmlAsString16, "text/html", "utf-8", null);
+                webview1.loadDataWithBaseURL(null, htmlAsString16, "text/html", "utf-8", null);
                 break;
             case 20:
                 //Dextrose/glucose
                 if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("days")) {
                     if (agedd < 28) {
-                        drugDetails = 2 * weight2 + "mls 10% dextrose iv over 5-10 mins ";
+                        drugDetails = df.format(2 * weight2) + "mls 10% dextrose iv over 5-10 mins ";
 
                     } else {
-                        drugDetails = (5 * weight2) + " mls 10% dextrose iv over 5-10 mins ";
+                        drugDetails = df.format(5 * weight2) + " mls 10% dextrose iv over 5-10 mins ";
                     }
 
                 }
@@ -575,7 +568,7 @@ public class  DrugDescriptionActivity extends Activity {
 
                 description = "Note> Newborn: 2 mls/kg";
                 results.setText(drugDetails);
-                webview.loadData(description, "text/html", "UTF-8");
+                //webview.loadData(description, "text/html", "UTF-8");
                 break;
             case 21:
                 //Dihydrocodeine
@@ -583,17 +576,17 @@ public class  DrugDescriptionActivity extends Activity {
                         + "Age 4–12 yrs: 0.5–1 mg/kg (max. 30 mg) every 4–6 hrs</p></html>";
                 if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("years")) {
                     if (agedd >= 1 && agedd <= 2) {
-                        drugDetails = 0.5 * weight2 + "mg every 4–6 hours";
+                        drugDetails = df.format(0.5 * weight2) + "mg every 4–6 hours";
                     } else if (agedd > 4 && weight2 < 60) {
-                        drugDetails = 0.5 * weight2 + " - " + 30 * weight2 + "mg every 4–6 hours(max. 30 mg)";
+                        drugDetails = df.format(0.5 * weight2) + " - " + df.format(30 * weight2) + "mg every 4–6 hours(max. 30 mg)";
                     } else if (agedd > 4 && weight2 > 60) {
-                        drugDetails = 30 * weight2 + "mg every 4–6 hours(max. 30 mg)";
+                        drugDetails = df.format(30 * weight2) + "mg every 4–6 hours(max. 30 mg)";
                     } else {
-                        drugDetails = "Dihydrocodeine is not recommended for infaants";
+                        drugDetails = "Dihydrocodeine is not recommended for infants";
                     }
 
                 }
-                webview.loadData(description, "text/html", "UTF-8");
+                //webview.loadData(description, "text/html", "UTF-8");
                 results.setText(drugDetails);
 
                 // get our html content
@@ -604,7 +597,7 @@ public class  DrugDescriptionActivity extends Activity {
                 //Diazepam (iv)
                 if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("days")) {
                     if (agedd > 28) {
-                        drugDetails = 0.3 * weight2 + "mg =" + df.format((0.3 * weight2 * 8) / 5) + " mls of 10mg/2ml solution)";
+                        drugDetails = df.format(0.3 * weight2) + "mg =" + df.format((0.3 * weight2) / 5) + " mls of 10mg/2ml solution";
                     } else {
                         drugDetails = "Not used in neonates ";
                     }
@@ -615,7 +608,7 @@ public class  DrugDescriptionActivity extends Activity {
 
                 description = "<html><p>0.3 mg/kg iv <br/> Not used in neonates</p></html>";
                 //drugDetails=0.3*weight2+ "mg (="+300*weight2+" mcg)";
-                webview.loadData(description, "text/html", "UTF-8");
+                //webview.loadData(description, "text/html", "UTF-8");
                 results.setText(drugDetails);
 
                 // get our html content
@@ -628,7 +621,7 @@ public class  DrugDescriptionActivity extends Activity {
                 //Diazepam (rectal)m;
                 if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("days")) {
                     if (agedd > 28) {
-                        drugDetails = 0.3 * weight2 + "mg =" + df.format((0.3 * weight2 * 8) / 5) + " mls of 10mg/2ml solution)";
+                        drugDetails = df.format(0.5 * weight2) + "mg =" + df.format((0.5 * weight2) / 5) + " mls of 10mg/2ml solution)";
                     } else {
                         drugDetails = "Not used in neonates ";
                     }
@@ -637,7 +630,7 @@ public class  DrugDescriptionActivity extends Activity {
 
                 }
                 results.setText(drugDetails);
-                webview.loadData(description, "text/html", "UTF-8");
+                //webview.loadData(description, "text/html", "UTF-8");
                 // get our html content
                 String htmlAsString20 = getString(R.string.DiazepamR);
                 webview1.loadDataWithBaseURL(null, htmlAsString20, "text/html", "utf-8", null);
@@ -675,7 +668,7 @@ public class  DrugDescriptionActivity extends Activity {
                 //add info
                 description = getResources().getString(R.string.d24);
                 results.setText(drugDetails);
-                webview.loadData(description, "text/html", "UTF-8");
+                //webview.loadData(description, "text/html", "UTF-8");
 
                 // get our html content
                 String htmlAsString21 = getString(R.string.Digoxin);
@@ -698,7 +691,7 @@ public class  DrugDescriptionActivity extends Activity {
                     drugDetails = "null";
                 }
                 results.setText(drugDetails);
-                webview.loadData(description, "text/html", "UTF-8");
+                //webview.loadData(description, "text/html", "UTF-8");
 
                 // get our html content
                 String htmlAsString22 = getString(R.string.Flucloxacillin);
@@ -713,22 +706,21 @@ public class  DrugDescriptionActivity extends Activity {
             case 27:
                 //Gentamicin
                 if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("days")) {
-                    description = "<html><p>Neonates &lt 7 days and &lt 2kg - 3mg/kg  24hrly <br/>Neonates &lt 7 days and &gt or = 2kg - 5mg/kg  24hrly <br/> Over 7 days -7.5mg/kg iv/im over 3-5 minutes 24hrly </p></html>  ";
                     if (agedd <= 7) {
                         if (weight2 < 2) {
-                            drugDetails = 3 * weight2 + " mg iv/im 24hrly";
+                            drugDetails = df.format(3 * weight2) + " mg iv/im 24hrly";
                         } else if (weight2 >= 2) {
-                            drugDetails = 5 * weight2 + " mg iv/im 24hrly";
+                            drugDetails = df.format(5 * weight2) + " mg iv/im 24hrly";
                         }
 
                     } else if (agedd > 7) {
-                        drugDetails = 7.5 * weight2 + " mg iv/im over 3-5 minutes 24hrly ";
+                        drugDetails = df.format(7.5 * weight2) + " mg iv/im over 3-5 minutes 24hrly ";
                     }
                 } else {
                     drugDetails = "null";
                 }
                 results.setText(drugDetails);
-                webview.loadData(description, "text/html", "UTF-8");
+                //webview.loadData(description, "text/html", "UTF-8");
 
                 // get our html content
                 String htmlAsString23 = getString(R.string.Gentamicin);
@@ -739,13 +731,19 @@ public class  DrugDescriptionActivity extends Activity {
                 //(For severe SCD only: Pain >3 episodes/ yr; stroke; transfusion ≥ 2/ yr; acute chest syndrome)
                 //Child 2-12 years initially 10-15mg/kg once daily, increased every 12 weeks in steps of 2.5 - 5 mg/kg daily according to response; usual dose 15 - 30 mg/kg daily (max. 35 mg/kg)
                 //Hydroxyurea
-                drugDetails = "Child above 2 years initially" + (10 * weight2) + "-" + 15 * weight2 + "once daily" + " \n " +
-                        "increased every 12 weeks in steps of" + (2.5 * weight2) + "-" + (5 * weight2) + "daily according to response; \n" +
-                        "usual dose" + (15 * weight2) + "-" + (30 * weight2) + "daily (max. 35 mg/kg)" + "\n" +
-                        "Consult a paeditrician for children under 2 years";
-                description = "<html></p>(for severe SCD only: Pain >3 episodes/yr; stroke;	transfusion	&gt;2/yr; acute chest syndrome)<br/>Stop treatment and consult specialist if neutrophils reduced</p></html>";
+                if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("years")) {
+                    if (agedd > 2) {
+                        drugDetails = "Child above 2 years initially" + df.format(10 * weight2) + "-" + df.format(15 * weight2) + "once daily" + " \n " +
+                                "increased every 12 weeks in steps of" + df.format(2.5 * weight2) + "-" + df.format(5 * weight2) + "daily according to response; \n" +
+                                "usual dose" + df.format(15 * weight2) + "-" + df.format(30 * weight2) + "daily (max. 35 mg/kg)";
+                    } else {
+                        drugDetails = "Consult a paeditrician for children under 2 years";
+                    }
+                }else {
+                    drugDetails = "null";
+                }
                 results.setText(drugDetails);
-                webview.loadData(description, "text/html", "UTF-8");
+                //webview.loadData(description, "text/html", "UTF-8");
 
                 // get our html content
                 String htmlAsString24 = getString(R.string.Hydroxyurea);
@@ -762,8 +760,8 @@ public class  DrugDescriptionActivity extends Activity {
             case 30:
                 //Iron tabs / syrup *
                 //2 - 4 mg elemental Fe/kg/24 hr max dose: 15 mg elemental Fe/day
-                if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("years")) {
-                    if (agedd < 1) {
+                if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("months")) {
+                    if (agedd < 12) {
                         if (weight2 < 3.75) {
                             drugDetails = "Iron deficiency, Anemia in a pre-term infant: " + (15 * weight2) + "mg elemental iron 24hrly(max 15mg elemental fe/days)" + " \n " +
                                     "Prophylaxis for a preterm-infant" + (15 * weight2) + "mg elemental iron 24hrly(max 15mg elemental fe/days) \n" +
@@ -787,8 +785,7 @@ public class  DrugDescriptionActivity extends Activity {
                 } else {
                     drugDetails = "null";
                 }
-                description = "";
-                webview.loadData(description, "text/html", "UTF-8");
+                //webview.loadData(description, "text/html", "UTF-8");
                 results.setText(drugDetails);
                 // get our html content
                 String htmlAsString26 = getString(R.string.Iron);
@@ -801,14 +798,14 @@ public class  DrugDescriptionActivity extends Activity {
                 if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("months")) {
                     if (agedd < 12) {
                         drugDetails = "Hepatic encephalopathy 1.7 - 6.7g/day (2.5 - 10ml) orally divided in 3-4 doses";
-                    } else {
+                    } else if (agedd > 12) {
                         drugDetails = "Hepatic Encephoropathy 25-60g/day (40-90ml) orally divided in 3-4 doses ";
+                    } else if (weight2 > 40 || (weight2 * 2) > 40 || weight2 > 60 || (weight2 * 3) > 60) {
+                        drugDetails = "Chronic constipation 40g/day (60ml/day) orally in divided doses";
+                    } else {
+                        drugDetails = "Chronic constipation:" + (weight2 * 7) + "-" + (weight2 * 2) + "g/day" + weight2 * 1 + "-" + weight2 * 3 + "ml/day orally divided doses";
                     }
-                } else if (weight2 > 40 || (weight2*2) > 40 || weight2 > 60 || (weight2*3)>60) {
-                    drugDetails = "Chronic constipation 40g/day (60ml/day) orally in divided doses";
-                }else {
-                    drugDetails = "Chronic constipation:" + (weight2*7) + "-" + (weight2*2) + "g/day" + weight2*1 + "-" + weight2*3 + "ml/day orally divided doses";
-        }
+                }
         results.setText(drugDetails);
         // get our html content
         String htmlAsString27 = getString(R.string.Lactulose);
@@ -824,7 +821,6 @@ public class  DrugDescriptionActivity extends Activity {
                 drugDetails = "Not recommended for infants";
             }
         }
-        description = "Not recommended for infants";
         results.setText(drugDetails);
 
         // get our html content
@@ -835,7 +831,6 @@ public class  DrugDescriptionActivity extends Activity {
         case 33:
         //Metronidazole
         if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("days")) {
-            description = "<html><p>Neonates &lt 7 days - 7.5mg/kg iv 12hrly <br/> Over 7 days -7.5mg/kg iv over 8hrly </p></html>  ";
             if (agedd < 28 && (weight2*15) < 4000) {
                 drugDetails = 7.5 * weight2 + " iv 12hourly ";
 
@@ -853,7 +848,7 @@ public class  DrugDescriptionActivity extends Activity {
             drugDetails = "Error";
         }
         results.setText(drugDetails);
-        webview.loadData(description, "text/html", "UTF-8");
+        //webview.loadData(description, "text/html", "UTF-8");
 
         // get our html content
         String htmlAsString29 = getString(R.string.Metronidazole);
@@ -864,7 +859,7 @@ public class  DrugDescriptionActivity extends Activity {
         //Morphine
         if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("days")) {
             if (agedd < 28) {
-                drugDetails = df.format(0.05 * weight2) + " mg/dose im/sc/slow IV every 4 hours";
+                drugDetails = df.format(0.05 * weight2) + "-" + df.format(0.2*weight2) + " mg/dose im/sc/slow IV every 4 hours";
             } else {
                 drugDetails = df.format(0.1 * weight2) + "-" + weight2*0.2 + " mg/dose im/sc/slow IV every 2-4 hours as needed. Max 15mg/dose \n" +
                         weight2*0.2 + "-" + weight2*0.5 + "mg/dose PO every 4-6 hours as needed";
@@ -895,7 +890,8 @@ public class  DrugDescriptionActivity extends Activity {
         break;
         case 36:
         //Nystatin
-        drugDetails = "(100,000 iu/ml) 1ml 6hrly (2weeks if HIV +ve)";
+        drugDetails = "Pre-terms : 0.5ml(50,000 u) to each side of the mouth 6 hourly (2weeks if HIV +ve) \n" +
+                "Terms : 1ml(100,000 u) to each side of the mouth 6 hourly (2weeks if HIV +ve) ";
         results.setText(drugDetails);
 
         //webview.loadData(description, "text/html", "UTF-8");
@@ -908,7 +904,7 @@ public class  DrugDescriptionActivity extends Activity {
         //10-15mg / kg 6 to 8 hrly
         description = "10-15mg/kg 6 to 8 hrly";
         drugDetails = 10 * weight2 + "-" + 15 * weight2 + " mg 6 to 8 hrly";
-        webview.loadData(description, "text/html", "UTF-8");
+        //webview.loadData(description, "text/html", "UTF-8");
         results.setText(drugDetails);
         // get our html content
         String htmlAsString32 = getString(R.string.Paracetamol);
@@ -920,7 +916,7 @@ public class  DrugDescriptionActivity extends Activity {
         description = "0.5 to 1mg/kg every 4-6 hours";
         drugDetails = 0.5 * weight2 + "-" + 1 * weight2 + " mg im  4 to 6 hrly";
         results.setText(drugDetails);
-        webview.loadData(description, "text/html", "UTF-8");
+        //webview.loadData(description, "text/html", "UTF-8");
 
         // get our html content
         String htmlAsString33 = getString(R.string.Pethidine);
@@ -933,18 +929,17 @@ public class  DrugDescriptionActivity extends Activity {
         //Loading with 15mg/kg (assuming not	on	maintenance	phenobarb)	followed by 2.5mg – 5mg/kg daily, Page	13
         if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("days")) {
             if (agedd <= 28) {
-                drugDetails = "Loading with " + 20 * weight2 + " mg (assuming not on maintenance phenobarb) \n Maintenance dose" + 2.5 * weight2 + "-" + 5 * weight2 + " mg daily im/oral \n " +
-                        weight2*5 + "mg im/oral as high dose maintenance in chronic therapy";
+                drugDetails = "Loading with " + df.format(20 * weight2) + " mg im/oral \n Maintenance dose" + df.format(2.5 * weight2) + "-" + df.format(5 * weight2) + " mg daily im/oral \n " +
+                        df.format(weight2*5) + "mg im/oral as high dose maintenance in chronic therapy";
 
             } else {
-                drugDetails = "Loading with " + 15 * weight2 + " mg im/oral \n maintrenace dose" + 2.5 * weight2 + "-" + 5 * weight2 + " mg daily im/oral \n" +
+                drugDetails = "Loading with " + 15 * weight2 + " mg im/oral \n maintrenace dose" + df.format(2.5 * weight2) + "-" + df.format(5 * weight2) + " mg daily im/oral \n" +
                         weight2*2.5 + "mg im/oral as a starting dose for fits in febrile illness \n" +
                         weight2*2 + "mg im/oral as high dose maintenance in chronic therapy" ;
             }
         } else {
             drugDetails = "";
         }
-        drugDetails = "";
         results.setText(drugDetails);
         //webview.loadData(description, "text/html", "UTF-8");
         // get our html content
@@ -1100,7 +1095,7 @@ public class  DrugDescriptionActivity extends Activity {
                     //description="";
                 }
 
-                webview.loadData(description, "text/html", "UTF-8");
+                //webview.loadData(description, "text/html", "UTF-8");
                 results.setText(drugDetails);
                 // get our html content
                 String htmlAsString40 = getString(R.string.Valproate);
@@ -1142,7 +1137,7 @@ public class  DrugDescriptionActivity extends Activity {
                     description="Once on admission, not to be repeated within 1 month. For malnutrition with eye disease repeat on day 2 and day 14";
                 }
 
-                webview.loadData(description, "text/html", "UTF-8");
+                //webview.loadData(description, "text/html", "UTF-8");
                 results.setText(drugDetails);
 
                 // get our html content
@@ -1196,13 +1191,13 @@ public class  DrugDescriptionActivity extends Activity {
                 if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("days")) {
                     if (agedd < 28 && weight2 < 1.5) {
                         drugDetails = "0.5mg stat im \n " +
-                                "for liver disease" + weight2 * 0.3 + "mg stat(max 10mg)";
+                                "for liver disease" + df.format(weight2 * 0.3) + "mg stat(max 10mg)";
                     } else if (agedd < 28 && weight2 >= 1.5) {
                         drugDetails = "1mg stat im \n " +
-                                "for liver disease" + weight2 * 0.3 + "mg stat (max 10mg)";
+                                "for liver disease" + df.format(weight2 * 0.3) + "mg stat (max 10mg)";
 
                     } else {
-                        drugDetails = "For liver disease" + weight2 * 0.3 + "mg stat (max 10mg)";
+                        drugDetails = "For liver disease" + df.format(weight2 * 0.3) + "mg stat (max 10mg)";
                         // description="";
                     }
                 }

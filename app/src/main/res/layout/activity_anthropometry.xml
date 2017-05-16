@@ -3,9 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/background">
+    android:background="@color/finestWhite">
 
-    <RelativeLayout
+    <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/header"
         android:layout_width="match_parent"
@@ -13,27 +13,49 @@
         android:layout_alignParentTop="true"
         android:background="#FC9"
         android:gravity="center"
+        android:orientation="vertical"
         >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:text="Basic Paediatrics Protocols - Kenya"
+            android:text="Paediatrics Protocols - Kenya"
             android:textColor="#000"
             android:textSize="15sp" />
 
-    </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/header1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_below="@+id/header"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Anthropometry"
+            android:textColor="#000"
+            android:textSize="10sp" />
+
+    </LinearLayout>
 
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/wtestimation"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/header1"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="27dp" />
+        android:layout_alignParentStart="true" />
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"

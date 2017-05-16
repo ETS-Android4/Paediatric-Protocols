@@ -21,12 +21,12 @@ import com.mwongera.paediatric_protocols.R;
 
 public class AnthropometrySlideActivity extends FragmentActivity {
 
-    private static final int NUM_PAGES = 6;
+    private static final int NUM_PAGES = 5;
     private ViewPager mPager;
     private PagerAdapter mPagerAdapter;
 
     private WFH1_fragment mWFH1;
-    private WeightEstimationFragment mWeightestimation;
+    private WeightEstimationFragment mWeightEstimation;
     private WFH2_fragment mWFH2;
     private WFH3_fragment mWFH3;
     private WFH4_fragment mWFH4;
@@ -100,8 +100,8 @@ public class AnthropometrySlideActivity extends FragmentActivity {
         public Fragment getItem(int position) {
             switch(position){
                 case 0:
-                    mWeightestimation = new WeightEstimationFragment();
-                    return mWeightestimation;
+                    mWeightEstimation = new WeightEstimationFragment();
+                    return mWeightEstimation;
                 case 1:
                     mWFH1 = new WFH1_fragment();
                     return mWFH1;

@@ -2,7 +2,7 @@
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@color/finestWhite"
     >
 
     <LinearLayout
@@ -20,9 +20,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:text="Basic Paediatrics Protocols - Kenya"
+            android:text="Paediatrics Protocols - Kenya"
             android:textColor="#000"
             android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/header1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_below="@+id/header"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <TextView
             android:layout_width="wrap_content"
@@ -31,7 +45,6 @@
             android:text="Asthma"
             android:textColor="#000"
             android:textSize="10sp" />
-
 
     </LinearLayout>
 
