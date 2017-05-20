@@ -392,6 +392,13 @@ for 24 hrs then 62.5–250 micrograms daily in 1–2 doses</p></html></string>
         ]]>
     </string>
 
+    <string name="Chlorhexidine">
+        <![CDATA[
+        <h2>Ciprofloxacin(oral)</h2>
+        <p>(4% Chlorhexidine) apply once daily until the cord separates</p>
+        ]]>
+    </string>
+
     <string name="Clotrimazole">
         <![CDATA[
         <h2>Clotrimazole 1%</h2>

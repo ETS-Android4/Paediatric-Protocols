@@ -417,12 +417,9 @@ public class  DrugDescriptionActivity extends Activity {
                     if (ageddd <= 0.25) {
                         drugDetails = "Are you sure you want to issue Chloramphenicol to a neonate";
 
-                    } else if (ageddd > 0.25) {
+                    } else  {
                         drugDetails = (25 * weight2) + "mg iv/im 6hrly - Meningitis " +
                                 "\n oral : " + (25 * weight2) + "mg 6 hourly";
-                    } else {
-                        drugDetails = "Are you sure you want to issue Chloramphenicol to a neonate";
-
                     }
                 results.setText(drugDetails);
                 //webview.loadData(description, "text/html", "UTF-8");
@@ -434,47 +431,44 @@ public class  DrugDescriptionActivity extends Activity {
 
             case 20:
                 //Chlorhexidine
-                drugDetails = " pMDI with spacer 200 mgs daily (low dose)";
+                drugDetails = " (4% Chlorhexidine) apply once daily until the cord separates";
 
                 results.setText(drugDetails);
                 //webview.loadData(description, "text/html", "UTF-8");
 
                 // get our html content
-                String htmlAsString18 = getString(R.string.);
+                String htmlAsString18 = getString(R.string.Chlorhexidine);
                 webview1.loadDataWithBaseURL(null, htmlAsString18, "text/html", "utf-8", null);
                 break;
 
             case 21:
                 //Ciprofloxacin
-                if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("days")) {
 
-                    if (agedd <= 7) {
+                    if (ageddd <= 1) {
                         drugDetails = "Not recommended for neonates ";
 
-                    } else if (agedd > 28) {
+                    } else if (ageddd >1) {
                         drugDetails = "Dysentery dosing" + df.format(15 * weight2) + " mg/dose 12hrly for 3 days ";
                     }
-
-                }
                 results.setText(drugDetails);
                 //webview.loadData(description, "text/html", "UTF-8");
 
                 // get our html content
-                String htmlAsString13 = getString(R.string.Ciprofloxacin);
-                webview1.loadDataWithBaseURL(null, htmlAsString13, "text/html", "utf-8", null);
+                String htmlAsString19 = getString(R.string.Ciprofloxacin);
+                webview1.loadDataWithBaseURL(null, htmlAsString19, "text/html", "utf-8", null);
 
                 break;
-            case 17:
+            case 22:
                 //Clotrimazole 1%
                 drugDetails = "Apply 2-3 times daily until cleared";
                 results.setText(drugDetails);
                 //webview.loadData(description, "text/html", "UTF-8");
 
                 // get our html content
-                String htmlAsString14 = getString(R.string.Clotrimazole);
-                webview1.loadDataWithBaseURL(null, htmlAsString14, "text/html", "utf-8", null);
+                String htmlAsString20 = getString(R.string.Clotrimazole);
+                webview1.loadDataWithBaseURL(null, htmlAsString20, "text/html", "utf-8", null);
                 break;
-            case 18:
+            case 23:
                 //Co-trimoxazole*
                 if (weight2 >= 2 && weight2 <= 3) {
                     drugDetails = "Pneumonia dosing" + (4 * weight2) + " mg Trimethropim" +
@@ -502,85 +496,66 @@ public class  DrugDescriptionActivity extends Activity {
                 }
                 results.setText(drugDetails);
                 // get our html content
-                String htmlAsString15 = getString(R.string.Cotrimoxazole);
-                webview1.loadDataWithBaseURL(null, htmlAsString15, "text/html", "utf-8", null);
+                String htmlAsString21 = getString(R.string.Cotrimoxazole);
+                webview1.loadDataWithBaseURL(null, htmlAsString21, "text/html", "utf-8", null);
                 break;
-            case 19:
+            case 24:
                 //Dexamethasone
-                drugDetails = df.format(0.6 * weight2) + " mg stat for severe	croup";
+                drugDetails = df.format(0.6 * weight2) + " mg stat for severe croup iv/im";
                 results.setText(drugDetails);
 
                 // get our html content
-                String htmlAsString16 = getString(R.string.Dexamethasone);
-                webview1.loadDataWithBaseURL(null, htmlAsString16, "text/html", "utf-8", null);
+                String htmlAsString22 = getString(R.string.Dexamethasone);
+                webview1.loadDataWithBaseURL(null, htmlAsString22, "text/html", "utf-8", null);
                 break;
-            case 20:
+            case 25:
                 //Dextrose/glucose
-                if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("days")) {
-                    if (agedd < 28) {
+                    if (ageddd < 1) {
                         drugDetails = df.format(2 * weight2) + "mls 10% dextrose iv over 5-10 mins ";
 
                     } else {
                         drugDetails = df.format(5 * weight2) + " mls 10% dextrose iv over 5-10 mins ";
                     }
-
-                }
                 results.setText(drugDetails);
                 //webview.loadData(description, "text/html", "UTF-8");
 
                 // get our html content
-                String htmlAsString17 = getString(R.string.Dextrose);
-                webview1.loadDataWithBaseURL(null, htmlAsString17, "text/html", "utf-8", null);
-
-
-                description = "Note> Newborn: 2 mls/kg";
-                results.setText(drugDetails);
-                //webview.loadData(description, "text/html", "UTF-8");
+                String htmlAsString23 = getString(R.string.Dextrose);
+                webview1.loadDataWithBaseURL(null, htmlAsString23, "text/html", "utf-8", null);
                 break;
-            case 21:
+            case 26:
                 //Dihydrocodeine
-                description = "<html><p>Age 1–4 yrs: 0.5mg / kg every 4–6 hours <br/>"
-                        + "Age 4–12 yrs: 0.5–1 mg/kg (max. 30 mg) every 4–6 hrs</p></html>";
-                if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("years")) {
-                    if (agedd >= 1 && agedd <= 2) {
+                    if (ageddd >= 12 && ageddd <= 24) {
                         drugDetails = df.format(0.5 * weight2) + "mg every 4–6 hours";
-                    } else if (agedd > 4 && weight2 < 60) {
-                        drugDetails = df.format(0.5 * weight2) + " - " + df.format(30 * weight2) + "mg every 4–6 hours(max. 30 mg)";
-                    } else if (agedd > 4 && weight2 > 60) {
-                        drugDetails = df.format(30 * weight2) + "mg every 4–6 hours(max. 30 mg)";
+                    } else if (ageddd > 24 && weight2 < 60) {
+                        drugDetails = df.format(0.5 * weight2) + " - " + df.format(30 * weight2) + "mg every 4–6 hours";
+                    } else if (ageddd > 24 && weight2 > 60) {
+                        drugDetails = df.format(30 * weight2) + "mg every 4–6 hours";
                     } else {
                         drugDetails = "Dihydrocodeine is not recommended for infants";
                     }
 
-                }
                 //webview.loadData(description, "text/html", "UTF-8");
                 results.setText(drugDetails);
 
                 // get our html content
-                String htmlAsString18 = getString(R.string.Dihydrocodeine);
-                webview1.loadDataWithBaseURL(null, htmlAsString18, "text/html", "utf-8", null);
+                String htmlAsString24 = getString(R.string.Dihydrocodeine);
+                webview1.loadDataWithBaseURL(null, htmlAsString24, "text/html", "utf-8", null);
                 break;
-            case 22:
+            case 27:
                 //Diazepam (iv)
-                if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("days")) {
-                    if (agedd > 28) {
+                    if (ageddd > 1) {
                         drugDetails = df.format(0.3 * weight2) + "mg =" + df.format((0.3 * weight2) / 5) + " mls of 10mg/2ml solution";
                     } else {
-                        drugDetails = "Not used in neonates ";
+                        drugDetails = "Not recommended in neonates ";
                     }
-                } else {
-                    drugDetails = "null ";
-
-                }
-
-                description = "<html><p>0.3 mg/kg iv <br/> Not used in neonates</p></html>";
                 //drugDetails=0.3*weight2+ "mg (="+300*weight2+" mcg)";
                 //webview.loadData(description, "text/html", "UTF-8");
                 results.setText(drugDetails);
 
                 // get our html content
-                String htmlAsString19 = getString(R.string.DiazepamV);
-                webview1.loadDataWithBaseURL(null, htmlAsString19, "text/html", "utf-8", null);
+                String htmlAsString25 = getString(R.string.DiazepamV);
+                webview1.loadDataWithBaseURL(null, htmlAsString25, "text/html", "utf-8", null);
                 break;
             case 23:
                 description = "<html><p>The whole syringe  barrel of a 1ml or 2ml syringe should be inserted gently so	" +
