@@ -568,6 +568,12 @@ for 24 hrs then 62.5–250 micrograms daily in 1–2 doses</p></html></string>
         ]]>
     </string>
 
+    <string name="Lorazepam">
+        <![CDATA[
+        <p>(0.1 mg/kg iv over 30-60 secs (Max dose 4mg)</p>
+        ]]>
+    </string>
+
     <string name="Mebendazole">
         <![CDATA[
         <h2>Mebendazole</h2>
