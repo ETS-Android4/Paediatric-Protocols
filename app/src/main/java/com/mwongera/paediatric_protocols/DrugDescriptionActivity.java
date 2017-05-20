@@ -29,6 +29,7 @@ public class  DrugDescriptionActivity extends Activity {
     WebView webview, webview1;
     Spinner aged;
     int age;
+    Double ageddd;
     int positioned = 0;
     Double weight;
     String aging, weighing;
@@ -36,7 +37,6 @@ public class  DrugDescriptionActivity extends Activity {
     String position;
     String drugDetails = null;
     String description = null;
-    String[] lan;
     Button btn1;
 
     @Override
@@ -73,18 +73,26 @@ public class  DrugDescriptionActivity extends Activity {
                 weighing = inputWeight.getText().toString();
 
                 //method to calculate dosage once a button is clicked
+
                 if (weighing.length() != 0 && aging.length() != 0) {
                     age = Integer.parseInt(aging);
                     weight = Double.parseDouble(weighing);
                     results.setText("");
-
-                    //add a keyboard remover function
-                    calculateDosage(weight, age, positioned);
                 } else {
                     Toast.makeText(getApplicationContext(), "Enter details correctly", Toast.LENGTH_SHORT).show();
                 }
 
-
+                if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("days")) {
+                    ageddd = Double.valueOf(df.format(age / 28));
+                }else if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("months")) {
+                    ageddd = Double.valueOf(df.format(age == age));
+                }else if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("years")) {
+                   ageddd = Double.valueOf(df.format(age * 12));
+                }else {
+                    Toast.makeText(getApplicationContext(), "Enter details correctly", Toast.LENGTH_SHORT).show();
+                }
+                //add a keyboard remover function
+                calculateDosage(weight, ageddd, positioned);
             }
         });
 
@@ -97,15 +105,15 @@ public class  DrugDescriptionActivity extends Activity {
     }
 
     //come up with an algorithm for each drug.
-    private void calculateDosage(Double weight2, int agedd, int pos) {
+    private void calculateDosage(Double weight2, Double ageddd, int pos) {
 
 
         //DO a switch case for all the drugs.
         switch (pos) {
             //Adrenaline   Give 0.1ml/kg in resuscitation.
             case 0:
-                drugDetails = ("" + df.format(0.1 * weight2) + " ml in resuscitation ");
-                drugDetails = ("" + df.format(0.5 * weight2) + " ml of 1:1000 solution (max 5ml) for severe viral group");
+                drugDetails = "Give" + df.format(0.1 * weight2) + " ml in resuscitation \n" +
+                        df.format(0.5 * weight2) + " ml of 1:1000 solution (max 5ml) for severe viral group";
 
                 results.setText(drugDetails);
                 //webview.loadData(description, "text/html", "UTF-8");
@@ -118,18 +126,13 @@ public class  DrugDescriptionActivity extends Activity {
             case 1:
                 //Albendazole Age < 2yrs, 200mg stat
                 //Age ≥ 2yrs, 400mg stat
-                if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("days") || (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("months"))) {
-                    drugDetails = "200mg stat";
-
-                } else if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("years")) {
-                    if (agedd < 2) {
-                        drugDetails = "200mg stat";
-                    } else {
-
-                        drugDetails = "400mg stat";
-                    }
+                if (ageddd < 24) {
+                    drugDetails = "Give 200mg stat";
 
                 }
+                else {
+                        drugDetails = "Give 400mg stat";
+                    }
                 // add values to the txtviews
                 results.setText(drugDetails);
                 // get our html content
@@ -138,20 +141,8 @@ public class  DrugDescriptionActivity extends Activity {
                 break;
             case 2:
                 //Amikacin Age 1mo to 18 yrs, 15mg/kg once daily; same dosing can be used in newborns.
-                if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("years") || (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("months"))) {
-                    if (agedd >= 1 && agedd <= 12) {
                         drugDetails = (15 * weight2 + " mg once daily");
-                        description = "Same dosing can be used in newborns. Slow iv over 3-5 min\n" +
-                                "Amikacin trough concentration should be monitored ( if available)\n" +
-                                "If serious gram - ve infection / resistance to gentamicin, higher doses may be used with monitoring";
                         results.setText(drugDetails);
-                    } else if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("days")) {
-                        drugDetails = "";
-                        results.setText(drugDetails);
-                    }
-
-                }
-
                 //webview.loadData(description, "text/html", "UTF-8");
                 // get our html content
                 String htmlAsString2 = getString(R.string.Amikacin);
@@ -162,16 +153,13 @@ public class  DrugDescriptionActivity extends Activity {
                 //(iv)
                 //Newborn Loading dose 6mg/kg  iv over 1 hour or rectal,
                 //Maintenance (iv or oral): Age	0-7	days - 2.5mg/kg ///////////////////////////depends more on age
-                if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("days")) {
-                    if (agedd < 28) {
-                        drugDetails = "Loading dose " + 6 * weight2 + " mg  iv over 1 hour or rectal" +
-                                "\n Maintenance (iv or oral):" + 2.5 * weight2 + " mg 12hrly ";
-
-
-                    } else if (agedd >= 7 && agedd <= 28) {
-                        drugDetails = "Newborn Loading dose " + 4 * weight2 + " mg  12 hourly";
-
-                    }
+                    if (ageddd < 1 ) {
+                        drugDetails = "Loading dose " + (6 * weight2) + " mg  iv over 1 hour or rectal";
+                        if (ageddd < 0.25) {
+                           drugDetails = "Maintenance (iv or oral):" + (2.5 * weight2) + " mg 12hrly ";
+                        }else if (ageddd >= 0.25 ){
+                            drugDetails = "Maintenance (iv or oral):" + (4 * weight2) + " mg 12hrly ";
+                        }
 
                 } else {
                     drugDetails = "Asthma:" + 5 * weight2 + "mg iv first dose over 30 mins max 500mg";
@@ -191,7 +179,7 @@ public class  DrugDescriptionActivity extends Activity {
             case 4:
                 //Use 25mg/kg/dose for simple infections and 40-45mg/kg
                 //for pneumonia
-                drugDetails = (25 * weight2) + "mg dose for simple infections\n " + (40 * weight2) + "-" + (45 * weight2) + " mg for pnemonia";
+                drugDetails = (25 * weight2) + "mg dose for simple infections\n " + (40 * weight2) + "-" + (45 * weight2) + " mg for pneumonia";
                 results.setText(drugDetails);
 
                 // get our html content
@@ -201,17 +189,12 @@ public class  DrugDescriptionActivity extends Activity {
             case 5:
                 //Neonate: 50mg/kg/dose 12 hourly iv or  if aged < 7 days and 8 hourly if aged 8 - 28 days.
                 //Age 1m and over: 50mg/kg/dose (Max 500mg) 8 hourly
-
-                if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("days")) {
-                    if (agedd <= 7) {
-                        drugDetails = (50 * weight2) + " mg dose 12 hourly or im";
-                    } else if (agedd > 7 && agedd <= 28) {
-                        drugDetails = (50 * weight2) + " mg dose 8 hourly or im";
-                    }
-
-                } else {
-
-                    drugDetails = (50 * weight2) + " mg (max 500mg) dose 6 hourly iv / im";
+                    if (ageddd <= 0.25) {
+                        drugDetails = (50 * weight2) + " mg per dose 12 hourly or im";
+                    } else if (ageddd > 0.25 && ageddd <= 1) {
+                        drugDetails = (50 * weight2) + " mg per dose 8 hourly or im";
+                    } else {
+                    drugDetails = (50 * weight2) + " mg (max 500mg) per dose 6 hourly iv / im";
                 }
                 results.setText(drugDetails);
                 // get our html content
@@ -223,101 +206,49 @@ public class  DrugDescriptionActivity extends Activity {
                 //Artemether -
                 //Lumefantrine
 
-                description = "Given with Food \n Stat then at 8hrs then BD on day 2 and 3";
+                if (weight2 < 5) {
+                    drugDetails = "1/2 tablet Given with Food Stat then at 8hrs then BD on day 2 and 3";
 
-                if (weight < 5) {
-                    drugDetails = "1/2 tablet";
+                } else if (weight2 >= 5 && weight2 < 15 ) {
+                    drugDetails = "1 tablet Given with Food Stat then at 8hrs then BD on day 2 and 3";
 
+                } else if (weight2 >= 15 && weight2 < 24 ) {
+                    drugDetails = "2 tablets Given with Food Stat then at 8hrs then BD on day 2 and 3";
+
+                } else if (weight2 >= 24 && weight2 < 34 ) {
+                    drugDetails = "3 tablets Given with Food Stat then at 8hrs then BD on day 2 and 3";
                 } else {
-                    // check the ages
-                    if ((String.valueOf(aged.getSelectedItem())
-                            .equalsIgnoreCase("months"))) {
-                        // months
-                        if (agedd >= 3 && agedd < 35) {
-                            drugDetails = "1 tablet";
-
-                        } else if (agedd >= 35 && agedd < 60) {
-                            drugDetails = "2 tablets";
-
-                        } else {
-                            drugDetails = "Error, kindly check the inputs";
-                        }
-
-                    } else if ((String.valueOf(aged.getSelectedItem())
-                            .equalsIgnoreCase("years"))) {
-
-                        // years
-                        if (agedd >= 1 && agedd < 3) {
-                            drugDetails = "1 tablet";
-                        } else if (agedd >= 3 && agedd <= 8) {
-                            drugDetails = "2 tablets";
-                        } else if (agedd > 8 && agedd <= 11) {
-                            drugDetails = "3 tablets";
-                        } else {
-                            drugDetails = "Error, kindly check the inputs";
-                        }
-                    } else {
-                        drugDetails = "Error in the Inputs";
-                    }
-
+                    drugDetails = "Kindly check your drug index for adult dosages";
                 }
                 results.setText(drugDetails);
-                webview1.loadData(description, "text/html", "UTF-8");
                 break;
             case 7:
                 //	Artemisinin -
                 //	Piperaquine
-                description = "Given OD for 3 days";
-                if (weight < 50) {
-                    drugDetails = "Given OD for 3 days";
+                if (ageddd >= 3 && ageddd < 35 ) {
+                    drugDetails = "Give 1 paediatric tablet OD for 3 days";
 
-                }else {
-                    // check the ages
-                    if ((String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("months"))) {
-                        // months
-                        if (agedd >= 3 && agedd <= 35) {
-                            drugDetails = "1 paed tab";
+                } else if (ageddd >= 35 && ageddd < 60 ) {
+                    drugDetails = "Give 2 paediatric tablets OD for 3 days";
 
-                        } else if (agedd > 35 && agedd < 60) {
-                            drugDetails = "2 paed tabs";
-
-                        } else {
-                            drugDetails = "Error, kindly check the inputs";
-                        }
-
-                    } else if ((String.valueOf(aged.getSelectedItem())
-                            .equalsIgnoreCase("years"))) {
-
-                        // years
-                        if (agedd >= 1 && agedd < 3) {
-                            drugDetails = "1 paed tab";
-                        } else if (agedd >= 3 && agedd <= 5) {
-                            drugDetails = "2 paed tab";
-                        } else if (agedd > 5 && agedd <= 11) {
-                            drugDetails = "1 adult tab";
-                        } else {
-                            drugDetails = "Error, kindly check the inputs";
-                        }
-                    } else {
-                        drugDetails = "Error in the Inputs";
-                    }
+                } else if (ageddd >= 60 && ageddd < 142 ) {
+                    drugDetails = "Give 1 adult tablet OD for 3 days";
+                } else {
+                    drugDetails = "Kindly check your drug index for adult dosages";
                 }
 
                 results.setText(drugDetails);
-                webview1.loadData(description, "text/html", "UTF-8");
                 break;
             case 8:
                 //Artesunate Age 1m and over: 2.4mg/kg given iv/im at 0, 12 and 24
                 //hours then daily –
-                if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("months") || String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("years")) {
                     if (weight2 <= 20) {
-                        drugDetails = df.format(3 * weight2) + " mg At 0,12, and 24h then continue daily until oral administration is feasible\n press here for preparation procedure";
+                        drugDetails = df.format(3 * weight2) + " mg At 0,12, and 24h then continue daily until oral administration is feasible" +
+                                "\n press here for preparation procedure";
                     } else {
-                        drugDetails = df.format(2.4 * weight2) + " mg At 0,12, and 24h then continue daily until oral administration is feasible\n press here for preparation procedure";
+                        drugDetails = df.format(2.4 * weight2) + " mg At 0,12, and 24h then continue daily until oral administration is feasible" +
+                                "\n press here for preparation procedure";
                     }
-                    //description="change to full course oral ACT as soon as possible after 3 doses when infant/child drinking/breast feeding.";
-                    description = "Given iv / im for a minimum of 24 hours\n" +
-                            "As soon as the child can eat drink (after 24 hours for artesunate) then change to a full course of artemisinin combination therapy (ACT) typically the 1st line oral anti-malarial, Artemether Lumefantrine.";
                     results.setOnClickListener(new View.OnClickListener() {
                         public void onClick(View v) {
                             Intent i = new Intent(DrugDescriptionActivity.this, MalariaTreatmentPreparation.class);
@@ -325,10 +256,6 @@ public class  DrugDescriptionActivity extends Activity {
                         }
                     });
 
-
-                } else {
-                    drugDetails = "Error, make sure the child is above 1 Month";
-                }
                 results.setText(drugDetails);
                 //webview.loadData(description, "text/html", "UTF-8");
 
@@ -337,69 +264,87 @@ public class  DrugDescriptionActivity extends Activity {
                 webview1.loadDataWithBaseURL(null, htmlAsString6, "text/html", "utf-8", null);
                 break;
             case 9:
-                //Beclomethasone Age < 2yrs	50-100	micrograms	12hrly,
-                //Age ≥ 2yrs 100-200 micrograms	12hrly
-                if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("months") || String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("days")) {
-                    drugDetails = "50-100	micrograms	12hrly";
-                } else if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("years")) {
-                    if (agedd < 2) {
-                        drugDetails = "50-100	micrograms	12hrly";
-                    } else if (agedd >= 2) {
-                        drugDetails = "100-200 micrograms	12hrly";
-                    }
-                }
-                description = "Can double doses to improve control but check technique and follow up carefully";
+                //Arzithromycin
+                    drugDetails = df.format(10 * weight2) + " mg (Max = 500mg PO for 3 days)";
+
                 results.setText(drugDetails);
                 //webview.loadData(description, "text/html", "UTF-8");
 
                 // get our html content
-                String htmlAsString7 = getString(R.string.Beclomethasone);
+                String htmlAsString7 = getString(R.string.Azithromycin);
                 webview1.loadDataWithBaseURL(null, htmlAsString7, "text/html", "utf-8", null);
                 break;
+
             case 10:
-                description = "Not recommended if jaundiced or age less than	7 days <br/> Double Penicillin doses if treating Meningitis and age greater than 1	month";
-                //Benzyl Penicillin (X-pen)Newborn:  50,000 iu/kg/dose 12 hourly iv or im.
-                if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("days")) {
-                    if (agedd <= 7) {
-                        drugDetails =df.format(weight2 * 50000) + " iu/dose 12 hourly iv or im";
-                    } else {
-                        drugDetails = df.format(weight2 * 50000) +" iu/dose 6 hourly iv / im";
-                    }
+                //Budesonide
+                drugDetails = " pMDI with spacer 200 mgs daily (low dose)";
+
+                results.setText(drugDetails);
+                //webview.loadData(description, "text/html", "UTF-8");
+
+                // get our html content
+                String htmlAsString8 = getString(R.string.Budesonide);
+                webview1.loadDataWithBaseURL(null, htmlAsString8, "text/html", "utf-8", null);
+                break;
+
+            case 11:
+                //Beclomethasone Age < 2yrs	50-100	micrograms	12hrly,
+                //Age ≥ 2yrs 100-200 micrograms	12hrly
+                if (ageddd < 24) {
+                    drugDetails = "50-100	micrograms	12hrly";
                 } else {
-                    drugDetails = "Double penicillin doses when treating meningitis and age is more than a month";
+                    drugDetails = "100-200	micrograms	12hrly";
                 }
                 results.setText(drugDetails);
                 //webview.loadData(description, "text/html", "UTF-8");
 
                 // get our html content
-                String htmlAsString8 = getString(R.string.Benzyl);
-                webview1.loadDataWithBaseURL(null, htmlAsString8, "text/html", "utf-8", null);
-                break;
-            case 11:
-                //Newborns and up to 4 yrs: 0.25mmol/kg 6 hrly.
-                if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("years")) {
-                    if (agedd > 4) {
-                        drugDetails = "Allowed only up to 4 years";
-                    } else {
-                        drugDetails = (0.25 * weight2) + " mmol 6 hourly";
-                    }
-                } else
-                    drugDetails = (0.25 * weight2) + " mmol 6 hourly";
-                description = "<html><p>Calcium Gluconate 1g tabs contain 2.23mmol calcium"
-                        + "<br/>Calcium Lactate 300mg tabs contain 1mmol calcium"
-                        + "<br/>Maybe required together with Vitamin	D for treating rickets in first 7 days but monitor calcium to prevent hypercalcaemia</p></html>";
-                results.setText(drugDetails);
-                webview1.loadData(description, "text/html", "UTF-8");
+                String htmlAsString9 = getString(R.string.Beclomethasone);
+                webview1.loadDataWithBaseURL(null, htmlAsString9, "text/html", "utf-8", null);
                 break;
             case 12:
+                //Benzyl Penicillin (X-pen)Newborn:  50,000 iu/kg/dose 12 hourly iv or im.
+                    if (ageddd <= 0.25) {
+                        drugDetails =df.format(weight2 * 50000) + " iu/dose 12 hourly iv or im ";
+                    } else {
+                        drugDetails = df.format(weight2 * 50000) +" iu/dose 6 hourly iv / im " +
+                                "\n Double Penicillin doses when treating meningitis and age > 1 month";
+                    }
+                results.setText(drugDetails);
+                //webview.loadData(description, "text/html", "UTF-8");
+
+                // get our html content
+                String htmlAsString10 = getString(R.string.Benzyl);
+                webview1.loadDataWithBaseURL(null, htmlAsString10, "text/html", "utf-8", null);
+                break;
+
+            case 13:
+                //Caffeine Citrate
+
+                drugDetails = "Loading dose : Oral " + (weight2 * 20) + " mg (or iv over 30 minutes)" +
+                        "\n Maintenace dose : Oral " + (weight2 * 5) + " mg (or iv over 30 minutes)";
+
+                // get our html content
+                String htmlAsString11 = getString(R.string.Caffeine);
+                webview1.loadDataWithBaseURL(null, htmlAsString11, "text/html", "utf-8", null);
+                break;
+
+            case 14:
+                //Newborns and up to 4 yrs: 0.25mmol/kg 6 hrly.
+                drugDetails = "Severe hypocalcemia " +
+                        "\n V bolus of 10% calcium gluconate" + 0.5*weight2 + " ml or" +  (0.11 * weight2) + "mmol to a maximum of" + 20 *weight2  + " ml over 5 – 10 min then continuous IV infusion over 24 hours of" + weight2*1 + "mmol (Max 8.8 mmol) " +
+                        "\n Mild hypocalcemia " +
+                        "\n Oral calcium" +  (0.2*weight2) + "mmol to a maximum of 10 mmol 6 hourly" ;
+
+                results.setText(drugDetails);
+                String htmlAsString12 = getString(R.string.Calcium);
+                webview1.loadDataWithBaseURL(null, htmlAsString12, "text/html", "utf-8", null);
+                break;
+            case 15:
                 //Carbamazepine Age 1 m –12 yrs: initially 5 mg/kg at night, increased
-                if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("days")) {
-                    if (agedd >= 28) {
+                    if (ageddd >= 1) {
                         drugDetails = df.format(5 * weight2) + " mg  at night, increased as necessary by " + df.format(2.5 * weight2) + "-" + df.format(5 * weight2) + " mg every 3–7 days "
                                 + "\n usual maintenance dose " + df.format(5 * weight2) + " mg 2–3 times daily.";
-                    } else {
-                        drugDetails = "";
-                    }
                 } else {
                     drugDetails = "Not recommended for neonates";
                 }
@@ -408,76 +353,98 @@ public class  DrugDescriptionActivity extends Activity {
                 //webview.loadData(description, "text/html", "UTF-8");
 
                 // get our html content
-                String htmlAsString9 = getString(R.string.Carbamazepine);
-                webview1.loadDataWithBaseURL(null, htmlAsString9, "text/html", "utf-8", null);
+                String htmlAsString13 = getString(R.string.Carbamazepine);
+                webview1.loadDataWithBaseURL(null, htmlAsString13, "text/html", "utf-8", null);
                 break;
-            case 13:
+            case 16:
                 //Cefotaxime Preferred	to	Ceftriaxone	for	treatment	of	neonatal	meningitis	if	aged	<7	days:
-                if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("days")) {
-                    if (agedd <= 7) {
-                        drugDetails = "Pre-term: " + (50 * weight2) + " mg 12 hourly \nTerm aged <7 days: " + 50 * weight2 + "mg 8 hourly";
-                        results.setText(drugDetails);
-
-                    } else {
-                        drugDetails = "Drug for only upto 7 days";
-                    }
+                if (ageddd <= 0.25) {
+                        drugDetails = "Pre-term : " + (50 * weight2) + " mg 12 hourly " +
+                                "\nTerm: aged < 7 days: " + 50 * weight2 + "mg 8 hourly";
                 } else {
-                    drugDetails = "Provided dosages are for neonates aged 7 days or less";
-                }
-                description = "Preferred to Ceftriaxone for treatment	of neonatal	meningitis if aged <7 days:";
-                results.setText(drugDetails);
-                //webview.loadData(description, "text/html", "UTF-8");
-
-                // get our html content
-                String htmlAsString10 = getString(R.string.Cefotaxime);
-                webview1.loadDataWithBaseURL(null, htmlAsString10, "text/html", "utf-8", null);
-                break;
-            case 14:
-                //Ceftriaxone
-                //
-                if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("days")) {
-                    description = "<html><p><ul><li>Ceftriaxone iv/im maximum 50mg/kg 24hrly for neonates but not recommended if jaundiced or &lt 7 days .</li><br/><li>If Meningitis or very severe sepsis, 50mg/kg 12hrly</li></ul></p></html>  ";
-                    if (agedd <= 7) {
-                        drugDetails = 50 * weight2 + " iv/im 24hrly ";
-
-                    } else if (agedd > 7 && weight2 < 80) {
-                        drugDetails = (50 * weight2) + " iv/im 24hrly " +
-                                "\n for meningitis and very severe sepsis: " + (50 * weight2) + "iv/im 12 hourly";
-                    } else {
-                        drugDetails = "max 4gms iv/im 24 hourly";
+                        drugDetails = "Provided dosages are for neonates aged 7 days or less";
                     }
+                results.setText(drugDetails);
+                //webview.loadData(description, "text/html", "UTF-8");
+
+                // get our html content
+                String htmlAsString14 = getString(R.string.Cefotaxime);
+                webview1.loadDataWithBaseURL(null, htmlAsString14, "text/html", "utf-8", null);
+                break;
+
+            case 17:
+                //Ceftazidime
+                if (ageddd <= 0.25) {
+                    drugDetails = 50 * weight2 + "mg iv/im 12hrly ";
+
+                } else if ((ageddd > 0.25 && ageddd < 1) || (weight2 > 1.2)){
+                    drugDetails = (50 * weight2) + "mg iv/im 8hrly ";
+                } else {
+                    drugDetails = (30 * weight2) + "mg - " + (weight2*50) + "mg iv/im 8hrly (Max 6 grams per day) ";
                 }
                 results.setText(drugDetails);
                 //webview.loadData(description, "text/html", "UTF-8");
 
                 // get our html content
-                String htmlAsString11 = getString(R.string.Ceftazidime);
-                webview1.loadDataWithBaseURL(null, htmlAsString11, "text/html", "utf-8", null);
+                String htmlAsString15 = getString(R.string.Ceftazidime);
+                webview1.loadDataWithBaseURL(null, htmlAsString15, "text/html", "utf-8", null);
 
                 break;
-            case 15:
+
+            case 18:
+                //Ceftriaxone
+                if (ageddd <= 0.25) {
+                    drugDetails = 50 * weight2 + "mg iv/im 24hrly ";
+
+                } else if (ageddd > 0.25 && ageddd < 1)  {
+                    drugDetails = (50 * weight2) + "mg iv/im 24hrly " +
+                            "\n for meningitis and very severe sepsis: " + (50 * weight2) + "mg iv/im 12 hourly";
+                } else {
+                    drugDetails = "max 4gms iv/im 24 hourly";
+                }
+                results.setText(drugDetails);
+                //webview.loadData(description, "text/html", "UTF-8");
+                // get our html content
+                String htmlAsString16 = getString(R.string.Ceftriaxone);
+                webview1.loadDataWithBaseURL(null, htmlAsString16, "text/html", "utf-8", null);
+
+                break;
+
+
+            case 19:
                 //Chloramphenicol
-                if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("days")) {
-                    description = "<html><p>Chloramphenicol should not be used in babies aged &lt 7 days<br/> 25mg/kg iv/im 6hrly for meningitis in over 7 days old</p></html>  ";
-                    if (agedd <= 7) {
+
+                    if (ageddd <= 0.25) {
                         drugDetails = "Are you sure you want to issue Chloramphenicol to a neonate";
 
-                    } else if (agedd > 7) {
-                        drugDetails = (25 * weight2) + " iv/im 6hrly - Meningitis " +
+                    } else if (ageddd > 0.25) {
+                        drugDetails = (25 * weight2) + "mg iv/im 6hrly - Meningitis " +
                                 "\n oral : " + (25 * weight2) + "mg 6 hourly";
                     } else {
                         drugDetails = "Are you sure you want to issue Chloramphenicol to a neonate";
 
                     }
-                }
                 results.setText(drugDetails);
                 //webview.loadData(description, "text/html", "UTF-8");
 
                 // get our html content
-                String htmlAsString12 = getString(R.string.Chloramphenicol);
-                webview1.loadDataWithBaseURL(null, htmlAsString12, "text/html", "utf-8", null);
+                String htmlAsString17 = getString(R.string.Chloramphenicol);
+                webview1.loadDataWithBaseURL(null, htmlAsString17, "text/html", "utf-8", null);
                 break;
-            case 16:
+
+            case 20:
+                //Chlorhexidine
+                drugDetails = " pMDI with spacer 200 mgs daily (low dose)";
+
+                results.setText(drugDetails);
+                //webview.loadData(description, "text/html", "UTF-8");
+
+                // get our html content
+                String htmlAsString18 = getString(R.string.);
+                webview1.loadDataWithBaseURL(null, htmlAsString18, "text/html", "utf-8", null);
+                break;
+
+            case 21:
                 //Ciprofloxacin
                 if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("days")) {
 

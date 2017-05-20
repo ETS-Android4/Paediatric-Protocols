@@ -40,5 +40,8 @@ public class samsteps extends Fragment{
         return rootView;
 
     }
+    public static samsteps newInstance() {
+        return new samsteps();
+    }
 
 }

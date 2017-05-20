@@ -25,11 +25,6 @@ public class AnthropometrySlideActivity extends FragmentActivity {
     private ViewPager mPager;
     private PagerAdapter mPagerAdapter;
 
-    private WFH1_fragment mWFH1;
-    private WeightEstimationFragment mWeightEstimation;
-    private WFH2_fragment mWFH2;
-    private WFH3_fragment mWFH3;
-    private WFH4_fragment mWFH4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +33,7 @@ public class AnthropometrySlideActivity extends FragmentActivity {
 
         //Instantiate a ViewPager and a PagerAdapter
         mPager = (ViewPager) findViewById(R.id.pager);
-        mPagerAdapter = new AnthropometrySlideActivity.ScreenSlidePagerAdapter(getSupportFragmentManager());
+        mPagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
         mPager.setAdapter(mPagerAdapter);
         mPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
 

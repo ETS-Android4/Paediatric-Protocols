@@ -103,22 +103,28 @@ for 24 hrs then 62.5–250 micrograms daily in 1–2 doses</p></html></string>
         <item>Artemether - Lumefantrine</item>
         <item>Artemisinin -Piperaquine</item>
         <item>Artesunate</item>
+        <item>Azithromycin</item>
+        <item>Budesonide</item>
         <item>Beclomethasone</item>
         <item>Benzyl Penicillin </item>
+        <item>Caffeine Citrate</item>
         <item>Calcium</item>
         <item>Carbamazepine</item>
         <item>Cefotaxime</item>
+        <item>Ceftazidime</item>
         <item>Ceftriaxone</item>
+        <item>Chlorhexidine Digluconate</item>
         <item>Chloramphenicol</item>
         <item>Ciprofloxacin</item>
         <item>Clotrimazole 1% </item>
         <item>Co-trimoxazole </item>
         <item>Dexamethasone</item>
-        <item> Dextrose/glucose</item>
+        <item>Dextrose/glucose</item>
         <item>Dihydrocodeine</item>
         <item>Diazepam (iv)</item>
         <item>Diazepam (rectal)</item>
         <item>Digoxin (oral)</item>
+        <item>Erythromycin</item>
         <item>Flucloxacillin</item>
         <item>Frusemide </item>
         <item>Gentamicin</item>
@@ -126,6 +132,7 @@ for 24 hrs then 62.5–250 micrograms daily in 1–2 doses</p></html></string>
         <item>Ibuprofen</item>
         <item>Iron tabs / syrup</item>
         <item>Lactulose</item>
+        <item>Lorazepam</item>
         <item>Mebendazole </item>
         <item>Metronidazole(oral)</item>
         <item>Morphine</item>
@@ -292,6 +299,19 @@ for 24 hrs then 62.5–250 micrograms daily in 1–2 doses</p></html></string>
         ]]>
     </string>
 
+    <string name="Azithromycin">
+        <![CDATA[
+        <p>10mg/kg (Max = 500mg) PO daily for 3 days</p>
+        ]]>
+    </string>
+
+    <string name="Budesonide">
+        <![CDATA[
+        <p>pMDI with spacer 200 mgs daily (low dose)</p>
+        ]]>
+    </string>
+
+
     <string name="Beclomethasone">
         <![CDATA[
         <h2>Beclomethasone</h2>
@@ -338,7 +358,6 @@ for 24 hrs then 62.5–250 micrograms daily in 1–2 doses</p></html></string>
 
     <string name="Calcium">
         <![CDATA[
-        <h2>Calcium</h2>
         <p>Monitor calcium especially if on Vitamin D or long term therapy</p>
         <p><b>Severe hypocalcemia</b></p>
         <p>V bolus of 10% calcium gluconate 0.5 ml/kg (0.11 mmol/kg) to a maximum of 20 ml/kg over 5 – 10 min then continuous IV infusion</p>

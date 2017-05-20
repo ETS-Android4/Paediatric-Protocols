@@ -97,11 +97,9 @@ public class managementSamSlideActivity extends FragmentActivity {
         public Fragment getItem(int position) {
             switch(position){
                 case 0:
-                    mSamsteps = new samsteps();
-                    return mSamsteps;
+                    return samsteps.newInstance();
                 case 1:
-                    mWFH1 = new WFH0_fragment();
-                    return mWFH1;
+                    return WFH0_fragment.newInstance();
 
                 default: break;
 
