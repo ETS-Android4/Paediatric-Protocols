@@ -557,41 +557,33 @@ public class  DrugDescriptionActivity extends Activity {
                 String htmlAsString25 = getString(R.string.DiazepamV);
                 webview1.loadDataWithBaseURL(null, htmlAsString25, "text/html", "utf-8", null);
                 break;
-            case 23:
-                description = "<html><p>The whole syringe  barrel of a 1ml or 2ml syringe should be inserted gently so	" +
-                        "that pr DZ is given at a depth of 4-5cm<br/></p><p>0.3 mg/kg iv <br/> Not used in neonates</p></html>";
+            case 28:
                 //Diazepam (rectal)m;
-                if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("days")) {
-                    if (agedd > 28) {
-                        drugDetails = df.format(0.5 * weight2) + "mg =" + df.format((0.5 * weight2) / 5) + " mls of 10mg/2ml solution)";
-                    } else {
-                        drugDetails = "Not used in neonates ";
-                    }
+                if (ageddd > 1) {
+                    drugDetails = df.format(0.5 * weight2) + "mg =" + df.format((0.5 * weight2) / 5) + " mls of 10mg/2ml solution";
                 } else {
-                    drugDetails = "null ";
-
+                    drugDetails = "Not recommended in neonates ";
                 }
+
                 results.setText(drugDetails);
                 //webview.loadData(description, "text/html", "UTF-8");
                 // get our html content
-                String htmlAsString20 = getString(R.string.DiazepamR);
-                webview1.loadDataWithBaseURL(null, htmlAsString20, "text/html", "utf-8", null);
+                String htmlAsString26 = getString(R.string.DiazepamR);
+                webview1.loadDataWithBaseURL(null, htmlAsString26, "text/html", "utf-8", null);
                 break;
-            case 24:
+            case 29:
                 //Digoxin (oral)
-                if (String.valueOf(aged.getSelectedItem())
-                        .equalsIgnoreCase("years")) {
-                    if (agedd >= 2 && agedd < 5) {
+                    if (ageddd >= 24 && ageddd < 60) {
                         drugDetails = "initialy " + (35 * weight2)
                                 + " micrograms in 3 divided doses for 24 hrs then \n "
                                 + 10 * weight2 + " micrograms daily in 1–2 doses";
-                    } else if (agedd >= 5 && agedd < 10) {
+                    } else if (ageddd >= 60 && ageddd < 120) {
                         drugDetails = "initialy " + 25
                                 * weight2
                                 + " micrograms (max.750 micrograms) in 3 divided doses for 24 hrs then \n "
                                 + 6 * weight2
                                 + " micrograms (max. 250 micrograms daily)daily in 1–2 doses";
-                    } else if (agedd > 10) {
+                    } else if (ageddd > 120) {
                         drugDetails = "initialy " + 0.75 * weight2
                                 + "-"
                                 + 1.5 * weight2
@@ -602,26 +594,38 @@ public class  DrugDescriptionActivity extends Activity {
                                 + 250
                                 * weight2
                                 + " micrograms (max 250mcg) daily in 1–2 doses";
-                    }
-
-                } else {
-                    drugDetails = "Consult a paeditrician for use under 2 years";
+                    } else {
+                    drugDetails = "Consult a paeditrician for use in under 2 year olds";
                 }
+
                 //add info
                 description = getResources().getString(R.string.d24);
                 results.setText(drugDetails);
                 //webview.loadData(description, "text/html", "UTF-8");
 
                 // get our html content
-                String htmlAsString21 = getString(R.string.Digoxin);
-                webview1.loadDataWithBaseURL(null, htmlAsString21, "text/html", "utf-8", null);
+                String htmlAsString27 = getString(R.string.Digoxin);
+                webview1.loadDataWithBaseURL(null, htmlAsString27, "text/html", "utf-8", null);
 
                 break;
-            case 25:
+
+            case 30:
+                //Erythromycin
+                drugDetails = df.format(30 * weight2) + "-" + weight2*50 +" mg per day in 3-4 divided doses (Max 2 grams per day))";
+
+                results.setText(drugDetails);
+                //webview.loadData(description, "text/html", "UTF-8");
+
+                // get our html content
+                String htmlAsString28 = getString(R.string.Erythromycin);
+                webview1.loadDataWithBaseURL(null, htmlAsString28, "text/html", "utf-8", null);
+                break;
+
+            case 31:
                 //Flucloxacillin
                 if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("days")) {
                     description = "<html><p>Neonates 25mg/kg  12hrly given as a 125mg/5ml suspension<br/>Over 1 month 50mg/kg per dose 8hrly </p></html>  ";
-                    if (agedd > 28) {
+                    if (ageddd > 1) {
                         drugDetails = "Oral: " + (weight2 * 15) + "mg/dose or as" + (weight2 * 25 * 5) / 125 + " mls/ suspension 12 hrly \n"
                                 + "iv/im: " + (weight2 * 50) + "mg 8 hourly"
                         ;
@@ -636,46 +640,41 @@ public class  DrugDescriptionActivity extends Activity {
                 //webview.loadData(description, "text/html", "UTF-8");
 
                 // get our html content
-                String htmlAsString22 = getString(R.string.Flucloxacillin);
-                webview1.loadDataWithBaseURL(null, htmlAsString22, "text/html", "utf-8", null);
+                String htmlAsString29 = getString(R.string.Flucloxacillin);
+                webview1.loadDataWithBaseURL(null, htmlAsString29, "text/html", "utf-8", null);
 
                 break;
-            case 26:
-                //Frusemide
-                drugDetails = 0.5 * weight2 + " mg to" + 1 * weight2 + " mg up to 6 hrly";
+            case 32:
+                //Furosemide
+                drugDetails = 0.5 * weight2 + " mg -" + 1 * weight2 + " mg up to 6 hrly";
                 results.setText(drugDetails);
                 break;
-            case 27:
+            case 33:
                 //Gentamicin
-                if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("days")) {
-                    if (agedd <= 7) {
+                    if (ageddd <= 0.25 ) {
                         if (weight2 < 2) {
                             drugDetails = df.format(3 * weight2) + " mg iv/im 24hrly";
-                        } else if (weight2 >= 2) {
+                        } else {
                             drugDetails = df.format(5 * weight2) + " mg iv/im 24hrly";
                         }
 
-                    } else if (agedd > 7) {
+                    } else {
                         drugDetails = df.format(7.5 * weight2) + " mg iv/im over 3-5 minutes 24hrly ";
                     }
-                } else {
-                    drugDetails = "null";
-                }
                 results.setText(drugDetails);
                 //webview.loadData(description, "text/html", "UTF-8");
 
                 // get our html content
-                String htmlAsString23 = getString(R.string.Gentamicin);
-                webview1.loadDataWithBaseURL(null, htmlAsString23, "text/html", "utf-8", null);
+                String htmlAsString30 = getString(R.string.Gentamicin);
+                webview1.loadDataWithBaseURL(null, htmlAsString30, "text/html", "utf-8", null);
                 break;
-            case 28:
+            case 34:
 
                 //(For severe SCD only: Pain >3 episodes/ yr; stroke; transfusion ≥ 2/ yr; acute chest syndrome)
                 //Child 2-12 years initially 10-15mg/kg once daily, increased every 12 weeks in steps of 2.5 - 5 mg/kg daily according to response; usual dose 15 - 30 mg/kg daily (max. 35 mg/kg)
                 //Hydroxyurea
-                if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("years")) {
-                    if (agedd > 2) {
-                        drugDetails = "Child above 2 years initially" + df.format(10 * weight2) + "-" + df.format(15 * weight2) + "once daily" + " \n " +
+                    if (ageddd > 24) {
+                        drugDetails = "initially" + df.format(10 * weight2) + "-" + df.format(15 * weight2) + "once daily" + " \n " +
                                 "increased every 12 weeks in steps of" + df.format(2.5 * weight2) + "-" + df.format(5 * weight2) + "daily according to response; \n" +
                                 "usual dose" + df.format(15 * weight2) + "-" + df.format(30 * weight2) + "daily (max. 35 mg/kg)";
                     } else {
