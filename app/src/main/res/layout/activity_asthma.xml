@@ -1,5 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/finestWhite"
@@ -20,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:text="Paediatrics Protocols - Kenya"
+            android:text="@string/paediatrics_protocols_kenya"
             android:textColor="#000"
             android:textSize="15sp" />
 
@@ -42,9 +43,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:text="Asthma"
+            android:text="@string/asthma"
             android:textColor="#000"
-            android:textSize="10sp" />
+            android:textSize="12sp" />
 
     </LinearLayout>
 
@@ -60,7 +61,7 @@
         android:layout_marginEnd="11dp"
         android:layout_marginTop="14dp"
 
-        />
+        tools:ignore="ContentDescription" />
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"

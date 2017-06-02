@@ -1,4 +1,5 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:fillViewport="true"
@@ -20,14 +21,13 @@
     android:layout_width="fill_parent"
     android:layout_alignParentTop="true"
     android:layout_height="wrap_content"
-  android:orientation="vertical" >
+    android:orientation="vertical" >
 
     <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:background="#FC9"
         android:gravity="center"
         >
@@ -36,7 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:text="Basic Paediatrics Protocols - Kenya"
+            android:text="@string/paediatrics_protocols_kenya"
             android:textColor="#000"
             android:textSize="15sp" />
 
@@ -46,12 +46,11 @@
             android:id="@+id/textDrug"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-           android:gravity="center"
+            android:gravity="center"
             android:background="#fff"
-            android:text="Drug"
+            android:text="@string/drug"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
     
     
 </LinearLayout>
@@ -69,9 +68,12 @@
 
     <EditText
         android:id="@+id/editText1"
-        android:hint="Enter weight"
+        android:hint="@string/enter_weight"
+        android:background="@drawable/bg_edittext"
         android:textColor="@android:color/black"
-        android:layout_width="200dp"
+        android:layout_width="fill_parent"
+        android:textAlignment="center"
+        android:layout_margin="10sp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:ems="10"
@@ -85,10 +87,13 @@
    <EditText
         android:id="@+id/editText2"
         android:textColor="@android:color/black"
-        android:layout_width="200dp"
+        android:background="@drawable/bg_edittext"
+        android:layout_width="fill_parent"
+        android:textAlignment="center"
         android:layout_height="wrap_content"
+        android:layout_margin="10sp"
         android:layout_weight="1"
-        android:hint="Select Age"
+        android:hint="@string/select_age"
         android:ems="10"
         android:inputType="number" >
 
@@ -98,7 +103,8 @@
        android:id="@+id/spinner1"
        android:prompt="@string/lang"
        android:entries="@array/age_category"
-       android:layout_width="200dp"
+       android:layout_width="fill_parent"
+       android:textAlignment="center"
        android:layout_height="wrap_content"
        android:layout_weight="1" />
    
@@ -123,49 +129,44 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="50"
-                android:text="Calculate"
+                android:text="@string/calculate"
                 android:textColor="@color/text_color_primary_3"
                 android:backgroundTint="@color/holo_blue_dark"
+                android:background="@color/holo_blue_dark"
                 android:layout_margin="10dp"
-                />
+                tools:ignore="InefficientWeight,UnusedAttribute" />
         </LinearLayout>
 
         <TextView
             android:id="@+id/textResults"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/layoer1"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
             android:layout_marginTop="12dp"
             android:gravity="center"
             android:background="#fff"
             android:lines="5"
-            android:text="Results"
+            android:text="@string/results"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textSize="15dp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/guidelines"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
             android:gravity="center"
             android:background="#fff"
-            android:text="Guidelines"
+            android:text="@string/guidelines"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
 
 
         <WebView
             android:id="@+id/webView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignRight="@+id/layoer1"
-            android:layout_below="@+id/layoer1"
+            android:layout_height="0dp"
             android:layout_marginTop="12dp"
             android:layout_weight="20"
-            android:text="Guidelines"
+            android:text="@string/guidelines"
             android:textAppearance="?android:attr/textAppearanceMedium"
             />
 
@@ -173,8 +174,6 @@
             android:id="@+id/adView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
             ads:adSize="BANNER"
             android:layout_gravity="center"
             ads:adUnitId="@string/medical_ad">

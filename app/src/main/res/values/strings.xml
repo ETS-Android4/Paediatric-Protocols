@@ -977,5 +977,28 @@ contains viruses or other harmful computer code designed to interrupt, destroy o
         \n\nLast updated: May 11, 2017.
 
     </string>
+    <string name="basic_paediatrics_protocols_kenya">Basic Paediatrics Protocols - Kenya</string>
+    <string name="terms_and_condtions">Terms and Condtions</string>
+    <string name="anthropometry">Anthropometry</string>
+    <string name="paediatrics_protocols_kenya">Paediatrics Protocols - Kenya</string>
+    <string name="asthma">Asthma</string>
+    <string name="basic_support">Basic Support</string>
+    <string name="convulsions">Convulsions</string>
+    <string name="press_and_hold_for_more_options">Press and Hold for more Options</string>
+    <string name="cpap">CPAP</string>
+    <string name="guidelines">Guidelines</string>
+    <string name="calculate">Calculate</string>
+    <string name="drug">Drug</string>
+    <string name="enter_weight">Enter weight</string>
+    <string name="results">Results</string>
+    <string name="select_age">Select Age</string>
+    <string name="essential_drugs">Essential Drugs</string>
+    <string name="feeding_severe_malnutrition">Feeding - Severe Malnutrition</string>
+    <string name="fluid_in_diarrhoea">Fluid in diarrhoea</string>
+    <string name="fluid_management_diarrhoea">Fluid management-diarrhoea</string>
+    <string name="maintaince">Maintaince</string>
+    <string name="oral_or_ngt">Oral or NGT</string>
+    <string name="shock">Shock</string>
+    <string name="infant_support">Infant Support</string>
 
 </resources>

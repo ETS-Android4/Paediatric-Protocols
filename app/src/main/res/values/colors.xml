@@ -46,6 +46,8 @@
     <color name="secondary_text">#727272</color>
     <color name="icons">#212121</color>
     <color name="divider">#B6B6B6</color>
+    <color name="finestWhite">#ffff</color>
+    <color name="finestBlack">@android:color/black</color>
 
     <color name="redPrimaryDark">#DD3131</color>
     <color name="redPrimary">#FF5E5E</color>

@@ -12,7 +12,6 @@
       android:id="@+id/header"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_alignParentTop="true"
       android:background="#FC9"
       android:gravity="center"
       >
@@ -21,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:text="Basic Paediatrics Protocols - Kenya"
+        android:text="@string/basic_paediatrics_protocols_kenya"
         android:textColor="#000"
         android:textSize="15sp" />
 
@@ -31,10 +30,9 @@
       android:id="@+id/defaultTheme"
       android:layout_width="match_parent"
       android:layout_height="64dp"
-      android:layout_alignParentBottom="true"
       android:background="@color/finestWhite"
       android:onClick="onClick"
-      android:text="Terms and Condtions"
+      android:text="@string/terms_and_condtions"
       android:textColor="@color/finestBlack"
       />
 
@@ -42,10 +40,9 @@
       android:id="@+id/redTheme"
       android:layout_width="match_parent"
       android:layout_height="64dp"
-      android:layout_alignParentBottom="true"
       android:background="@color/redPrimary"
       android:onClick="onClick"
-      android:text="About"
+      android:text="@string/about"
       android:textColor="@color/finestWhite"
       />
 
