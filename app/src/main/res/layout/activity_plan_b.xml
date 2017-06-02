@@ -1,9 +1,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:background="@color/finestWhite"
-    android:layout_height="match_parent"
     tools:context=".ShockActivity">
 
 
@@ -19,7 +19,6 @@
             android:id="@+id/header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
             android:background="#FC9"
             android:gravity="center"
             >
@@ -28,7 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:text="Paediatrics Protocols - Kenya"
+                android:text="@string/paediatrics_protocols_kenya"
                 android:textColor="#000"
                 android:textSize="15sp" />
 
@@ -38,93 +37,111 @@
             android:id="@+id/textDrug"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
             android:gravity="center"
             android:background="#fff"
-            android:text="Dehydration Plan B"
+            android:text="@string/dehydration_plan_b"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
 
 
     </LinearLayout>
 
-    <EditText
-        android:id="@+id/weight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Input weight"
-        android:textColor="@android:color/black"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        android:layout_marginTop="62dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true">
-
-        <requestFocus />
-    </EditText>
     <LinearLayout
-        android:id="@+id/layoer1"
-
+        android:id="@+id/layoer2"
         android:layout_width="fill_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/weight"
+        android:layout_height="wrap_content"
         android:weightSum="100"
         android:orientation="vertical"
+        android:layout_below="@+id/layoer72"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
-        >
-
-        <android.support.v7.widget.AppCompatButton
-            android:id="@+id/button1"
+        <EditText
+            android:id="@+id/editText1"
+            android:hint="@string/enter_weight"
+            android:background="@drawable/bg_edittext"
+            android:textColor="@android:color/black"
             android:layout_width="fill_parent"
+            android:textAlignment="center"
+            android:layout_margin="10sp"
             android:layout_height="wrap_content"
-            android:layout_weight="50"
-            android:text="Calculate"
-            android:textColor="@color/text_color_primary_3"
-            android:backgroundTint="@color/holo_blue_dark"
-            android:background="@color/holo_blue_dark"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            tools:ignore="InefficientWeight">
 
-            />
+            <requestFocus />
+        </EditText>
+        <!--    <EditText -->
+        <!--         android:id="@+id/editText2" -->
+        <!--         android:layout_width="100dp" -->
+        <!--         android:layout_height="wrap_content" -->
+        <!--         android:layout_weight="1" -->
+        <!--         android:hint="Age" -->
+        <!--         android:ems="10" -->
+        <!--         android:inputType="number" > -->
+
+        <!--     </EditText> -->
 
     </LinearLayout>
     <LinearLayout
         android:id="@+id/layoer3"
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/layoer1"
-        android:weightSum="100"
-        android:orientation="vertical"
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp"
-        >
+        android:layout_below="@+id/layoer2"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/layoer1"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:weightSum="100" >
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/button1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:text="@string/calculate"
+                android:textColor="@color/text_color_primary_3"
+                android:backgroundTint="@color/holo_blue_dark"
+                android:background="@color/holo_blue_dark"
+                android:layout_margin="10dp"
+                tools:ignore="InefficientWeight,UnusedAttribute" />
+        </LinearLayout>
+
         <TextView
             android:id="@+id/textResults"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/layoer1"
-
-            android:lines="3"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
             android:background="#fff"
-            android:text=""
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+            android:lines="5"
+            android:text="@string/results"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="15sp" />
 
         <WebView
-            android:id="@+id/webView1"
+            android:id="@+id/webView"
             android:layout_width="match_parent"
-            android:layout_height="186dp" />
+            android:layout_height="0dp"
+            android:layout_marginTop="12dp"
+            android:layout_weight="20"
+            android:text="@string/guidelines"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            />
 
         <com.google.android.gms.ads.AdView
             android:id="@+id/adView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             ads:adSize="BANNER"
-            ads:adUnitId="@string/medical_ad"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"></com.google.android.gms.ads.AdView>
+            android:layout_gravity="center"
+            ads:adUnitId="@string/medical_ad">
+        </com.google.android.gms.ads.AdView>
+
 
     </LinearLayout>
 

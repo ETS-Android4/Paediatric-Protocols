@@ -20,7 +20,6 @@
             android:id="@+id/header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
             android:background="#FC9"
             android:gravity="center"
             >
@@ -29,7 +28,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:text="Paediatrics Protocols - Kenya"
+                android:text="@string/paediatrics_protocols_kenya"
                 android:textColor="#000"
                 android:textSize="15sp" />
 
@@ -39,12 +38,11 @@
             android:id="@+id/textDrug"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
             android:gravity="center"
             android:background="#fff"
-            android:text="New Born fluids|feeding"
+            android:text="@string/new_born_fluids_feeding"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
 
 
     </LinearLayout>
@@ -63,23 +61,29 @@
 
         <EditText
             android:id="@+id/editText1"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="51.09"
-            android:ems="10"
+            android:hint="@string/enter_weight"
+            android:background="@drawable/bg_edittext"
             android:textColor="@android:color/black"
-            android:hint="weight"
-            android:inputType="numberDecimal" >
+            android:layout_width="fill_parent"
+            android:textAlignment="center"
+            android:layout_margin="10sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            tools:ignore="InefficientWeight">
 
             <requestFocus />
         </EditText>
 
         <Spinner
             android:id="@+id/spinner1"
-            android:layout_width="200dp"
+            android:prompt="@string/lang"
+            android:entries="@array/days"
+            android:layout_width="fill_parent"
+            android:textAlignment="center"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:entries="@array/days" />
+            android:layout_weight="1" />
 
         <!--    <EditText -->
         <!--         android:id="@+id/editText2" -->
@@ -118,70 +122,58 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="50"
-                android:text="Calculate"
+                android:text="@string/calculate"
                 android:textColor="@color/text_color_primary_3"
                 android:backgroundTint="@color/holo_blue_dark"
                 android:background="@color/holo_blue_dark"
-                android:layout_marginRight="2dp"
-                />
+                android:layout_margin="10sp"
+                tools:ignore="InefficientWeight,UnusedAttribute" />
         </LinearLayout>
 
         <TextView
             android:id="@+id/textvolume"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/layoer1"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
             android:layout_marginTop="12dp"
             android:gravity="center"
             android:background="#fff"
             android:lines="3"
-            android:text="Total Daily Fluids"
+            android:text="@string/total_daily_fluids"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textSize="14dp" />
+            android:textSize="14sp" />
         <TextView
             android:id="@+id/texthrly"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/layoer1"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
             android:layout_marginTop="3dp"
             android:gravity="center"
             android:background="#fff"
             android:lines="3"
-            android:text="NG Feeds 3hrly"
+            android:text="@string/ng_feeds_3hrly"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textSize="14dp" />
+            android:textSize="14sp" />
         <TextView
             android:id="@+id/textRate"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/layoer1"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
             android:layout_marginTop="3dp"
             android:gravity="center"
             android:background="#ffffe0"
             android:lines="3"
-            android:text="IV fluids rate (mls/hr)"
+            android:text="@string/iv_fluids_rate_mls_hr"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textSize="14dp" />
+            android:textSize="14sp" />
         <TextView
             android:id="@+id/textNGT"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/layoer1"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
             android:layout_marginTop="3dp"
             android:gravity="center"
             android:background="#fff"
             android:lines="6"
-            android:text="NGT Feeds after 24 hrs IVF"
+            android:text="@string/ngt_feeds_after_24_hrs_ivf"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textSize="14dp" />
+            android:textSize="14sp" />
 
         <com.google.android.gms.ads.AdView
             android:id="@+id/adView"
@@ -189,9 +181,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             ads:adSize="BANNER"
-            ads:adUnitId="@string/medical_ad"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"></com.google.android.gms.ads.AdView>
+            ads:adUnitId="@string/medical_ad"></com.google.android.gms.ads.AdView>
 
     </LinearLayout>
 

@@ -19,7 +19,6 @@
             android:id="@+id/header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
             android:background="#FC9"
             android:gravity="center"
             >
@@ -28,7 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:text="Paediatrics Protocols - Kenya"
+                android:text="@string/paediatrics_protocols_kenya"
                 android:textColor="#000"
                 android:textSize="15sp" />
 
@@ -38,12 +37,11 @@
             android:id="@+id/textDrug"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
             android:gravity="center"
             android:background="#fff"
-            android:text="Dehydration Plan-C"
+            android:text="@string/dehydration_plan_c"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
 
 
     </LinearLayout>
@@ -58,24 +56,26 @@
         android:layout_below="@+id/layoer72">
 
         <EditText
-            android:id="@+id/weight"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:hint="Input weight"
+            android:id="@+id/editText1"
+            android:hint="@string/enter_weight"
+            android:background="@drawable/bg_edittext"
             android:textColor="@android:color/black"
+            android:layout_width="fill_parent"
+            android:textAlignment="center"
+            android:layout_margin="10sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:ems="10"
-            android:layout_weight="50"
-            android:inputType="numberDecimal"
-            android:layout_marginTop="20dp"
-            >
+            android:inputType="numberDecimal" >
 
             <requestFocus />
         </EditText>
 
         <Spinner
             android:id="@+id/spinner1"
-            android:layout_width="204dp"
+            android:layout_width="fill_parent"
             android:layout_height="match_parent"
+            android:textAlignment="center"
             android:layout_weight="1"
             android:entries="@array/age"
             android:prompt="@string/lang"
@@ -102,13 +102,13 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="50"
-                android:text="Calculate"
+                android:text="@string/calculate"
                 android:textColor="@color/text_color_primary_3"
                 android:backgroundTint="@color/holo_blue_dark"
                 android:background="@color/holo_blue_dark"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
-                />
+                tools:ignore="InefficientWeight,UnusedAttribute" />
 
         </LinearLayout>
 
@@ -116,44 +116,35 @@
             android:id="@+id/textstep1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/layoer1"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
             android:layout_marginTop="12dp"
             android:gravity="center"
             android:background="#fff"
             android:lines="4"
-            android:text="Step1"
+            android:text="@string/step1"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textSize="16dp" />
+            android:textSize="16sp" />
         <TextView
             android:id="@+id/textstep2"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/layoer1"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
 
             android:gravity="center"
             android:background="#fff"
             android:lines="4"
-            android:text="Step2"
+            android:text="@string/step2"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textSize="16dp" />
+            android:textSize="16sp" />
         <TextView
             android:id="@+id/textngt"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/layoer1"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
 
             android:gravity="center"
             android:background="#fff"
             android:lines="4"
-            android:text="ngt Rehydration"
+            android:text="@string/ngt_rehydration"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textSize="16dp" />
+            android:textSize="16sp" />
 
 
         <com.google.android.gms.ads.AdView
@@ -162,9 +153,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             ads:adSize="BANNER"
-            ads:adUnitId="@string/medical_ad"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"></com.google.android.gms.ads.AdView>
+            ads:adUnitId="@string/medical_ad"></com.google.android.gms.ads.AdView>
     </LinearLayout>
 
 

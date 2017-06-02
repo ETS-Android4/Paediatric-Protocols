@@ -49,7 +49,6 @@ public class  DrugDescriptionActivity extends Activity {
         inputWeight = (EditText) findViewById(R.id.editText1);
         results = (TextView) findViewById(R.id.textResults);
         txtDrug = (TextView) findViewById(R.id.textDrug);
-        webview = (WebView) findViewById(R.id.webView1);
         webview1 = (WebView) findViewById(R.id.webView);
         aged = (Spinner) findViewById(R.id.spinner1);
         btn1 = (Button) findViewById(R.id.button1);

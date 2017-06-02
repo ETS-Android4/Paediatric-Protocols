@@ -38,8 +38,8 @@ public class PlanBActivity extends Activity {
         setContentView(R.layout.activity_plan_b);
        // getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#f9a614")));
         results=(TextView)findViewById(R.id.textResults);
-        notes=(WebView)findViewById(R.id.webView1);
-        inputweight=(EditText)findViewById(R.id.weight);
+        notes=(WebView)findViewById(R.id.webView);
+        inputweight=(EditText)findViewById(R.id.editText1);
         btn=(Button)findViewById(R.id.button1);
         //btn1=(Button)findViewById(R.id.button2);
         btn.setOnClickListener(new View.OnClickListener() {

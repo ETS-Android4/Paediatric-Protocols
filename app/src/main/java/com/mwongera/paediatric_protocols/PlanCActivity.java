@@ -46,7 +46,7 @@ public class PlanCActivity extends Activity {
         txtstep1=(TextView)findViewById(R.id.textstep1);
         txtstep2=(TextView)findViewById(R.id.textstep2);
         txtstep3=(TextView)findViewById(R.id.textngt);
-        weight=(EditText)findViewById(R.id.weight);
+        weight=(EditText)findViewById(R.id.editText1);
         //webview=(WebView)findViewById(R.id.webView1);
         spn=(Spinner)findViewById(R.id.spinner1);
         lan=getResources().getStringArray(R.array.age);

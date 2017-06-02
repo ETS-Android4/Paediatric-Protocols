@@ -1,5 +1,6 @@
 <!-- Dummy content. -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
@@ -12,7 +13,6 @@
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:background="#FC9"
         android:gravity="center"
         android:orientation="vertical"
@@ -22,7 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:text="Paediatrics Protocols - Kenya"
+            android:text="@string/paediatrics_protocols_kenya"
             android:textColor="#000"
             android:textSize="15sp" />
 
@@ -35,18 +35,15 @@
         android:layout_height="wrap_content"
         android:background="#fff"
         android:gravity="center"
-        android:orientation="vertical"
-        android:layout_below="@+id/header"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:text="Severe Malnutrition"
+            android:text="@string/severe_malnutrition"
             android:textColor="#000"
-            android:textSize="10sp" />
+            android:textSize="12sp" />
 
     </LinearLayout>
 
@@ -55,12 +52,9 @@
         android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/header"
         android:src="@drawable/samsteps"
 
-        />
+        tools:ignore="ContentDescription" />
 
     <TextView android:id="@android:id/text1"
         style="?android:textAppearanceLarge"
