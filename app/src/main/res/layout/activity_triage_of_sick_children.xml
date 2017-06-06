@@ -22,7 +22,7 @@
             android:layout_margin="5dp"
             android:text="@string/paediatrics_protocols_kenya"
             android:textColor="#000"
-            android:textSize="15sp" />
+            android:textSize="22sp" />
 
         <LinearLayout
             android:id="@+id/header1"

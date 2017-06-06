@@ -90,39 +90,6 @@
         </activity>
         <activity android:name=".fragment.AnthropometrySlideActivity">
         </activity>
-        <activity android:name=".Drugs_drawer"
-            android:theme="@style/DrawerTheme"
-            android:parentActivityName=".MainActivity" >
-            <!-- Parent activity meta-data to support 4.0 and lower -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"/>
-        </activity>
-        <activity android:name=".MajorConditions_drawer"
-            android:theme="@style/DrawerTheme"
-            android:parentActivityName=".MainActivity" >
-            <!-- Parent activity meta-data to support 4.0 and lower -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
-            </activity>
-        <activity android:name=".Newborn_Drawer"
-            android:theme="@style/DrawerTheme"
-            android:parentActivityName=".MainActivity" >
-            <!-- Parent activity meta-data to support 4.0 and lower -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
-            </activity>
-        <activity android:name=".Triage_Drawer"
-            android:theme="@style/DrawerTheme"
-            android:parentActivityName=".MainActivity" >
-            <!-- Parent activity meta-data to support 4.0 and lower -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
-
-            </activity>
 
         <activity android:name=".fragment.managementSamSlideActivity">
         </activity>

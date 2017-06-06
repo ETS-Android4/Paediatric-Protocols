@@ -87,50 +87,6 @@ public class MainActivity extends DrawerActivity {
                         .setTextColorPrimaryRes(R.color.navigationBarColor)
         );
         addItems(new DrawerItem()
-                        .setTextPrimary(getString(R.string.drugs_fragment))
-                        .setImage(ContextCompat.getDrawable(this, R.drawable.pills2))
-                        .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
-                            @Override
-                            public void onClick(DrawerItem drawerItem, long id, int position) {
-                                Intent i = new Intent(MainActivity.this, Drugs_drawer.class);
-                                startActivity(i);
-                            }
-                        })
-                ,
-                new DrawerItem()
-                        .setTextPrimary(getString(R.string.triage_fragment))
-                        .setImage(ContextCompat.getDrawable(this, R.drawable.medicalsignal))
-                        .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
-                            @Override
-                            public void onClick(DrawerItem drawerItem, long id, int position) {
-                                Intent i = new Intent(MainActivity.this, Triage_Drawer.class);
-                                startActivity(i);
-                            }
-                        })
-                ,
-                new DrawerItem()
-                        .setTextPrimary(getString(R.string.major_conditions_fragment))
-                        .setImage(ContextCompat.getDrawable(this, R.drawable.heart2))
-                        .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
-                            @Override
-                            public void onClick(DrawerItem drawerItem, long id, int position) {
-                                Intent i = new Intent(MainActivity.this, MajorConditions_drawer.class);
-                                startActivity(i);
-                            }
-                        })
-                ,
-                new DrawerItem()
-                        .setTextPrimary(getString(R.string.newborn_care_fragment))
-                        .setImage(ContextCompat.getDrawable(this, R.drawable.mother))
-                        .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
-                            @Override
-                            public void onClick(DrawerItem drawerItem, long id, int position) {
-                                Intent i = new Intent(MainActivity.this, Newborn_Drawer.class);
-                                startActivity(i);
-                            }
-                        })
-                ,
-                new DrawerItem()
                         .setImage(ContextCompat.getDrawable(this, R.drawable.text_lines))
                         .setTextPrimary(getString(R.string.news_fragment))
                         .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
@@ -143,7 +99,7 @@ public class MainActivity extends DrawerActivity {
                 ,
                 new DrawerItem()
                         .setTextPrimary(getString(R.string.about))
-                        .setImage(ContextCompat.getDrawable(this, R.drawable.ic_action_info))
+                        .setImage(ContextCompat.getDrawable(this, R.drawable.logo))
                         .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
                             @Override
                             public void onClick(DrawerItem drawerItem, long id, int position) {
