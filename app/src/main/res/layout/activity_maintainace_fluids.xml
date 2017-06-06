@@ -154,7 +154,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
             android:gravity="center"
-            android:background="#ffffe0"
+            android:background="#ffff"
             android:lines="5"
             android:text="@string/_3_hrly_feed_volume"
             android:textAppearance="?android:attr/textAppearanceMedium"

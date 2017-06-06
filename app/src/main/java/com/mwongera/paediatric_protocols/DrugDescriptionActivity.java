@@ -28,10 +28,9 @@ public class  DrugDescriptionActivity extends Activity {
     TextView results, txtDrug;
     WebView webview, webview1;
     Spinner aged;
-    int age;
     Double ageddd;
     int positioned = 0;
-    Double weight;
+    Double weight, age;
     String aging, weighing;
     String drugtype;
     String position;
@@ -74,7 +73,7 @@ public class  DrugDescriptionActivity extends Activity {
                 //method to calculate dosage once a button is clicked
 
                 if (weighing.length() != 0 && aging.length() != 0) {
-                    age = Integer.parseInt(aging);
+                    age = Double.parseDouble(aging);
                     weight = Double.parseDouble(weighing);
                     results.setText("");
                 } else {
@@ -82,9 +81,9 @@ public class  DrugDescriptionActivity extends Activity {
                 }
 
                 if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("days")) {
-                    ageddd = Double.valueOf(df.format(age / 28));
+                    ageddd = Double.valueOf((age / 28));
                 }else if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("months")) {
-                    ageddd = Double.valueOf(df.format(age == age));
+                    ageddd = Double.valueOf(df.format(age));
                 }else if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("years")) {
                    ageddd = Double.valueOf(df.format(age * 12));
                 }else {

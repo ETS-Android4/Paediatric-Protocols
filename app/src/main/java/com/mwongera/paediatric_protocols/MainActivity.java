@@ -49,7 +49,7 @@ public class MainActivity extends DrawerActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setTitle("Paediatric Protocols - Ke");
+        setTitle("PAEDIATRIC PTOTOCOLS - KE");
 
         mViewPager = (MaterialViewPager) findViewById(R.id.materialViewPager);
         toolbar = mViewPager.getToolbar();
@@ -130,10 +130,16 @@ public class MainActivity extends DrawerActivity {
                             }
                         })
                 ,
-                new DrawerFragmentItem()
-                        .setFragment(new RssFragment())
+                new DrawerItem()
                         .setImage(ContextCompat.getDrawable(this, R.drawable.text_lines))
                         .setTextPrimary(getString(R.string.news_fragment))
+                        .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
+                            @Override
+                            public void onClick(DrawerItem drawerItem, long id, int position) {
+                                Intent i = new Intent(MainActivity.this, RssActivity.class);
+                                startActivity(i);
+                            }
+                        })
                 ,
                 new DrawerItem()
                         .setTextPrimary(getString(R.string.about))

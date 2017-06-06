@@ -158,7 +158,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
             android:gravity="center"
-            android:background="#ffffe0"
+            android:background="#fff"
             android:lines="3"
             android:text="@string/iv_fluids_rate_mls_hr"
             android:textAppearance="?android:attr/textAppearanceMedium"

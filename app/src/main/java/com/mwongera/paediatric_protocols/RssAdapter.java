@@ -16,6 +16,7 @@ public class RssAdapter extends BaseAdapter {
 
     private final List<RssItem> items;
     private final Context context;
+    private ClickListener clickListener = null;
 
     public RssAdapter(Context context, List<RssItem> items) {
         this.items = items;
@@ -54,6 +55,10 @@ public class RssAdapter extends BaseAdapter {
 
     static class ViewHolder {
         TextView itemTitle;
+    }
+
+    public void setClickListener(ClickListener clickListener){
+        this.clickListener = clickListener;
     }
 
 }
