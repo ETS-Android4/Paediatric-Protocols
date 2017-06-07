@@ -1,41 +1,24 @@
 package com.mwongera.paediatric_protocols;
 import android.content.Intent;
-import android.content.res.Configuration;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.LinearLayout;
-import android.widget.ListView;
-import android.widget.Toast;
 
 import com.github.florent37.materialviewpager.MaterialViewPager;
 import com.github.florent37.materialviewpager.header.HeaderDesign;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
 import com.heinrichreimersoftware.materialdrawer.DrawerActivity;
-import com.heinrichreimersoftware.materialdrawer.structure.DrawerFragmentItem;
 import com.heinrichreimersoftware.materialdrawer.structure.DrawerItem;
-import com.heinrichreimersoftware.materialdrawer.structure.DrawerProfile;
 import com.heinrichreimersoftware.materialdrawer.theme.DrawerTheme;
 import com.mwongera.paediatric_protocols.fragment.Drugsfragment;
 import com.mwongera.paediatric_protocols.fragment.MajorConditionsFragment;
 import com.mwongera.paediatric_protocols.fragment.NewbornCareFragment;
-import com.mwongera.paediatric_protocols.fragment.NewsFragment;
-import com.mwongera.paediatric_protocols.fragment.RssFragment;
 import com.mwongera.paediatric_protocols.fragment.TriageFragment;
 
 public class MainActivity extends DrawerActivity {
@@ -149,26 +132,24 @@ public class MainActivity extends DrawerActivity {
             }
         });
 
+
+
         mViewPager.setMaterialViewPagerListener(new MaterialViewPager.Listener() {
             @Override
             public HeaderDesign getHeaderDesign(int page) {
                 switch (page) {
                     case 0:
-                        return HeaderDesign.fromColorResAndUrl(
-                                R.color.finestWhite,
-                                "https://wallpaperscraft.com/image/medicine_pharmacy_pills_fake_law_98419_1920x1080.jpg");
+                        return HeaderDesign.fromColorResAndDrawable(
+                                R.color.finestWhite, getResources().getDrawable(R.drawable.wallone));
                     case 1:
-                        return HeaderDesign.fromColorResAndUrl(
-                                R.color.finestWhite,
-                                "http://cdn.playbuzz.com/cdn/e654eda5-1512-49b8-a4a9-19fffc103bfa/008ea10b-81cc-4167-8944-7031900e19d8.png");
+                        return HeaderDesign.fromColorResAndDrawable(
+                                R.color.finestWhite, getResources().getDrawable(R.drawable.wallfour));
                     case 2:
-                        return HeaderDesign.fromColorResAndUrl(
-                                R.color.finestWhite,
-                                "https://www.premiumswitzerland.com/img/image_db/dermatology_main-1920.jpg");
+                        return HeaderDesign.fromColorResAndDrawable(
+                                R.color.finestWhite, getResources().getDrawable(R.drawable.wallthree));
                     case 3:
-                        return HeaderDesign.fromColorResAndUrl(
-                                R.color.finestWhite,
-                                "https://s-media-cache-ak0.pinimg.com/originals/cf/ba/6e/cfba6e5f849cf5f49ef519cecb7b1810.jpg");
+                        return HeaderDesign.fromColorResAndDrawable(
+                                R.color.finestWhite, getResources().getDrawable(R.drawable.walltwo));
                 }
                 return null;
             }
