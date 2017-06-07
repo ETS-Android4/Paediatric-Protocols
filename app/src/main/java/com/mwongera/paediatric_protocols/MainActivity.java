@@ -168,7 +168,7 @@ public class MainActivity extends DrawerActivity {
                     case 3:
                         return HeaderDesign.fromColorResAndUrl(
                                 R.color.finestWhite,
-                                "http://cdn.wall-pix.net/albums/art-photography/00005471.jpg");
+                                "https://s-media-cache-ak0.pinimg.com/originals/cf/ba/6e/cfba6e5f849cf5f49ef519cecb7b1810.jpg");
                 }
                 return null;
             }

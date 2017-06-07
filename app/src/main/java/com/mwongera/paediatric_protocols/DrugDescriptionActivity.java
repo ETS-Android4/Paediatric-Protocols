@@ -1,6 +1,8 @@
 package com.mwongera.paediatric_protocols;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -59,6 +61,7 @@ public class  DrugDescriptionActivity extends Activity {
         position = i.getStringExtra("position");
         txtDrug.setText(drugtype);
         positioned = Integer.parseInt(position);
+        final Context context = this;
         //Toast.makeText(getApplicationContext(),position,Toast.LENGTH_SHORT).show();
         //on btn1 click event
         btn1.setOnClickListener(new View.OnClickListener() {
@@ -88,6 +91,18 @@ public class  DrugDescriptionActivity extends Activity {
                    ageddd = Double.valueOf(df.format(age * 12));
                 }else {
                     Toast.makeText(getApplicationContext(), "Enter details correctly", Toast.LENGTH_SHORT).show();
+                }
+
+                if (ageddd < 1 && weight >= 10.5) {
+                    AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
+
+                    alertDialogBuilder
+                            .setMessage("Wow!!! Call the guiness book of records");
+
+                    AlertDialog alertDialog = alertDialogBuilder.create();
+
+                    alertDialog.show();
+
                 }
                 //add a keyboard remover function
                 calculateDosage(weight, ageddd, positioned);
