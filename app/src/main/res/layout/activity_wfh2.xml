@@ -12,8 +12,8 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#FC9"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#336699"
         android:gravity="center"
         android:orientation="vertical"
         >
@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:text="@string/paediatrics_protocols_kenya"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:textSize="22sp" />
 
 

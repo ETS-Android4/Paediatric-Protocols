@@ -6,6 +6,15 @@
     android:scrollbars = "vertical"
     android:scrollbarStyle="insideInset"
     >
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        tools:ignore="UnusedAttribute">
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -27,8 +36,8 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#FC9"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#336699"
         android:gravity="center"
         >
 
@@ -37,7 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:text="@string/paediatrics_protocols_kenya"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:textSize="22sp" />
 
     </RelativeLayout>
@@ -183,4 +192,5 @@
     </LinearLayout>
 
 </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
     </ScrollView>

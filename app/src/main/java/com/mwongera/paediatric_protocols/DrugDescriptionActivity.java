@@ -5,7 +5,10 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,7 +26,7 @@ import java.text.DecimalFormat;
  * Created by mwongera on 2/21/17.
  */
 
-public class  DrugDescriptionActivity extends Activity {
+public class  DrugDescriptionActivity extends AppCompatActivity {
 //Use dialog boxes for alerts
     DecimalFormat df = new DecimalFormat("###.#");
     EditText inputWeight, inputAge;
@@ -70,6 +73,11 @@ public class  DrugDescriptionActivity extends Activity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 //aging=getExactAge(age);
+                InputMethodManager inputManager = (InputMethodManager)
+                        getSystemService(Context.INPUT_METHOD_SERVICE);
+
+                inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
+                        InputMethodManager.HIDE_NOT_ALWAYS);
                 aging = inputAge.getText().toString();
                 weighing = inputWeight.getText().toString();
 
@@ -84,7 +92,7 @@ public class  DrugDescriptionActivity extends Activity {
                 }
 
                 if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("days")) {
-                    ageddd = Double.valueOf((age / 28));
+                    ageddd = Double.valueOf(df.format(age / 28));
                 }else if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("months")) {
                     ageddd = Double.valueOf(df.format(age));
                 }else if (String.valueOf(aged.getSelectedItem()).equalsIgnoreCase("years")) {

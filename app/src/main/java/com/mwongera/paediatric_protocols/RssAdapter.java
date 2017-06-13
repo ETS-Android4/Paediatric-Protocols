@@ -1,10 +1,15 @@
 package com.mwongera.paediatric_protocols;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+
+import com.thefinestartist.finestwebview.FinestWebView;
+import com.thefinestartist.finestwebview.listeners.WebViewListener;
 
 import java.util.List;
 
@@ -12,7 +17,7 @@ import java.util.List;
  * Created by mwongera on 4/27/17.
  */
 
-public class RssAdapter extends BaseAdapter {
+public class RssAdapter extends BaseAdapter  {
 
     private final List<RssItem> items;
     private final Context context;
@@ -53,12 +58,10 @@ public class RssAdapter extends BaseAdapter {
         return convertView;
     }
 
+
+
     static class ViewHolder {
         TextView itemTitle;
-    }
-
-    public void setClickListener(ClickListener clickListener){
-        this.clickListener = clickListener;
     }
 
 }

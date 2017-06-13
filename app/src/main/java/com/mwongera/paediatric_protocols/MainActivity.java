@@ -1,6 +1,9 @@
 package com.mwongera.paediatric_protocols;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -139,17 +142,25 @@ public class MainActivity extends DrawerActivity {
             public HeaderDesign getHeaderDesign(int page) {
                 switch (page) {
                     case 0:
+                        Bitmap bm = BitmapFactory.decodeResource(getResources(), R.drawable.wallone);
+                        Drawable bmDrawable = new BitmapDrawable(getResources(), bm);
                         return HeaderDesign.fromColorResAndDrawable(
-                                R.color.finestWhite, getResources().getDrawable(R.drawable.wallone));
+                                R.color.finestWhite, bmDrawable);
                     case 1:
+                        Bitmap bm1 = BitmapFactory.decodeResource(getResources(), R.drawable.wallfour);
+                        Drawable bmDrawable1 = new BitmapDrawable(getResources(), bm1);
                         return HeaderDesign.fromColorResAndDrawable(
-                                R.color.finestWhite, getResources().getDrawable(R.drawable.wallfour));
+                                R.color.finestWhite, bmDrawable1);
                     case 2:
+                        Bitmap bm2 = BitmapFactory.decodeResource(getResources(), R.drawable.wallthree);
+                        Drawable bmDrawable2 = new BitmapDrawable(getResources(), bm2);
                         return HeaderDesign.fromColorResAndDrawable(
-                                R.color.finestWhite, getResources().getDrawable(R.drawable.wallthree));
+                                R.color.finestWhite, bmDrawable2);
                     case 3:
+                        Bitmap bm3 = BitmapFactory.decodeResource(getResources(), R.drawable.wallfive);
+                        Drawable bmDrawable3 = new BitmapDrawable(getResources(), bm3);
                         return HeaderDesign.fromColorResAndDrawable(
-                                R.color.finestWhite, getResources().getDrawable(R.drawable.walltwo));
+                                R.color.finestWhite, bmDrawable3);
                 }
                 return null;
             }

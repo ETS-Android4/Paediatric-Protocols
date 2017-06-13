@@ -8,9 +8,9 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="?attr/actionBarSize"
         android:layout_alignParentTop="true"
-        android:background="#FC9"
+        android:background="#336699"
         android:gravity="center"
         >
 
@@ -18,9 +18,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:text="Paediatrics Protocols - Kenya"
-            android:textColor="#000"
-            android:textSize="15sp" />
+            android:text="@string/paediatrics_protocols_kenya"
+            android:textColor="#fff"
+            android:textSize="22sp" />
 
     </RelativeLayout>
 
@@ -30,9 +30,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-         />
+        tools:ignore="ContentDescription" />
 
 
 </RelativeLayout>

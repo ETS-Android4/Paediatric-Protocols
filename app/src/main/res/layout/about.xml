@@ -3,16 +3,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:background="@color/finestWhite"
-    >
+    android:background="@color/finestWhite">
 
   <RelativeLayout
       xmlns:android="http://schemas.android.com/apk/res/android"
       android:id="@+id/header"
       android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="#FC9"
+      android:layout_height="?attr/actionBarSize"
+      android:background="#336699"
       android:gravity="center"
       >
 
@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:text="@string/paediatrics_protocols_kenya"
-        android:textColor="#000"
+        android:textColor="#fff"
         android:textSize="22sp" />
 
   </RelativeLayout>

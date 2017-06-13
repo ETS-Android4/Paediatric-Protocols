@@ -70,6 +70,7 @@ public class RssFragment extends Fragment implements AdapterView.OnItemClickList
         }
     };
 
+
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         RssAdapter adapter = (RssAdapter) parent.getAdapter();
@@ -77,6 +78,7 @@ public class RssFragment extends Fragment implements AdapterView.OnItemClickList
         Uri uri = Uri.parse(item.getLink());
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
+
     }
 
     @Override
