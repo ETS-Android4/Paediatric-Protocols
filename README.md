@@ -1,2 +1,2 @@
-# Paediatric_Protocols
+# Paediatric Protocols Kenya
 An Android application on basic paediatric protocols
