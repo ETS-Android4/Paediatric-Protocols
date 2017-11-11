@@ -1,35 +1,52 @@
 {
   "project_info": {
-    "project_number": "985156334587",
-    "project_id": "kenya-paediatric-protocols"
+    "project_number": "296221237972",
+    "firebase_url": "https://paediatricprotocols-c94c0.firebaseio.com",
+    "project_id": "paediatricprotocols-c94c0",
+    "storage_bucket": "paediatricprotocols-c94c0.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:985156334587:android:a4ea73e12f28350d",
+        "mobilesdk_app_id": "1:296221237972:android:a4ea73e12f28350d",
         "android_client_info": {
-          "package_name": "com.mwongera.paediatric_protocols"
+          "package_name": "bpp.kelvian.com"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "296221237972-muvue3s49ejeanokq2q8laoi0tb4rvt2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "bpp.kelvian.com",
+            "certificate_hash": "3c6bbb7e8a8644a57b6bf0860c47acba24c88dee"
+          }
+        },
+        {
+          "client_id": "296221237972-au3nnscvg8c9tfe33n9qnj9snrmjta3u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyBM3hsciAK5YASIhl17PeiLf-T-KSaB40o"
+          "current_key": "AIzaSyAeUaxEIPuD9Avg-0i5i34rKXc_vcm0oTo"
         }
       ],
       "services": {
         "analytics_service": {
-          "status": 2,
-          "analytics_property": {
-            "tracking_id": "UA-61280431-2"
-          }
+          "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "296221237972-au3nnscvg8c9tfe33n9qnj9snrmjta3u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
-          "status": 1
+          "status": 2
         }
       }
     }
