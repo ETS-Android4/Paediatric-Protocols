@@ -27,11 +27,10 @@ public class About extends AppCompatActivity {
         if (view.getId() == R.id.defaultTheme) {
             new FinestWebView.Builder(this).titleDefault("Terms and conditions")
                     .show("https://healthedsolutionsblog.wordpress.com/2016/04/30/terms-and-conditions/");
-        } else if (view.getId() == R.id.redTheme) {
+        } // else if (view.getId() == R.id.redTheme) {
             //            Intent intent = new Intent(this, WebViewActivity.class);
             //            startActivity(intent);
 
         }
-    }
 
 }
