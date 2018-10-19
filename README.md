@@ -2,7 +2,6 @@
 An Android application on basic paediatric protocols
 
 
-# Privacy Policy
 ## KENYA PAEDIATRIC PROTOCOLS PRIVACY POLICY
 Kenya Paediatric protocols application is a free app. This service is provided by Health Ed. Solutions and is intended for use as is.
 
