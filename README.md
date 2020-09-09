@@ -1,5 +1,6 @@
 # Paediatric Protocols Kenya
-An Android application on basic paediatric protocols
+An Android application on Kenya's paediatric protocols
+App used by doctors, nurses and pharmacies.
 
 
 ## KENYA PAEDIATRIC PROTOCOLS PRIVACY POLICY
